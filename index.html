@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verum Systems - Premium Präsentation</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* =========================================
+           1. CSS VARIABLES & BASE RESET
+           ========================================= */
+        :root {
+            --bg-base: #171717;
+            --text-primary: #FFFFFF;
+            --text-secondary: #FFFFFF;
+            --text-muted: #FFFFFF;
+            --gold: #F9C10E;
+            --border-light: rgba(255, 255, 255, 0.12);
+            --panel-bg: rgba(255, 255, 255, 0.05);
+            --sidebar-width: 280px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            overflow: hidden; /* Prevent scrolling, app-like feel */
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        /* =========================================
+           2. BACKGROUND SYSTEM (STRICT LAYERING)
+           ========================================= */
+        .bg-layer-image {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://res.cloudinary.com/dkbegf5yh/image/upload/v1770119944/bgheader_ubkadw.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            mix-blend-mode: luminosity;
+            z-index: -3;
+        }
+
+        .bg-layer-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(23,23,23,0.3) 0%, rgba(23,23,23,0.95) 100%);
+            z-index: -2;
+        }
+
+        .bg-layer-grid {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://res.cloudinary.com/dkbegf5yh/image/upload/v1770117054/automindz_grid_3000w_sx9yxh.png');
+            background-size: 1200px;
+            background-position: center center;
+            opacity: 0.5;
+            mix-blend-mode: screen;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+            z-index: -1;
+        }
+
+        /* =========================================
+           3. TYPOGRAPHY
+           ========================================= */
+        .title-main {
+            font-size: 56px;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+        }
+
+        .card-title {
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 24px;
+            opacity: 0.8;
+        }
+
+        .text-body {
+            font-size: 20px;
+            font-weight: 200;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(90deg, #FFFFFF 0%, #F9C10E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* =========================================
+           4. LAYOUT & UI COMPONENTS
+           ========================================= */
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: rgba(15, 15, 15, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-right: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            position: relative;
+        }
+
+        .sidebar-logo {
+            padding: 40px 30px;
+        }
+
+        .sidebar-logo img {
+            width: 140px;
+            height: auto;
+            display: block;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 0 16px;
+        }
+
+        .nav-item {
+            padding: 14px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.6);
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-item:hover {
+            color: #fff;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .nav-item.active {
+            color: #fff;
+            font-weight: 500;
+            border-left: 3px solid var(--gold);
+            background: linear-gradient(90deg, rgba(249,193,14,0.1) 0%, transparent 100%);
+        }
+
+        /* Main Stage */
+        .main-stage {
+            flex: 1;
+            position: relative;
+            height: 100vh;
+            perspective: 1000px;
+        }
+
+        .slide-counter {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-light);
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            z-index: 20;
+        }
+
+        /* Slide Container */
+        .slide {
+            position: absolute;
+            inset: 0;
+            padding: 80px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Layout Types */
+        .centered-layout {
+            align-items: center;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            height: 100%;
+        }
+
+        .grid-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* Glass Cards */
+        .glass-card {
+            border-radius: 28px;
+            background: var(--panel-bg);
+            backdrop-filter: blur(24px) saturate(1.2);
+            -webkit-backdrop-filter: blur(24px) saturate(1.2);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-light);
+            border-top: 1px solid rgba(255,255,255,0.25); /* thin top highlight */
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card.centered {
+            text-align: center;
+        }
+
+        /* Clean List (Custom Bullets) */
+        .list-clean {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-clean li {
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 200;
+            line-height: 1.6;
+        }
+
+        .list-clean li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 12px var(--gold);
+        }
+
+        /* Premium CTA Button */
+        .premium-cta {
+            border-radius: 60px;
+            background: linear-gradient(90deg, #FFFFFF 0%, #FFF0B3 40%, #F9C10E 100%);
+            padding: 6px 6px 6px 28px; /* Offset for circle icon */
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            text-decoration: none;
+            margin-top: 30px;
+        }
+
+        .premium-cta:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(249, 193, 14, 0.25);
+        }
+
+        .cta-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cta-micro {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(0,0,0,0.6);
+            font-weight: 700;
+        }
+
+        .cta-main {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #000;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        /* =========================================
+           5. ANIMATIONS & DELAYS
+           ========================================= */
+        .anim-item {
+            transform: translateY(30px);
+            opacity: 0;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+        }
+
+        .slide.active .anim-item {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+
+        /* Typewriter helper class */
+        .type-char {
+            display: inline-block;
+            transition: opacity 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BACKGROUND SYSTEM -->
+    <div class="bg-layer-image"></div>
+    <div class="bg-layer-overlay"></div>
+    <div class="bg-layer-grid"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1769866535/Transparent-02_onkhlb.png" alt="Verum Systems Logo">
+        </div>
+        <ul class="nav-list" id="chapter-list">
+            <li class="nav-item active" data-target="0">01. Status Quo</li>
+            <li class="nav-item" data-target="1">02. Die falsche Annahme</li>
+            <li class="nav-item" data-target="2">03. Das Marketing-Leck</li>
+            <li class="nav-item" data-target="3">04. Der logische Bruch</li>
+            <li class="nav-item" data-target="4">05. Die 4 Schwächen</li>
+            <li class="nav-item" data-target="5">06. Die Patientenreise</li>
+            <li class="nav-item" data-target="6">07. Vertrauen & Mobile</li>
+            <li class="nav-item" data-target="7">08. Potenzialanalyse</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN STAGE -->
+    <main class="main-stage">
+        <div class="slide-counter" id="slide-counter">1 / 8</div>
+
+        <!-- SLIDE 1: Intro -->
+        <section class="slide active">
+            <div class="centered-layout">
+                <h1 class="title-main typewriter-text">Warum Ihre Website aktuell nur <span class="gold-gradient">Geld verbrennt</span></h1>
+                <p class="subtitle anim-item delay-1">(Trotz teurem Marketing-Budget)</p>
+                <div class="glass-card anim-item delay-2" style="max-width: 800px; margin: 40px auto 0;">
+                    <p class="text-body">An Praxisinhaber mit hochpreisigen Selbstzahler-Behandlungen: Wenn Sie aktuell in Marketing investieren, Ihre Website aber nur schön aussieht statt Patienten sauber durch den Entscheidungsprozess zu führen, dann verbrennen Sie bares Geld.</p>
+                    <p class="text-body" style="margin-bottom: 0;">Das Problem ist nicht Ihre Anzeige, nicht Ihr Budget und nicht Ihre Behandlung. <br><strong>Das Problem ist die Website zwischen Klick und Termin.</strong></p>
+                </div>
+                <button class="premium-cta anim-item delay-3" onclick="nextSlide()">
+                    <div class="cta-text-wrapper">
+                        <span class="cta-micro">Starten</span>
+                        <span class="cta-main">Präsentation beginnen</span>
+                    </div>
+                    <div class="cta-icon"><i class="fas fa-play"></i></div>
+                </button>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: Die falsche Annahme -->
+        <section class="slide">
+            <div class="split-layout">
+                <div>
+                    <h2 class="title-main typewriter-text">Die größte <span class="gold-gradient">falsche Annahme</span></h2>
+                    <p class="subtitle anim-item delay-1">„Wenn die Seite hochwertig aussieht, wird sie schon funktionieren.“ – <strong>Nein.</strong></p>
+                    <p class="text-body anim-item delay-2">Eine Website kann teuer gewesen sein. Modern aussehen. Professionell programmiert sein. Und trotzdem komplett am Ziel vorbeigehen.</p>
+                </div>
+                <div class="glass-card anim-item delay-3">
+                    <h3 class="card-title">Was Patienten wirklich suchen</h3>
+                    <ul class="list-clean">
+                        <li>Sicherheit in der Entscheidung</li>
+                        <li>Klare Orientierung</li>
+                        <li>Bestätigung ihrer Annahmen</li>
+                        <li>Führung durch den Prozess</li>
+                    </ul>
+                    <p class="text-body" style="margin-top: 24px; color: var(--gold);">Die meisten Seiten sehen nett aus, aber sie führen nicht.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: Das eigentliche Leck -->
+        <section class="slide">
+            <div class="split-layout">
+                <div class="glass-card anim-item delay-2" style="padding-right: 60px;">
+                    <h3 class="card-title">Der Bruch nach dem Klick</h3>
+                    <p class="text-body">Der Interessent klickt auf eine Werbeanzeige zu einer ganz konkreten Behandlung (z.B. Oberlidstraffung oder Implantate)...</p>
+                    <p class="text-body">...und landet danach auf einer Seite, die komplett generisch ist. Startseite. Sammelseite. 10 Themen gleichzeitig. Keine klare Führung.</p>
+                </div>
+                <div>
+                    <h2 class="title-main typewriter-text">Das eigentliche <span class="gold-gradient">Leck im Marketing</span></h2>
+                    <p class="text-body anim-item delay-1">Viele glauben: „Wir brauchen mehr Reichweite.“</p>
+                    <p class="text-body anim-item delay-1" style="font-weight: 500;">In Wahrheit bräuchten sie erstmal weniger Reibung nach dem Klick.</p>
+                    <div class="anim-item delay-3" style="margin-top: 30px; border-left: 2px solid var(--border-light); padding-left: 20px;">
+                        <p class="text-body" style="font-style: italic; opacity: 0.8;">"Sie verbrennen das Geld in dem Moment, in dem Sie bezahlte Aufmerksamkeit auf eine Seite schicken, die psychologisch nicht dafür gebaut ist."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Der logische Bruch -->
+        <section class="slide">
+            <div class="centered-layout" style="max-width: 1000px;">
+                <h2 class="title-main typewriter-text">Der <span class="gold-gradient">logische Bruch</span></h2>
+                <p class="subtitle anim-item delay-1">Wenn in der Anzeige „Oberlidstraffung“ steht, muss danach auch „Oberlidstraffung“ kommen.</p>
+                
+                <div class="grid-2x2">
+                    <div class="glass-card anim-item delay-2">
+                        <h3 class="card-title" style="font-size: 24px;"><i class="fas fa-mouse-pointer" style="color: var(--gold); margin-right: 12px;"></i> Klick-Erwartung</h3>
+                        <p class="text-body">Patient sucht konkrete Lösung für ein spezifisches Problem.</p>
+                    </div>
+                    <div class="glass-card anim-item delay-3">
+                        <h3 class="card-title" style="font-size: 24px;"><i class="fas fa-times-circle" style="color: #ff4757; margin-right: 12px;"></i> Web-Realität</h3>
+                        <p class="text-body">Patient landet in einem "Gemischtwarenladen" aus 10 Leistungen.</p>
+                    </div>
+                    <div class="glass-card anim-item delay-4" style="grid-column: span 2;">
+                        <p class="text-body" style="text-align: left; margin:0;">
+                            <strong>Das Pizza-Sushi-Beispiel:</strong> Wenn Sie mit Pizza werben und der Klick landet in einer Sushi-Karte, wundern Sie sich nicht, wenn Menschen abspringen.<br><br>
+                            Und dann sagen Praxen: <em>„Die Leads sind schlecht“</em> – Nein, Sie haben den Patienten auf dem Weg dazwischen verloren.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: Die 4 Schwächen -->
+        <section class="slide">
+            <div class="split-layout">
+                <div>
+                    <h2 class="title-main typewriter-text">Die 4 massiven <span class="gold-gradient">Schwächen</span></h2>
+                    <p class="subtitle anim-item delay-1">Warum aktuelle Praxis-Seiten Leads verbrennen.</p>
+                    <button class="premium-cta anim-item delay-4" onclick="nextSlide()">
+                        <div class="cta-text-wrapper">
+                            <span class="cta-micro">Lösung ansehen</span>
+                            <span class="cta-main">Wie es besser geht</span>
+                        </div>
+                        <div class="cta-icon"><i class="fas fa-arrow-right"></i></div>
+                    </button>
+                </div>
+                <div class="glass-card anim-item delay-2">
+                    <ul class="list-clean">
+                        <li class="anim-item delay-2"><strong>Keine Spezialisierung:</strong> Nicht erkennbar, worum es exakt geht und welches Ergebnis möglich ist.</li>
+                        <li class="anim-item delay-3"><strong>Zu wenig Vertrauen:</strong> Zu wenig Arztpräsenz, kein Gesicht, keine sichtbare Kompetenz.</li>
+                        <li class="anim-item delay-4"><strong>Keine psychologische Führung:</strong> Patient wird mit Informationen alleingelassen.</li>
+                        <li class="anim-item delay-5"><strong>Keine Vorqualifizierung:</strong> Anfragen werden nicht vorsortiert – Chaos im Team ist die Folge.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: Die Patientenreise -->
+        <section class="slide">
+            <div class="split-layout">
+                <div class="glass-card anim-item delay-2">
+                    <h3 class="card-title">Die Anatomie einer starken Seite</h3>
+                    <ul class="list-clean">
+                        <li>Problem sofort glasklar machen</li>
+                        <li>Gewünschtes Ergebnis greifbar machen</li>
+                        <li>Sichtbare Kompetenz auf dem Gebiet beweisen</li>
+                        <li>Einwände proaktiv entschärfen</li>
+                        <li>Den nächsten Schritt logisch und einfach machen</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="title-main typewriter-text">Die saubere <span class="gold-gradient">Patientenreise</span></h2>
+                    <p class="text-body anim-item delay-1">Eine starke Seite für lukrative Behandlungen muss nicht informieren. <strong>Sie muss führen.</strong></p>
+                    <p class="text-body anim-item delay-3" style="margin-top: 24px;">Im Kern brauchen Sie pro Behandlung eine eigene, psychologisch optimierte Route. Mit klarem Nutzen, Beweisen, Testimonials und einem klaren Ablauf.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: Vertrauen & Mobile -->
+        <section class="slide">
+            <div class="split-layout">
+                <div>
+                    <h2 class="title-main typewriter-text">Vertrauen & <span class="gold-gradient">Mobile</span></h2>
+                    <p class="subtitle anim-item delay-1">Zwei kritische Erfolgsfaktoren.</p>
+                    <p class="text-body anim-item delay-2">Patienten kaufen nicht nur eine Behandlung. Sie kaufen <strong>Vertrauen in die Entscheidung</strong>. Werden Fragen online nicht beantwortet, springt der Patient ab.</p>
+                </div>
+                <div class="glass-card anim-item delay-3">
+                    <h3 class="card-title"><i class="fas fa-mobile-alt" style="color: var(--gold); margin-right: 12px;"></i> Mobile wird brutal unterschätzt</h3>
+                    <p class="text-body">Die meisten Klicks kommen mobil. Ihre Seite muss auf dem Handy nicht nur lesbar sein – <strong>sie muss mobil verkaufen können.</strong></p>
+                    <div style="margin-top: 24px; padding: 16px; background: rgba(0,0,0,0.2); border-radius: 12px; border: 1px solid var(--border-light);">
+                        <p class="text-body" style="margin: 0; font-style: italic;">"Eine gute mobile Seite reduziert Reibung. Eine schlechte mobile Seite vernichtet Aufmerksamkeit."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: Outro / CTA -->
+        <section class="slide">
+            <div class="centered-layout" style="max-width: 800px;">
+                <h2 class="title-main typewriter-text">Der <span class="gold-gradient">Perspektivwechsel</span></h2>
+                <p class="subtitle anim-item delay-1">Betrachten Sie Ihre Website nicht als digitale Visitenkarte, sondern als digitalen Vertriebsprozess.</p>
+                
+                <div class="glass-card anim-item delay-2" style="margin: 40px 0;">
+                    <p class="text-body">Wenn Sie lukrative Selbstzahler-Behandlungen anbieten und Ihre Website nicht das Maximum aus dem Marketing-Budget herausholt, müssen wir reden.</p>
+                    <p class="text-body" style="margin-bottom: 0;">Finden wir heraus, wo die Brüche liegen und wie wir Klicks in vorqualifizierte Wunschpatienten verwandeln.</p>
+                </div>
+
+                <a href="#" class="premium-cta anim-item delay-3" style="text-decoration: none;">
+                    <div class="cta-text-wrapper">
+                        <span class="cta-micro">Potenzialanalyse</span>
+                        <span class="cta-main">Unverbindlich anfragen</span>
+                    </div>
+                    <div class="cta-icon"><i class="fas fa-check"></i></div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         JAVASCRIPT LOGIC
+         ========================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const navItems = document.querySelectorAll('.nav-item');
+            const counter = document.getElementById('slide-counter');
+            let currentSlideIndex = 0;
+            const totalSlides = slides.length;
+
+            // 1. Setup Robust Typewriter Effect
+            // This safely splits text nodes into spans without breaking HTML tags
+            function prepareTypewriters() {
+                const titles = document.querySelectorAll('.typewriter-text');
+                titles.forEach(title => {
+                    // Wrap text nodes recursively
+                    function wrapTextNodes(node) {
+                        if (node.nodeType === 3) { // Text node
+                            let text = node.nodeValue;
+                            let frag = document.createDocumentFragment();
+                            for (let i = 0; i < text.length; i++) {
+                                let char = text[i];
+                                let span = document.createElement('span');
+                                span.className = 'type-char';
+                                // Convert literal spaces to non-breaking spaces
+                                span.innerHTML = char === ' ' ? '&nbsp;' : char;
+                                span.style.opacity = '0';
+                                frag.appendChild(span);
+                            }
+                            node.parentNode.replaceChild(frag, node);
+                        } else if (node.nodeType === 1) { // Element node
+                            Array.from(node.childNodes).forEach(wrapTextNodes);
+                        }
+                    }
+                    wrapTextNodes(title);
+                });
+            }
+
+            function playTypewriter(slide) {
+                const chars = slide.querySelectorAll('.type-char');
+                chars.forEach(c => {
+                    c.style.opacity = '0'; // reset
+                    c.style.transition = 'none'; // remove transition for instant reset
+                });
+                
+                // Force reflow
+                void slide.offsetWidth;
+
+                chars.forEach((c, index) => {
+                    c.style.transition = 'opacity 0.1s ease';
+                    setTimeout(() => {
+                        c.style.opacity = '1';
+                    }, index * 20); // 20ms reveal speed
+                });
+            }
+
+            // 2. Navigation Logic
+            window.goToSlide = function(index) {
+                if (index < 0 || index >= totalSlides) return;
+                
+                // Update slides
+                slides.forEach(s => s.classList.remove('active'));
+                slides[index].classList.add('active');
+
+                // Update nav
+                navItems.forEach(n => n.classList.remove('active'));
+                navItems[index].classList.add('active');
+
+                // Update counter
+                counter.textContent = `${index + 1} / ${totalSlides}`;
+
+                // Play animations
+                playTypewriter(slides[index]);
+
+                currentSlideIndex = index;
+            };
+
+            window.nextSlide = function() {
+                goToSlide(currentSlideIndex + 1);
+            };
+
+            window.prevSlide = function() {
+                goToSlide(currentSlideIndex - 1);
+            };
+
+            // 3. Event Listeners
+            // Sidebar clicks
+            navItems.forEach((item, index) => {
+                item.addEventListener('click', () => goToSlide(index));
+            });
+
+            // Keyboard navigation
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+                    e.preventDefault();
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    prevSlide();
+                }
+            });
+
+            // 4. Initialize
+            prepareTypewriters();
+            goToSlide(0); // Start at slide 1
+        });
+    </script>
+</body>
+</html>
