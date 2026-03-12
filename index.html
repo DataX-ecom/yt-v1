@@ -111,11 +111,13 @@
         /* ── SLIDES ── */
         .slide{
             position:absolute;inset:0;padding:28px 44px;
-            display:flex;flex-direction:column;justify-content:center;
+            display:flex;flex-direction:column;justify-content:flex-start;
+            padding-top:50px;
             opacity:0;pointer-events:none;
             transition:opacity .8s cubic-bezier(.16,1,.3,1);z-index:1;
         }
         .slide.active{opacity:1;pointer-events:auto;z-index:5}
+        .slide.v-center{justify-content:center;padding-top:28px}
 
         .centered{align-items:center;text-align:center;max-width:1100px;margin:0 auto}
         .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;height:100%}
@@ -293,7 +295,7 @@
     </div>
 
     <!-- ══════════ SLIDE 1 ─ INTRO ══════════ -->
-    <section class="slide active">
+    <section class="slide v-center active">
         <div class="centered">
             <p class="label label-gold a d1">An Praxisinhaber mit Selbstzahler-Behandlungen</p>
             <h1 class="t1 tw">Warum Ihre Website aktuell nur <span class="gold-grad">Geld verbrennt</span></h1>
@@ -307,13 +309,13 @@
 
     <!-- ══════════ SLIDE 2 ─ FALSCHE ANNAHME ══════════ -->
     <section class="slide">
-        <div class="wide">
-            <div style="text-align:center;margin-bottom:32px">
+        <div style="max-width:1100px;margin:0 auto;width:100%">
+            <div style="text-align:center;margin-bottom:28px">
                 <p class="label label-gold a">Die größte falsche Annahme</p>
                 <h2 class="t1 tw">Die große <span class="gold-grad">Illusion</span></h2>
                 <p class="sub a d1">„Hochwertig aussehen = funktionieren."</p>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
                 <div class="card a d2" style="border-top:2px solid rgba(255,71,87,0.3)">
                     <h3 class="t2"><i class="fas fa-times-circle" style="color:var(--red);margin-right:10px;font-size:28px"></i> Die Illusion</h3>
                     <ul class="lst">
@@ -337,14 +339,13 @@
 
     <!-- ══════════ SLIDE 3 ─ LECK IM MARKETING ══════════ -->
     <section class="slide">
-        <div class="wide">
+        <div style="max-width:1100px;margin:0 auto;width:100%">
             <div style="text-align:center;margin-bottom:8px">
                 <p class="label label-gold a">Das eigentliche Problem</p>
                 <h2 class="t1 tw">Das Leck im <span class="gold-grad">Marketing</span></h2>
                 <p class="sub a d1">Nicht die Anzeige verbrennt Ihr Budget — sondern was danach passiert.</p>
             </div>
 
-            <!-- FLOW -->
             <div class="flow a d2">
                 <div class="flow-step">
                     <div class="flow-box ok"><i class="fas fa-bullhorn"></i></div>
@@ -367,19 +368,19 @@
                 </div>
             </div>
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px">
-                <div class="card red-top a d3" style="padding:24px">
-                    <h4 style="color:var(--red);font-size:22px;font-weight:600;margin-bottom:12px"><i class="fas fa-times-circle" style="margin-right:6px"></i> Nach dem Klick</h4>
-                    <ul class="lst sm">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:16px">
+                <div class="card red-top a d3">
+                    <h4 style="color:var(--red);font-size:24px;font-weight:600;margin-bottom:12px"><i class="fas fa-times-circle" style="margin-right:8px"></i> Nach dem Klick</h4>
+                    <ul class="lst">
                         <li>Landet auf generischer Startseite</li>
                         <li>Zehn Themen gleichzeitig</li>
                         <li>Keine klare Führung → <strong>Absprung</strong></li>
                     </ul>
                 </div>
-                <div class="card gold-top a d4" style="padding:24px">
-                    <h4 style="color:var(--gold);font-size:22px;font-weight:600;margin-bottom:12px"><i class="fas fa-lightbulb" style="margin-right:6px"></i> Der Denkfehler</h4>
-                    <p class="body" style="font-size:22px">Viele glauben: <strong>„Wir brauchen mehr Reichweite."</strong></p>
-                    <p class="body" style="font-size:22px;margin:0">Wahrheit: <strong style="color:var(--gold)">Weniger Reibung nach dem Klick.</strong></p>
+                <div class="card gold-top a d4">
+                    <h4 style="color:var(--gold);font-size:24px;font-weight:600;margin-bottom:12px"><i class="fas fa-lightbulb" style="margin-right:8px"></i> Der Denkfehler</h4>
+                    <p class="body">Viele glauben: <strong>„Wir brauchen mehr Reichweite."</strong></p>
+                    <p class="body" style="margin:0">Wahrheit: <strong style="color:var(--gold)">Weniger Reibung nach dem Klick.</strong></p>
                 </div>
             </div>
         </div>
@@ -407,28 +408,28 @@
 
     <!-- ══════════ SLIDE 5 ─ 4 CONVERSION-KILLER ══════════ -->
     <section class="slide">
-        <div class="wide">
-            <div style="text-align:center;margin-bottom:30px">
+        <div style="max-width:1100px;margin:0 auto;width:100%">
+            <div style="text-align:center;margin-bottom:24px">
                 <p class="label label-gold a">Die 4 Schwächen</p>
                 <h2 class="t1 tw" style="margin-bottom:8px">4 massive <span class="gold-grad">Conversion-Killer</span></h2>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
-                <div class="card num-card a d3"><div class="num-bg">01</div><div style="position:relative;z-index:1"><h4 class="num-title">Keine Spezialisierung</h4><p class="num-text">Nicht erkennbar, worum es geht & welches Ergebnis möglich ist.</p></div></div>
-                <div class="card num-card a d4"><div class="num-bg">02</div><div style="position:relative;z-index:1"><h4 class="num-title">Zu wenig Vertrauen</h4><p class="num-text">Fehlende Arztpräsenz, kein Gesicht, keine sichtbare Kompetenz.</p></div></div>
-                <div class="card num-card a d5"><div class="num-bg">03</div><div style="position:relative;z-index:1"><h4 class="num-title">Keine Führung</h4><p class="num-text">Patient wird mit Informationen alleingelassen statt geführt.</p></div></div>
-                <div class="card num-card a d6"><div class="num-bg">04</div><div style="position:relative;z-index:1"><h4 class="num-title">Keine Vorqualifizierung</h4><p class="num-text">Anfragen nicht vorsortiert — Chaos im Team & Frust.</p></div></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+                <div class="card num-card a d2"><div class="num-bg">01</div><div style="position:relative;z-index:1"><h4 class="num-title" style="font-size:26px">Keine Spezialisierung</h4><p class="num-text">Nicht erkennbar, worum es geht & welches Ergebnis möglich ist.</p></div></div>
+                <div class="card num-card a d3"><div class="num-bg">02</div><div style="position:relative;z-index:1"><h4 class="num-title" style="font-size:26px">Zu wenig Vertrauen</h4><p class="num-text">Fehlende Arztpräsenz, kein Gesicht, keine sichtbare Kompetenz.</p></div></div>
+                <div class="card num-card a d4"><div class="num-bg">03</div><div style="position:relative;z-index:1"><h4 class="num-title" style="font-size:26px">Keine Führung</h4><p class="num-text">Patient wird mit Informationen alleingelassen statt geführt.</p></div></div>
+                <div class="card num-card a d5"><div class="num-bg">04</div><div style="position:relative;z-index:1"><h4 class="num-title" style="font-size:26px">Keine Vorqualifizierung</h4><p class="num-text">Anfragen nicht vorsortiert — Chaos im Team & Frust.</p></div></div>
             </div>
         </div>
     </section>
 
     <!-- ══════════ SLIDE 6 ─ PATIENTENREISE ══════════ -->
     <section class="slide">
-        <div class="wide">
-            <div style="text-align:center;margin-bottom:32px">
+        <div style="max-width:1100px;margin:0 auto;width:100%">
+            <div style="text-align:center;margin-bottom:24px">
                 <p class="label label-gold a">Die Lösung</p>
                 <h2 class="t1 tw">Die saubere <span class="gold-grad">Patientenreise</span></h2>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
                 <div class="card a d2">
                     <h3 class="t2"><i class="fas fa-route" style="color:var(--gold);margin-right:10px;font-size:28px"></i> Was sich ändern muss</h3>
                     <ul class="lst">
@@ -456,15 +457,15 @@
 
     <!-- ══════════ SLIDE 7 ─ VERTRAUEN ══════════ -->
     <section class="slide">
-        <div class="wide">
-            <div style="text-align:center;margin-bottom:28px">
+        <div style="max-width:1100px;margin:0 auto;width:100%">
+            <div style="text-align:center;margin-bottom:24px">
                 <p class="label label-gold a">Der entscheidende Faktor</p>
                 <h2 class="t1 tw">Vertrauen ist <span class="gold-grad">alles</span></h2>
                 <p class="sub a d1">Patienten kaufen keine Behandlung — sie kaufen Vertrauen in die Entscheidung.</p>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
-                <div class="card gold-top a d2" style="padding:28px">
-                    <h4 style="font-size:22px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px"><i class="fas fa-user" style="color:var(--gold)"></i> Was der Patient wissen will</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+                <div class="card gold-top a d2">
+                    <h4 style="font-size:26px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px"><i class="fas fa-user" style="color:var(--gold)"></i> Was der Patient wissen will</h4>
                     <div class="q-grid">
                         <div class="q-item"><i class="fas fa-stethoscope"></i> Wer behandelt mich?</div>
                         <div class="q-item"><i class="fas fa-building"></i> Wie wirkt die Praxis?</div>
@@ -476,14 +477,14 @@
                         <div class="q-item"><i class="fas fa-arrow-right"></i> Was kommt als Nächstes?</div>
                     </div>
                 </div>
-                <div class="a d3" style="display:flex;flex-direction:column;gap:16px">
-                    <div class="card red-top" style="padding:24px;flex:1">
-                        <h4 style="font-size:22px;font-weight:600;margin-bottom:10px;color:var(--red)"><i class="fas fa-exclamation-triangle" style="margin-right:6px"></i> Fragen offen → Vorsicht</h4>
-                        <p class="body" style="font-size:22px;margin:0">Vorsicht online = <strong style="color:var(--red)">Absprung, nicht Anfrage.</strong></p>
+                <div class="a d3" style="display:flex;flex-direction:column;gap:20px">
+                    <div class="card red-top" style="flex:1">
+                        <h4 style="font-size:26px;font-weight:600;margin-bottom:10px;color:var(--red)"><i class="fas fa-exclamation-triangle" style="margin-right:8px"></i> Fragen offen → Vorsicht</h4>
+                        <p class="body" style="margin:0">Vorsicht online = <strong style="color:var(--red)">Absprung, nicht Anfrage.</strong></p>
                     </div>
-                    <div class="card" style="padding:24px;flex:1;background:rgba(249,193,14,0.06);border-color:rgba(249,193,14,0.15)">
-                        <h4 style="font-size:22px;font-weight:600;margin-bottom:10px;color:var(--gold)"><i class="fas fa-check-circle" style="margin-right:6px"></i> Vertrauen transportiert</h4>
-                        <p class="body" style="font-size:22px;margin:0"><strong style="color:var(--gold)">Qualifizierte Anfragen</strong> statt Preisanfragen.</p>
+                    <div class="card" style="flex:1;background:rgba(249,193,14,0.06);border-color:rgba(249,193,14,0.15)">
+                        <h4 style="font-size:26px;font-weight:600;margin-bottom:10px;color:var(--gold)"><i class="fas fa-check-circle" style="margin-right:8px"></i> Vertrauen transportiert</h4>
+                        <p class="body" style="margin:0"><strong style="color:var(--gold)">Qualifizierte Anfragen</strong> statt Preisanfragen.</p>
                     </div>
                 </div>
             </div>
@@ -497,8 +498,8 @@
     </section>
 
     <!-- ══════════ SLIDE 8 ─ MOBILE ══════════ -->
-    <section class="slide">
-        <div class="wide">
+    <section class="slide v-center">
+        <div style="max-width:1100px;margin:0 auto;width:100%">
             <div style="text-align:center;margin-bottom:28px">
                 <p class="label label-gold a">Brutal unterschätzt</p>
                 <h2 class="t1 tw">Der <span class="gold-grad">Mobile-Faktor</span></h2>
@@ -512,7 +513,7 @@
 
     <!-- ══════════ SLIDE 9 ─ PERSPEKTIVWECHSEL ══════════ -->
     <section class="slide">
-        <div class="wide" style="max-width:1300px">
+        <div style="max-width:1100px;margin:0 auto;width:100%">
             <div style="text-align:center;margin-bottom:28px">
                 <p class="label label-gold a">Das Umdenken</p>
                 <h2 class="t1 tw" style="font-size:76px">Der <span class="gold-grad">Perspektivwechsel</span></h2>
@@ -523,9 +524,9 @@
                     <div class="vs-title"><i class="fas fa-times-circle"></i> Bisher</div>
                     <p style="font-weight:500;margin-bottom:12px">„Wir haben auch eine Website."</p>
                     <ul class="lst sm">
-                        <li style="font-size:22px">Hauptsache modern</li>
-                        <li style="font-size:22px">Hauptsache online</li>
-                        <li style="font-size:22px">Informationen bereitstellen</li>
+                        <li>Hauptsache modern</li>
+                        <li>Hauptsache online</li>
+                        <li>Informationen bereitstellen</li>
                     </ul>
                 </div>
                 <div class="vs-mid">VS</div>
@@ -533,10 +534,10 @@
                     <div class="vs-title"><i class="fas fa-check-circle"></i> Ab jetzt</div>
                     <p style="font-weight:500;margin-bottom:12px">„Website arbeitet mit Marketing zusammen."</p>
                     <ul class="lst sm">
-                        <li style="font-size:22px">Richtige Leute aufwärmen</li>
-                        <li style="font-size:22px">Falsche Leute aussortieren</li>
-                        <li style="font-size:22px">Vertrauen vor dem Telefonat</li>
-                        <li style="font-size:22px">Klicks → planbar bessere Termine</li>
+                        <li>Richtige Leute aufwärmen</li>
+                        <li>Falsche Leute aussortieren</li>
+                        <li>Vertrauen vor dem Telefonat</li>
+                        <li>Klicks → planbar bessere Termine</li>
                     </ul>
                 </div>
             </div>
@@ -544,7 +545,7 @@
     </section>
 
     <!-- ══════════ SLIDE 10 ─ CTA ══════════ -->
-    <section class="slide">
+    <section class="slide v-center">
         <div class="centered" style="max-width:1000px">
             <p class="label label-gold a">Ihr nächster Schritt</p>
             <h2 class="t1 tw" style="font-size:68px">Unverbindliche <span class="gold-grad">Potenzialanalyse</span></h2>
