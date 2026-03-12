@@ -92,13 +92,13 @@
         .main-stage{flex:1;position:relative;height:100vh;z-index:5}
 
         .slide-counter{
-            position:absolute;top:36px;right:36px;
+            position:absolute;top:24px;right:28px;
             background:rgba(24,24,27,0.6);backdrop-filter:blur(12px);
             border:1px solid var(--border);border-radius:30px;
-            padding:8px 16px;font-size:13px;color:var(--text-secondary);
+            padding:8px 16px;font-size:14px;color:var(--text-secondary);
             letter-spacing:2px;z-index:20;
         }
-        .nav-arrows{position:absolute;bottom:36px;right:36px;display:flex;gap:10px;z-index:20}
+        .nav-arrows{position:absolute;bottom:24px;right:28px;display:flex;gap:10px;z-index:20}
         .nav-btn{
             width:44px;height:44px;border-radius:50%;
             background:rgba(24,24,27,0.6);backdrop-filter:blur(12px);
@@ -110,14 +110,12 @@
 
         /* ── SLIDES ── */
         .slide{
-            position:absolute;inset:0;padding:28px 44px;
-            display:flex;flex-direction:column;justify-content:flex-start;
-            padding-top:50px;
+            position:absolute;inset:0;padding:40px 50px;
+            display:flex;flex-direction:column;justify-content:center;
             opacity:0;pointer-events:none;
             transition:opacity .8s cubic-bezier(.16,1,.3,1);z-index:1;
         }
         .slide.active{opacity:1;pointer-events:auto;z-index:5}
-        .slide.v-center{justify-content:center;padding-top:28px}
 
         .centered{align-items:center;text-align:center;max-width:1100px;margin:0 auto}
         .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;height:100%}
@@ -241,7 +239,7 @@
         }
 
         /* ── IMAGE ── */
-        .comp-img{width:100%;max-height:42vh;object-fit:contain;border-radius:8px;margin-top:10px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+        .comp-img{width:100%;max-height:48vh;object-fit:contain;border-radius:8px;margin-top:10px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
 
         /* ── ANIMATIONS ── */
         .a{transform:translateY(28px);opacity:0;transition:transform .8s cubic-bezier(.16,1,.3,1),opacity .8s ease}
@@ -295,7 +293,7 @@
     </div>
 
     <!-- ══════════ SLIDE 1 ─ INTRO ══════════ -->
-    <section class="slide v-center active">
+    <section class="slide active">
         <div class="centered">
             <p class="label label-gold a d1">An Praxisinhaber mit Selbstzahler-Behandlungen</p>
             <h1 class="t1 tw">Warum Ihre Website aktuell nur <span class="gold-grad">Geld verbrennt</span></h1>
@@ -388,7 +386,7 @@
 
     <!-- ══════════ SLIDE 4 ─ LOGISCHER BRUCH ══════════ -->
     <section class="slide">
-        <div class="centered" style="max-width:1200px">
+        <div class="centered" style="max-width:1100px">
             <p class="label label-gold a">Anzeige ≠ Zielseite</p>
             <h2 class="t1 tw">Der <span class="gold-grad">logische Bruch</span></h2>
             <p class="sub a d1">Wer auf eine konkrete Behandlung klickt, will keine Leistungsübersicht — sondern genau das, was versprochen wurde.</p>
@@ -498,14 +496,14 @@
     </section>
 
     <!-- ══════════ SLIDE 8 ─ MOBILE ══════════ -->
-    <section class="slide v-center">
+    <section class="slide">
         <div style="max-width:1100px;margin:0 auto;width:100%">
             <div style="text-align:center;margin-bottom:28px">
                 <p class="label label-gold a">Brutal unterschätzt</p>
                 <h2 class="t1 tw">Der <span class="gold-grad">Mobile-Faktor</span></h2>
             </div>
             <div class="card a d2" style="padding:20px;text-align:center">
-                <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1773316592/e8ea272f-d17a-4d9f-a5cb-6916e96ac43f.png" style="width:100%;max-height:58vh;object-fit:contain;border-radius:8px" alt="Mobile Vergleich">
+                <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1773316592/e8ea272f-d17a-4d9f-a5cb-6916e96ac43f.png" style="width:100%;max-height:62vh;object-fit:contain;border-radius:8px" alt="Mobile Vergleich">
                 <p style="margin-top:12px;font-size:12px;color:var(--text-muted);font-weight:300">Quelle: similarweb.com/platforms/germany</p>
             </div>
         </div>
@@ -545,7 +543,7 @@
     </section>
 
     <!-- ══════════ SLIDE 10 ─ CTA ══════════ -->
-    <section class="slide v-center">
+    <section class="slide">
         <div class="centered" style="max-width:1000px">
             <p class="label label-gold a">Ihr nächster Schritt</p>
             <h2 class="t1 tw" style="font-size:68px">Unverbindliche <span class="gold-grad">Potenzialanalyse</span></h2>
