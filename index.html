@@ -298,8 +298,36 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
                 <p class="body-text" style="max-width:700px;margin-bottom:36px;">Ausgewählte Einblicke in operative Dashboards und Kampagnen-Interfaces – als visuelle Referenz für die tägliche Arbeitsweise.</p>
             </div>
 
-            <!-- Row 1: FB Ads + Shopify (2 Spalten) -->
-            <div class="grid-2 fade-in fd2" style="margin-bottom:24px;">
+            <!-- Row 1: Full-width Slideshow Card (GA4 + Shopify Dashboard) -->
+            <div class="screenshot-card slideshow-card fade-in fd2" style="margin-bottom:24px;">
+                <div class="slideshow-wrap" onclick="openLightbox(this)" style="aspect-ratio:16/8;">
+                    <div class="slideshow-slide active">
+                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774263709/Screenshot_2026-03-23_120051_mf4ueu.png" alt="Analytics Dashboard" style="object-fit:contain;object-position:center;">
+                    </div>
+                    <div class="slideshow-slide">
+                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262517/400k_sales_shopify_fhcwqk.jpg" alt="Shopify Dashboard" style="object-fit:contain;object-position:center;">
+                    </div>
+                    <div class="zoom-hint" style="opacity:1;"><i class="fas fa-expand"></i></div>
+                    <div class="slideshow-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="screenshot-meta" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+                    <div>
+                        <div class="sc-label">Umsatz- & Traffic-Daten</div>
+                        <div class="sc-desc">Siebenstellige Umsätze innerhalb weniger Monate – belegt durch Analytics- und Shopify-Dashboards.</div>
+                    </div>
+                    <div style="text-align:right;">
+                        <div style="font-size:28px;font-weight:300;color:var(--gold);line-height:1;">7-stellig</div>
+                        <div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-top:4px;">Umsatz erreicht</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: 3 kleine Cards (FB Ads, Startup Award, Team) -->
+            <div class="grid-3 fade-in fd3">
+                <!-- FB Ads Manager -->
                 <div class="screenshot-card" onclick="openLightbox(this)">
                     <div class="screenshot-img">
                         <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262511/Screenshot_2024-09-12_102144_znghtf.png" alt="Facebook Ads Manager – Ad Spend Übersicht">
@@ -308,40 +336,6 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
                     <div class="screenshot-meta">
                         <div class="sc-label">Meta / Facebook Ads Manager</div>
                         <div class="sc-desc">Kampagnen-Dashboard mit über 700.000 € verwalteten Ad Spend – operativ gesteuert und kontinuierlich optimiert.</div>
-                    </div>
-                </div>
-                <div class="screenshot-card" onclick="openLightbox(this)">
-                    <div class="screenshot-img">
-                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262517/400k_sales_shopify_fhcwqk.jpg" alt="Shopify – Bestellungen & Umsatz">
-                        <div class="zoom-hint"><i class="fas fa-expand"></i></div>
-                    </div>
-                    <div class="screenshot-meta">
-                        <div class="sc-label">Shopify – Bestellungen & Umsatz</div>
-                        <div class="sc-desc">Über 10.000 Bestellungen via Facebook Ads in 3 Monaten – sechsstellige Umsätze direkt aus dem E-Commerce-Backend.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Row 2: Slideshow (GA4 + Shopify Dashboard) + Startup Award + Team (3 Spalten) -->
-            <div class="grid-3 fade-in fd3">
-                <!-- Slideshow Card -->
-                <div class="screenshot-card slideshow-card">
-                    <div class="slideshow-wrap" onclick="openLightbox(this)">
-                        <div class="slideshow-slide active">
-                            <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774263709/Screenshot_2026-03-23_120051_mf4ueu.png" alt="Analytics Dashboard">
-                        </div>
-                        <div class="slideshow-slide">
-                            <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262517/400k_sales_shopify_fhcwqk.jpg" alt="Shopify Dashboard">
-                        </div>
-                        <div class="zoom-hint" style="opacity:1;"><i class="fas fa-expand"></i></div>
-                        <div class="slideshow-dots">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                        </div>
-                    </div>
-                    <div class="screenshot-meta">
-                        <div class="sc-label">Umsatz- & Traffic-Daten</div>
-                        <div class="sc-desc">Siebenstellige Umsätze innerhalb weniger Monate – belegt durch Analytics- und Shopify-Dashboards.</div>
                     </div>
                 </div>
 
@@ -359,8 +353,8 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
 
                 <!-- Team Photo -->
                 <div class="screenshot-card" onclick="openLightbox(this)">
-                    <div class="screenshot-img" style="aspect-ratio:16/9;">
-                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262512/2024_09_12_07_38_IMG_6983_hkrkhk.png" alt="Team" style="object-position:top center;">
+                    <div class="screenshot-img" style="aspect-ratio:16/10;">
+                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774267662/Screenshot_2026-03-23_130639_mrdu8m.png" alt="Team" style="object-fit:cover;object-position:center top;">
                         <div class="zoom-hint"><i class="fas fa-expand"></i></div>
                     </div>
                     <div class="screenshot-meta">
