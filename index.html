@@ -383,14 +383,91 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
     <section class="section" id="section-2">
         <div class="fade-in fd1"><div class="section-divider"></div><span class="label">Bereich 02</span></div>
         <h2 class="t1 fade-in fd2" style="margin:20px 0 16px;">Vorschlag für den <span class="gold-text">Testaufbau</span> in Hamburg</h2>
-        <p class="sub fade-in fd3" style="max-width:780px;margin-bottom:12px;">Ein klar abgegrenzter, messbarer Kampagnen-Test – zugeschnitten auf PAAU Hamburg.</p>
-        <div class="placeholder-grid fade-in fd4">
-            <div class="placeholder-card"><div class="ph-icon"><i class="fas fa-crosshairs"></i></div><div class="ph-title">Zielgruppe</div><div class="ph-desc">Definition der relevanten Zielgruppe auf Basis von Behandlungsschwerpunkt und Standort.</div></div>
-            <div class="placeholder-card"><div class="ph-icon"><i class="fas fa-syringe"></i></div><div class="ph-title">Behandlungsfokus</div><div class="ph-desc">Auswahl der Behandlung(en) mit dem höchsten Testpotenzial für die erste Kampagne.</div></div>
-            <div class="placeholder-card"><div class="ph-icon"><i class="fas fa-bullhorn"></i></div><div class="ph-title">Kanal-Ansatz</div><div class="ph-desc">Empfehlung für den geeignetsten Werbekanal – basierend auf Zielgruppe und Behandlungstyp.</div></div>
-            <div class="placeholder-card"><div class="ph-icon"><i class="fas fa-filter"></i></div><div class="ph-title">Landingpage & Funnel-Logik</div><div class="ph-desc">Aufbau einer conversion-optimierten Strecke vom Klick bis zur Anfrage.</div></div>
+        <p class="sub fade-in fd3" style="max-width:920px;margin-bottom:20px;">Ein klar abgegrenzter, messbarer Kampagnentest – zugeschnitten auf PAAU Hamburg, mit Fokus auf eine konkrete Behandlung, eine klar definierte Zielgruppe, einen passenden Kanalansatz und eine nachvollziehbare Funnel-Logik.</p>
+
+        <!-- Intro-Absatz -->
+        <div class="card fade-in fd4" style="margin-bottom:36px;padding:28px 34px;border-left:3px solid var(--gold-border);">
+            <p style="font-size:clamp(15px,1.2vw,18px);font-weight:300;color:var(--text-secondary);line-height:1.55;">Für den Hamburger Testmarkt wird ein bewusst <strong style="font-weight:500;color:var(--text-primary);">klar abgegrenztes Setup</strong> empfohlen. Ziel ist ein operativ sauberer Kampagnentest mit nachvollziehbarer Messbarkeit, bevor weitere Behandlungen oder Zielgruppensegmente ergänzt werden.</p>
         </div>
-        <div class="coming-badge fade-in fd5"><i class="fas fa-clock"></i> Wird im nächsten Schritt konkret ausgearbeitet</div>
+
+        <!-- 4 Karten Grid (2×2) -->
+        <div class="grid-2 fade-in fd5" style="margin-bottom:0;">
+
+            <!-- 1. Behandlungsfokus -->
+            <div class="card gold-top">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+                    <div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-syringe"></i></div>
+                    <div>
+                        <div class="label" style="margin-bottom:2px;">Behandlungsfokus</div>
+                        <div style="font-size:clamp(20px,2vw,28px);font-weight:400;line-height:1.2;">Lippenunterspritzung mit Hyaluron</div>
+                    </div>
+                </div>
+                <div class="story-item" style="margin-bottom:12px;"><div class="story-dot"></div><div class="story-text">Klar verständliche, visuell gut kommunizierbare und stark nachgefragte Behandlung – ideal für den Einstieg.</div></div>
+                <div class="story-item" style="margin-bottom:12px;"><div class="story-dot"></div><div class="story-text">Bewusster Fokus auf <strong>nur eine Behandlung</strong>, damit der Test sauber messbar bleibt und keine Streuverluste entstehen.</div></div>
+                <div class="story-item" style="margin-bottom:0;"><div class="story-dot"></div><div class="story-text">Wird als klarer <strong>Entry-Point</strong> für die erste Kampagne genutzt.</div></div>
+            </div>
+
+            <!-- 2. Zielgruppe -->
+            <div class="card gold-top">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+                    <div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-crosshairs"></i></div>
+                    <div>
+                        <div class="label" style="margin-bottom:2px;">Zielgruppe</div>
+                        <div style="font-size:clamp(20px,2vw,28px);font-weight:400;line-height:1.2;">Lokal Hamburg · Frauen · 20+</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;">
+                    <span style="padding:6px 16px;border-radius:100px;border:1px solid var(--border);background:rgba(255,255,255,0.03);font-size:14px;font-weight:400;color:var(--text-secondary);"><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:6px;"></i>Hamburg</span>
+                    <span style="padding:6px 16px;border-radius:100px;border:1px solid var(--border);background:rgba(255,255,255,0.03);font-size:14px;font-weight:400;color:var(--text-secondary);"><i class="fas fa-venus" style="color:var(--gold);margin-right:6px;"></i>Weiblich</span>
+                    <span style="padding:6px 16px;border-radius:100px;border:1px solid var(--border);background:rgba(255,255,255,0.03);font-size:14px;font-weight:400;color:var(--text-secondary);"><i class="fas fa-calendar" style="color:var(--gold);margin-right:6px;"></i>Alter: 20+</span>
+                </div>
+                <p style="font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.5;padding:14px 18px;border-radius:10px;background:rgba(255,255,255,0.03);border:1px solid var(--border);"><i class="fas fa-info-circle" style="color:var(--gold);margin-right:8px;"></i>Weitere Zielgruppensegmente und Verfeinerungen werden im nächsten Schritt ergänzt.</p>
+            </div>
+
+            <!-- 3. Kanaleinsatz -->
+            <div class="card gold-top">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+                    <div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-bullhorn"></i></div>
+                    <div>
+                        <div class="label" style="margin-bottom:2px;">Kanaleinsatz</div>
+                        <div style="font-size:clamp(20px,2vw,28px);font-weight:400;line-height:1.2;">Meta Ads · Facebook · Instagram</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:16px;margin-bottom:20px;">
+                    <div style="flex:1;padding:18px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);text-align:center;">
+                        <i class="fab fa-facebook" style="font-size:28px;color:#1877F2;margin-bottom:8px;display:block;"></i>
+                        <div style="font-size:14px;font-weight:500;color:var(--text-secondary);">Facebook</div>
+                    </div>
+                    <div style="flex:1;padding:18px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);text-align:center;">
+                        <i class="fab fa-instagram" style="font-size:28px;color:#E4405F;margin-bottom:8px;display:block;"></i>
+                        <div style="font-size:14px;font-weight:500;color:var(--text-secondary);">Instagram</div>
+                    </div>
+                    <div style="flex:1;padding:18px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);text-align:center;">
+                        <i class="fab fa-meta" style="font-size:28px;color:#0668E1;margin-bottom:8px;display:block;"></i>
+                        <div style="font-size:14px;font-weight:500;color:var(--text-secondary);">Meta Ads</div>
+                    </div>
+                </div>
+                <p style="font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.45;">Der Fokus liegt auf einem lokal ausgerichteten Paid-Social-Test mit klarer Messbarkeit – Sichtbarkeit und qualifizierte Anfragen über bezahlte Reichweite.</p>
+            </div>
+
+            <!-- 4. Landingpage / Funnel-Logik -->
+            <div class="card gold-top">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+                    <div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-filter"></i></div>
+                    <div>
+                        <div class="label" style="margin-bottom:2px;">Landingpage / Funnel-Logik</div>
+                        <div style="font-size:clamp(20px,2vw,28px);font-weight:400;line-height:1.2;">Dedizierter Behandlungs-Funnel</div>
+                    </div>
+                </div>
+                <div class="story-item" style="margin-bottom:12px;"><div class="story-dot"></div><div class="story-text">Für den Test wird eine <strong>dedizierte Funnel-Strecke</strong> aufgebaut, die inhaltlich und visuell direkt auf die Behandlung Lippenunterspritzung mit Hyaluron zugeschnitten ist.</div></div>
+                <div class="story-item" style="margin-bottom:20px;"><div class="story-dot"></div><div class="story-text">Klare, conversion-orientierte Strecke vom Anzeigenkontakt bis zur Anfrage – keine generische Landingpage, sondern <strong>behandlungsspezifisch</strong> aufgebaut.</div></div>
+                <a href="https://perspectivefunnel.co/69af00a1d11b74a33ceccad6/69af020908c4994a26c9edbe/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:12px;background:linear-gradient(135deg,rgba(249,193,14,0.12) 0%,rgba(249,193,14,0.04) 100%);border:1px solid var(--gold-border);color:var(--gold);font-size:15px;font-weight:500;text-decoration:none;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(249,193,14,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+                    <i class="fas fa-external-link-alt" style="font-size:13px;"></i>
+                    So könnte der Funnel konkret aussehen
+                </a>
+            </div>
+
+        </div>
     </section>
 
     <!-- ═══ SECTION 3 ═══ -->
