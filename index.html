@@ -73,8 +73,9 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
 .hero-badge i { font-size: 10px; }
 .hero .t1 { max-width: 900px; margin-bottom: 28px; }
 .hero .sub { max-width: 740px; margin-bottom: 48px; }
-.hero-sender { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-muted); font-weight: 400; }
-.hero-sender .sender-dot { width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, var(--gold) 0%, rgba(249,193,14,0.5) 100%); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: var(--bg-base); }
+.hero-logos { display: flex; align-items: center; justify-content: center; gap: 24px; }
+.hero-logo { height: 38px; width: auto; opacity: 0.85; filter: brightness(1.1); }
+.hero-x { font-size: 20px; font-weight: 300; color: var(--text-muted); }
 .hero-scroll-hint { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text-muted); font-size: 12px; font-weight: 400; letter-spacing: 0.06em; animation: float-hint 2.5s ease infinite; }
 @keyframes float-hint { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
 
@@ -108,6 +109,25 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
 .team-card .team-meta .sc-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
 .team-card .team-meta p { font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.4; }
 
+/* KPI Bar */
+.kpi-bar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 36px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.kpi-item { text-align: center; padding: 8px 4px; }
+.kpi-icon { width: 48px; height: 48px; border-radius: 14px; background: rgba(249,193,14,0.07); border: 1px solid var(--gold-border); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; color: var(--gold); font-size: 20px; }
+.kpi-value { font-size: clamp(22px, 2.2vw, 32px); font-weight: 300; color: var(--gold); margin-bottom: 6px; line-height: 1; }
+.kpi-label { font-size: 12px; font-weight: 400; color: var(--text-muted); line-height: 1.35; }
+
+/* Origin Grid */
+.origin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+/* Slideshow */
+.slideshow-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; border-bottom: 1px solid var(--border); cursor: pointer; background: rgba(255,255,255,0.02); }
+.slideshow-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; }
+.slideshow-slide.active { opacity: 1; }
+.slideshow-slide img { width: 100%; height: 100%; object-fit: contain; object-position: top center; background: rgba(255,255,255,0.03); }
+.slideshow-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 2; }
+.slideshow-dots .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25); transition: all 0.3s ease; }
+.slideshow-dots .dot.active { background: var(--gold); transform: scale(1.2); }
+
 /* Screenshots */
 .screenshot-card { border-radius: 16px; background: var(--panel); border: 1px solid var(--border); overflow: hidden; transition: transform 0.4s cubic-bezier(.16,1,.3,1), box-shadow 0.4s ease; cursor: pointer; }
 .screenshot-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
@@ -119,19 +139,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
 .screenshot-meta .sc-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 .screenshot-meta .sc-desc { font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.4; }
 
-/* Wide Screenshot */
-.screenshot-wide { border-radius: 16px; background: var(--panel); border: 1px solid var(--border); overflow: hidden; transition: transform 0.4s cubic-bezier(.16,1,.3,1), box-shadow 0.4s ease; cursor: pointer; }
-.screenshot-wide:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-.screenshot-wide .sw-img { width: 100%; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
-.screenshot-wide .sw-img img { width: 100%; height: auto; display: block; }
-.screenshot-wide .sw-img .zoom-hint { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 8px; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 13px; opacity: 0; transition: opacity 0.3s ease; }
-.screenshot-wide:hover .zoom-hint { opacity: 1; }
-.screenshot-wide .sw-meta { padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-.screenshot-wide .sw-meta .sc-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-.screenshot-wide .sw-meta .sc-desc { font-size: 14px; font-weight: 300; color: var(--text-muted); }
-.screenshot-wide .sw-meta .sw-stat { text-align: right; }
-.screenshot-wide .sw-meta .sw-stat .stat-num { font-size: 28px; font-weight: 300; color: var(--gold); line-height: 1; }
-.screenshot-wide .sw-meta .sw-stat .stat-sub { font-size: 12px; font-weight: 500; color: var(--text-muted); margin-top: 4px; }
+/* (screenshot-wide removed – no longer used) */
 
 /* Relevance */
 .relevance-box { border-radius: 16px; background: linear-gradient(135deg, rgba(249,193,14,0.04) 0%, rgba(24,24,27,0.85) 100%); border: 1px solid var(--gold-border); padding: 40px; margin-top: 60px; }
@@ -173,12 +181,15 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
     .mobile-toggle { display: flex; }
     .main { margin-left: 0; }
     .grid-narrative { grid-template-columns: 1fr; }
+    .kpi-bar { grid-template-columns: repeat(3, 1fr); }
+    .origin-grid { grid-template-columns: 1fr; gap: 0; }
 }
 @media (max-width: 640px) {
     .section { padding: 60px 24px; }
     .hero { padding: 60px 24px; }
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
     .card { padding: 24px; }
+    .kpi-bar { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -213,49 +224,81 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
         <div class="fade-in fd1"><div class="hero-badge"><i class="fas fa-shield-halved"></i> Case-specific Deck · Individuell vorbereitet</div></div>
         <h1 class="t1 fade-in fd2">Kampagnen-Präsentation<br>für <span class="gold-text">Dr. Edouard Manassa</span></h1>
         <p class="sub fade-in fd3">Strukturiert aufbereitet: Referenzen, Fallbeispiel, möglicher Testaufbau für Hamburg sowie die operative Grundlage für Reporting, Datenhoheit und Account-Zugriffe.</p>
-        <div class="hero-sender fade-in fd4"><div class="sender-dot">VS</div><span>Verum Systems · Präsentation für PAAU Hamburg</span></div>
+        <div class="hero-logos fade-in fd4">
+            <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1769866535/Transparent-02_onkhlb.png" alt="Verum Systems" class="hero-logo">
+            <span class="hero-x">×</span>
+            <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774267205/paau-logo-main-gray_p3udoj.svg" alt="PAAU" class="hero-logo">
+        </div>
         <div class="hero-scroll-hint"><span>Weiter scrollen</span><i class="fas fa-chevron-down"></i></div>
     </section>
 
     <!-- ═══ SECTION 1 ═══ -->
     <section class="section" id="section-1">
+        <!-- Header -->
         <div class="fade-in fd1"><div class="section-divider"></div><span class="label">Fallbeispiel 01</span></div>
         <h2 class="t1 fade-in fd2" style="margin:20px 0 16px;">Escape Welt – <span class="gold-text">Operative Skalierung</span><br>& Performance Marketing</h2>
-        <p class="sub fade-in fd3" style="max-width:860px;margin-bottom:56px;">Ein reales Beispiel, wie datenbasierte Kampagnen, Funnel-Optimierung und konsequentes Creative Testing in einem stark wachsenden Unternehmen operativ eingesetzt wurden.</p>
+        <p class="sub fade-in fd3" style="max-width:920px;margin-bottom:48px;">Ein reales Beispiel, wie datenbasierte Kampagnen, Funnel-Optimierung und konsequentes Creative Testing in einem stark wachsenden Unternehmen operativ eingesetzt wurden.</p>
 
-        <!-- Zweispaltiger Hauptblock -->
-        <div class="grid-narrative">
-            <div class="card gold-top fade-in fd3">
-                <span class="label" style="margin-bottom:20px;display:block;">Hintergrund & Entwicklung</span>
-                <div class="story-item"><div class="story-dot"></div><div class="story-text">Einstieg bei <strong>Escape Welt</strong> als Junior Online-Marketing-Manager in der frühen Wachstumsphase – zu einem Zeitpunkt, als die Strukturen im Marketing noch vollständig aufgebaut werden mussten.</div></div>
-                <div class="story-item"><div class="story-dot"></div><div class="story-text">Über einen Zeitraum von <strong>rund vier Jahren</strong> maßgeblich am Aufbau des gesamten Performance-Marketing-Bereichs beteiligt: Paid Ads, Kampagnenarchitektur, Tracking-Infrastruktur, Funnel-Logik und Landing-Page-Systeme.</div></div>
-                <div class="story-item"><div class="story-dot"></div><div class="story-text">Weiterentwicklung zur Rolle <strong>Head of Marketing</strong> – mit operativer Verantwortung für die strategische Steuerung und Skalierung der Kampagnen über alle relevanten Kanäle.</div></div>
-                <div class="story-item"><div class="story-dot"></div><div class="story-text">Internationale <strong>Expansion in 18 Länder</strong>, mit jeweils lokalisierten Kampagnen, kreativen Iterationen und marktspezifischer Anpassung der Funnels und Werbemittel.</div></div>
-                <div class="story-item"><div class="story-dot"></div><div class="story-text">Fokus auf <strong>datenbasierte Entscheidungen</strong>: kontinuierliches Creative Testing, Conversion-Rate-Optimierung, A/B-Tests und iterative Verbesserung der gesamten Kampagnenstruktur.</div></div>
+        <!-- ── KPI Icons Bar (6 Highlights) ── -->
+        <div class="kpi-bar fade-in fd4">
+            <div class="kpi-item">
+                <div class="kpi-icon"><i class="fas fa-puzzle-piece"></i></div>
+                <div class="kpi-value">300k+</div>
+                <div class="kpi-label">Verkaufte Rätselspiele<br>durch Online-Marketing</div>
             </div>
-            <div>
-                <div class="grid-2" style="gap:16px;">
-                    <div class="card stat-card fade-in fd3"><div class="stat-icon"><i class="fas fa-chart-line"></i></div><div class="stat-value">4 Jahre</div><div class="stat-label">Operative Wachstumskurve<br>vom Aufbau bis zur Skalierung</div></div>
-                    <div class="card stat-card fade-in fd4"><div class="stat-icon"><i class="fas fa-globe-europe"></i></div><div class="stat-value">18</div><div class="stat-label">Länder, in die skaliert<br>und lokalisiert wurde</div></div>
-                    <div class="card stat-card fade-in fd5"><div class="stat-icon"><i class="fas fa-coins"></i></div><div class="stat-value">700k+</div><div class="stat-label">Ad Spend operativ<br>verwaltet und optimiert</div></div>
-                    <div class="card stat-card fade-in fd6"><div class="stat-icon"><i class="fas fa-shopping-bag"></i></div><div class="stat-value">10k+</div><div class="stat-label">Bestellungen über<br>den Online-Shop generiert</div></div>
+            <div class="kpi-item">
+                <div class="kpi-icon"><i class="fab fa-instagram"></i></div>
+                <div class="kpi-value">11.000</div>
+                <div class="kpi-label">Follower<br>auf Instagram</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-icon"><i class="fas fa-star"></i></div>
+                <div class="kpi-value">10.000+</div>
+                <div class="kpi-label">Kundenbewertungen<br>& Video-Reviews</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-icon"><i class="fab fa-youtube"></i></div>
+                <div class="kpi-value">6 Mio.+</div>
+                <div class="kpi-label">Views<br>auf YouTube</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-icon"><i class="fas fa-globe"></i></div>
+                <div class="kpi-value">40 Mio.+</div>
+                <div class="kpi-label">Menschen in 34 Ländern<br>durch Werbemaßnahmen erreicht</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-icon"><i class="fas fa-coins"></i></div>
+                <div class="kpi-value">700k €</div>
+                <div class="kpi-label">Ad Spend verwaltet<br>und optimiert</div>
+            </div>
+        </div>
+
+        <!-- ── Ursprungsgeschichte ── -->
+        <div class="origin-card card gold-top fade-in fd3" style="margin-top:56px;">
+            <span class="label" style="margin-bottom:18px;display:block;">Hintergrund & Entstehung</span>
+            <div class="origin-grid">
+                <div>
+                    <div class="story-item"><div class="story-dot"></div><div class="story-text">Escape Welt betrieb ursprünglich eine <strong>lokale Escape-Room-Filiale in Leipzig</strong>. Mit dem Beginn der Corona-Pandemie musste der stationäre Betrieb eingestellt werden.</div></div>
+                    <div class="story-item"><div class="story-dot"></div><div class="story-text">Daraus entstand die Idee, das <strong>Escape-Room-Erlebnis nach Hause zu bringen</strong> – in Form von hochwertigen Rätselspielen und Puzzle-Boxen für den Versand.</div></div>
+                    <div class="story-item"><div class="story-dot"></div><div class="story-text">Das gesamte <strong>Online-Marketing wurde von Grund auf neu aufgebaut</strong>: Facebook Ads, Google Ads, Omnichannel-Marketing, E-Mail-Marketing, Funnel-Systeme, Landingpages und Tracking-Infrastruktur.</div></div>
                 </div>
-                <div class="team-card fade-in fd7" style="margin-top:16px;">
-                    <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262512/2024_09_12_07_38_IMG_6983_hkrkhk.png" alt="Escape Welt Team">
-                    <div class="team-meta"><div class="sc-label">Team & Arbeitsumfeld</div><p>Operative Zusammenarbeit im Escape Welt Marketing-Team – von der Kampagnenplanung bis zur kreativen Umsetzung.</p></div>
+                <div>
+                    <div class="story-item"><div class="story-dot"></div><div class="story-text">In <strong>zentraler Rolle</strong> maßgeblich an der Skalierung beteiligt – vom Junior Online-Marketing-Manager zum <strong>Head of Marketing</strong> über vier Jahre.</div></div>
+                    <div class="story-item"><div class="story-dot"></div><div class="story-text">Internationale <strong>Expansion in 34 Länder</strong> mit lokalisierten Kampagnen, kreativen Iterationen und marktspezifischer Funnel-Anpassung.</div></div>
+                    <div class="story-item"><div class="story-dot"></div><div class="story-text">Fokus auf <strong>datenbasierte Entscheidungen</strong>: kontinuierliches Creative Testing, Conversion-Optimierung und skalierbare Kampagnenarchitektur – B2C-Rätselspielzeuge als Kernprodukt.</div></div>
                 </div>
             </div>
         </div>
 
-        <!-- Screenshot-Proof-Sektion -->
-        <div style="margin-top:72px;">
+        <!-- ── Performance-Belege ── -->
+        <div style="margin-top:64px;">
             <div class="fade-in fd1">
                 <span class="label">Operative Nachweise</span>
                 <h3 class="t2" style="margin:12px 0 8px;">Performance-Belege aus dem Kampagnenumfeld</h3>
                 <p class="body-text" style="max-width:700px;margin-bottom:36px;">Ausgewählte Einblicke in operative Dashboards und Kampagnen-Interfaces – als visuelle Referenz für die tägliche Arbeitsweise.</p>
             </div>
 
-            <!-- Row 1: FB Ads + Shopify Bestellungen -->
+            <!-- Row 1: FB Ads + Shopify (2 Spalten) -->
             <div class="grid-2 fade-in fd2" style="margin-bottom:24px;">
                 <div class="screenshot-card" onclick="openLightbox(this)">
                     <div class="screenshot-img">
@@ -269,7 +312,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
                 </div>
                 <div class="screenshot-card" onclick="openLightbox(this)">
                     <div class="screenshot-img">
-                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262517/400k_sales_shopify_fhcwqk.jpg" alt="Shopify – Umsatz & Bestellungen">
+                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262517/400k_sales_shopify_fhcwqk.jpg" alt="Shopify – Bestellungen & Umsatz">
                         <div class="zoom-hint"><i class="fas fa-expand"></i></div>
                     </div>
                     <div class="screenshot-meta">
@@ -279,49 +322,50 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
                 </div>
             </div>
 
-            <!-- Row 2: Full-width Shopify Case Study -->
-            <div class="screenshot-wide fade-in fd3" onclick="openLightbox(this)" style="margin-bottom:24px;">
-                <div class="sw-img">
-                    <!-- HINWEIS: Dieses Bild (Shopify Overview Dashboard) auf Cloudinary hochladen und URL hier einfügen -->
-                    <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262517/400k_sales_shopify_fhcwqk.jpg" alt="Shopify Overview Dashboard">
-                    <div class="zoom-hint"><i class="fas fa-expand"></i></div>
+            <!-- Row 2: Slideshow (GA4 + Shopify Dashboard) + Startup Award + Team (3 Spalten) -->
+            <div class="grid-3 fade-in fd3">
+                <!-- Slideshow Card -->
+                <div class="screenshot-card slideshow-card">
+                    <div class="slideshow-wrap" onclick="openLightbox(this)">
+                        <div class="slideshow-slide active">
+                            <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774263709/Screenshot_2026-03-23_120051_mf4ueu.png" alt="Analytics Dashboard">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262517/400k_sales_shopify_fhcwqk.jpg" alt="Shopify Dashboard">
+                        </div>
+                        <div class="zoom-hint" style="opacity:1;"><i class="fas fa-expand"></i></div>
+                        <div class="slideshow-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="screenshot-meta">
+                        <div class="sc-label">Umsatz- & Traffic-Daten</div>
+                        <div class="sc-desc">Siebenstellige Umsätze innerhalb weniger Monate – belegt durch Analytics- und Shopify-Dashboards.</div>
+                    </div>
                 </div>
-                <div class="sw-meta">
-                    <div><div class="sc-label">Case: Shopify × Facebook Ads</div><div class="sc-desc">Durch gezielte Facebook-Ads-Kampagnen innerhalb von 3 Monaten über 10.000 Bestellungen im Shopify-Store generiert – operativ aufgebaut, skaliert und datenbasiert optimiert.</div></div>
-                    <div class="sw-stat"><div class="stat-num">10k+</div><div class="stat-sub">Bestellungen in 3 Monaten</div></div>
-                </div>
-            </div>
 
-            <!-- Row 3: GA4 + Kampagnen-Einblick + Business-Übersicht -->
-            <div class="grid-3 fade-in fd4">
+                <!-- Startup Award -->
                 <div class="screenshot-card" onclick="openLightbox(this)">
                     <div class="screenshot-img">
-                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774263709/Screenshot_2026-03-23_120051_mf4ueu.png" alt="Google Analytics 4 Dashboard">
+                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262511/Screenshot_2024-09-11_224134_flqbld.png" alt="Startup of the Year 2023 – 2. Platz">
                         <div class="zoom-hint"><i class="fas fa-expand"></i></div>
                     </div>
                     <div class="screenshot-meta">
-                        <div class="sc-label">Google Analytics 4</div>
-                        <div class="sc-desc">Dashboard-Auszug mit Traffic-Quellen und Nutzerverhalten als Grundlage datenbasierter Optimierung.</div>
+                        <div class="sc-label">Startup of the Year 2023</div>
+                        <div class="sc-desc">Escape Welt erreichte den 2. Platz beim Sächsischen Startup-of-the-Year-Wettbewerb – Anerkennung für nachhaltiges Wachstum.</div>
                     </div>
                 </div>
+
+                <!-- Team Photo -->
                 <div class="screenshot-card" onclick="openLightbox(this)">
-                    <div class="screenshot-img">
-                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262511/Screenshot_2024-09-11_224134_flqbld.png" alt="Escape Welt Kampagnen-Einblick">
+                    <div class="screenshot-img" style="aspect-ratio:16/9;">
+                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262512/2024_09_12_07_38_IMG_6983_hkrkhk.png" alt="Team" style="object-position:top center;">
                         <div class="zoom-hint"><i class="fas fa-expand"></i></div>
                     </div>
                     <div class="screenshot-meta">
-                        <div class="sc-label">Kampagnen-Einblick</div>
-                        <div class="sc-desc">Operativer Einblick in Kampagnenstruktur und kreative Iterationen im laufenden Betrieb.</div>
-                    </div>
-                </div>
-                <div class="screenshot-card" onclick="openLightbox(this)">
-                    <div class="screenshot-img">
-                        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262511/Screenshot_2024-09-12_104926_jle4fr.png" alt="Business Übersicht">
-                        <div class="zoom-hint"><i class="fas fa-expand"></i></div>
-                    </div>
-                    <div class="screenshot-meta">
-                        <div class="sc-label">Business-Übersicht</div>
-                        <div class="sc-desc">Zusätzliche Referenzpunkte zum operativen Geschäft und der Unternehmensstruktur.</div>
+                        <div class="sc-label">Team & operative Zusammenarbeit</div>
+                        <div class="sc-desc">Von der Kampagnenplanung bis zur kreativen Umsetzung – direkte operative Einbindung im Marketing-Team.</div>
                     </div>
                 </div>
             </div>
@@ -442,6 +486,22 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 document.querySelector('.lightbox-close').addEventListener('click', e => { e.stopPropagation(); closeLightbox(); });
+
+// Slideshow
+(function() {
+    const wrap = document.querySelector('.slideshow-wrap');
+    if (!wrap) return;
+    const slides = wrap.querySelectorAll('.slideshow-slide');
+    const dots = wrap.querySelectorAll('.dot');
+    let current = 0;
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }, 3500);
+})();
 </script>
 </body>
 </html>
