@@ -57,9 +57,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg-base);color:var(--text-p
 .hero-badge i{font-size:10px}
 .hero .t1{max-width:900px;margin-bottom:28px}
 .hero .sub{max-width:740px;margin-bottom:48px}
-.hero-logos{display:flex;align-items:center;justify-content:center;gap:24px}
-.hero-logo{height:38px;width:auto;opacity:0.85;filter:brightness(1.1)}
-.hero-x{font-size:20px;font-weight:300;color:var(--text-muted)}
+.hero-logos{display:flex;align-items:center;justify-content:center;gap:32px}
+.hero-logo{height:60px;width:auto;opacity:0.9;filter:brightness(1.1)}
+.hero-x{font-size:24px;font-weight:300;color:var(--text-muted)}
 .hero-scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-muted);font-size:12px;font-weight:400;letter-spacing:0.06em;animation:float-hint 2.5s ease infinite}
 @keyframes float-hint{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
@@ -158,8 +158,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg-base);color:var(--text-p
 
 /* Mobile */
 .mobile-toggle{display:none;position:fixed;top:16px;left:16px;z-index:200;width:44px;height:44px;border-radius:12px;background:rgba(10,10,11,0.9);border:1px solid var(--border);color:white;font-size:18px;cursor:pointer;align-items:center;justify-content:center}
-@media(max-width:1024px){.sidebar{transform:translateX(-100%)}.sidebar.open{transform:translateX(0)}.mobile-toggle{display:flex}.main{margin-left:0}.grid-narrative{grid-template-columns:1fr}.kpi-bar{grid-template-columns:repeat(3,1fr)}.origin-grid{grid-template-columns:1fr;gap:0}.s3-grid-4{grid-template-columns:repeat(2,1fr)!important}}
-@media(max-width:640px){.section{padding:60px 24px}.hero{padding:60px 24px}.grid-2,.grid-3{grid-template-columns:1fr}.card{padding:24px}.kpi-bar{grid-template-columns:repeat(2,1fr)}.s3-grid-4{grid-template-columns:1fr!important}.case-header{padding:18px 20px;gap:14px}.case-body-inner{padding:0 20px 28px}}
+@media(max-width:1024px){.sidebar{transform:translateX(-100%)}.sidebar.open{transform:translateX(0)}.mobile-toggle{display:flex}.main{margin-left:0}.grid-narrative{grid-template-columns:1fr}.kpi-bar{grid-template-columns:repeat(3,1fr)}.origin-grid{grid-template-columns:1fr;gap:0}.s3-grid-4{grid-template-columns:repeat(2,1fr)!important}.hero-logo{height:50px}}
+@media(max-width:640px){.section{padding:60px 24px}.hero{padding:60px 24px}.grid-2,.grid-3{grid-template-columns:1fr}.card{padding:24px}.kpi-bar{grid-template-columns:repeat(2,1fr)}.s3-grid-4{grid-template-columns:1fr!important}.case-header{padding:18px 20px;gap:14px}.case-body-inner{padding:0 20px 28px}.hero-logo{height:36px}.hero-logos{gap:20px}.hero-x{font-size:18px}.t1{font-size:clamp(28px,8vw,36px)}}
 </style>
 </head>
 <body>
@@ -372,7 +372,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg-base);color:var(--text-p
         <div class="card stat-card"><div class="stat-icon"><i class="fas fa-wallet"></i></div><div class="stat-value">700 €</div><div class="stat-label">Testbudget<br>gesamt</div></div>
         <div class="card stat-card"><div class="stat-icon"><i class="fas fa-calendar-alt"></i></div><div class="stat-value">14 Tage</div><div class="stat-label">Aktive Kampagnendauer<br><span style="font-size:11px;color:var(--text-muted);">Die Werbung läuft 2 Wochen</span></div></div>
         <div class="card stat-card"><div class="stat-icon"><i class="fas fa-clock"></i></div><div class="stat-value">~50 €</div><div class="stat-label">Tagesbudget<br>(700 € / 14 Tage)</div></div>
-        <div class="card stat-card"><div class="stat-icon"><i class="fas fa-tag"></i></div><div class="stat-value">20–30 €</div><div class="stat-label">Zielkorridor CPL<br><span style="font-size:11px;color:var(--text-muted);">Cost per Lead / Kosten pro Eintragung</span><br><span style="font-size:11px;color:var(--text-muted);">(Schätzwert)</span></div></div>
+        <div class="card stat-card"><div class="stat-icon"><i class="fas fa-tag"></i></div><div class="stat-value">15–30 €</div><div class="stat-label">Zielkorridor CPL<br><span style="font-size:11px;color:var(--text-muted);">Cost per Lead / Kosten pro Eintragung</span><br><span style="font-size:11px;color:var(--text-muted);">(Schätzwert)</span></div></div>
     </div>
     <div class="card fade-in fd5" style="margin-bottom:36px;">
         <span class="label" style="display:block;margin-bottom:20px;">Wie der Test operativ geführt wird</span>
@@ -388,12 +388,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg-base);color:var(--text-p
     <div class="card gold-top fade-in fd6" style="margin-bottom:36px;">
         <span class="label" style="display:block;margin-bottom:16px;">Erwartbare Interessenten für die Lippenunterspritzung</span>
         <div style="display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:140px;text-align:center;padding:20px 16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);"><div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-bottom:6px;">bei 15 € pro Anfrage</div><div style="font-size:clamp(24px,2.5vw,36px);font-weight:300;color:var(--gold);">~47</div><div style="font-size:12px;font-weight:400;color:var(--text-muted);">Interessenten</div></div>
             <div style="flex:1;min-width:140px;text-align:center;padding:20px 16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);"><div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-bottom:6px;">bei 20 € pro Anfrage</div><div style="font-size:clamp(24px,2.5vw,36px);font-weight:300;color:var(--gold);">~35</div><div style="font-size:12px;font-weight:400;color:var(--text-muted);">Interessenten</div></div>
-            <div style="flex:1;min-width:140px;text-align:center;padding:20px 16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);"><div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-bottom:6px;">bei 25 € pro Anfrage</div><div style="font-size:clamp(24px,2.5vw,36px);font-weight:300;color:var(--gold);">~28</div><div style="font-size:12px;font-weight:400;color:var(--text-muted);">Interessenten</div></div>
             <div style="flex:1;min-width:140px;text-align:center;padding:20px 16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);"><div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-bottom:6px;">bei 30 € pro Anfrage</div><div style="font-size:clamp(24px,2.5vw,36px);font-weight:300;color:var(--gold);">~23</div><div style="font-size:12px;font-weight:400;color:var(--text-muted);">Interessenten</div></div>
         </div>
         <div style="padding:20px 24px;border-radius:12px;background:rgba(249,193,14,0.06);border:1px solid var(--gold-border);">
-            <p style="font-size:clamp(16px,1.3vw,20px);font-weight:400;color:var(--text-primary);line-height:1.5;">Möglicher Zielkorridor: ca. <strong style="font-weight:600;color:var(--gold);">23 bis 35 Interessenten für eine Lippenunterspritzung</strong>, abhängig von Angebotsresonanz, Qualität der erstellten Videos und Follow-up-Geschwindigkeit der Filial-Mitarbeiter in Hamburg.</p>
+            <p style="font-size:clamp(16px,1.3vw,20px);font-weight:400;color:var(--text-primary);line-height:1.5;">Möglicher Zielkorridor: ca. <strong style="font-weight:600;color:var(--gold);">23 bis 47 Interessenten für eine Lippenunterspritzung</strong>, abhängig von Angebotsresonanz, lokalen Faktoren, Wettbewerbsdichte im selben Markt und Qualität der erstellten Werbemittel.</p>
         </div>
     </div>
     <div class="fade-in fd7" style="padding:22px 28px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid var(--border);">
@@ -474,7 +474,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg-base);color:var(--text-p
 <!-- Footer -->
 <footer style="padding:60px 48px 40px;text-align:center;border-top:1px solid var(--border);max-width:1200px;margin:0 auto;">
     <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1772716614/High_res-02_rootis.jpg" alt="Verum Systems" style="height:32px;width:auto;margin:0 auto 16px;display:block;filter:brightness(1.1);opacity:0.7;">
-    <p style="font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.5;">Individuell vorbereitet für Dr. Edouard Manassa / PAAU Hamburg<br>Bei Fragen oder für den nächsten Schritt – einfach antworten.</p>
+    <p style="font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.5;">Individuell vorbereitet für Dr. Edouard Manassa / PAAU Hamburg</p>
 </footer>
 </main>
 
