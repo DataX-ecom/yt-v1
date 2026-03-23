@@ -103,7 +103,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
 /* Team */
 .team-card { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--panel); transition: transform 0.4s cubic-bezier(.16,1,.3,1), box-shadow 0.4s ease; }
 .team-card:hover { transform: translateY(-3px); box-shadow: 0 16px 50px rgba(0,0,0,0.5); }
-.team-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.team-card img { width: 100%; height: 280px; object-fit: cover; object-position: top center; display: block; }
 .team-card .team-meta { padding: 18px 24px; }
 .team-card .team-meta .sc-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
 .team-card .team-meta p { font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.4; }
@@ -111,8 +111,8 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
 /* Screenshots */
 .screenshot-card { border-radius: 16px; background: var(--panel); border: 1px solid var(--border); overflow: hidden; transition: transform 0.4s cubic-bezier(.16,1,.3,1), box-shadow 0.4s ease; cursor: pointer; }
 .screenshot-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-.screenshot-img { width: 100%; aspect-ratio: 16/10; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
-.screenshot-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.screenshot-img { width: 100%; aspect-ratio: 16/9; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
+.screenshot-img img { width: 100%; height: 100%; object-fit: contain; object-position: top center; display: block; background: rgba(255,255,255,0.03); }
 .screenshot-img .zoom-hint { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 8px; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 13px; opacity: 0; transition: opacity 0.3s ease; }
 .screenshot-card:hover .zoom-hint { opacity: 1; }
 .screenshot-meta { padding: 20px 24px; }
@@ -273,13 +273,13 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
                         <div class="zoom-hint"><i class="fas fa-expand"></i></div>
                     </div>
                     <div class="screenshot-meta">
-                        <div class="sc-label">Shopify – Umsatz & Bestellungen</div>
-                        <div class="sc-desc">Über 10.000 Bestellungen und sechsstellige Umsätze – direkt aus dem operativen E-Commerce-Backend.</div>
+                        <div class="sc-label">Shopify – Bestellungen & Umsatz</div>
+                        <div class="sc-desc">Über 10.000 Bestellungen via Facebook Ads in 3 Monaten – sechsstellige Umsätze direkt aus dem E-Commerce-Backend.</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Row 2: Full-width Shopify Overview Dashboard -->
+            <!-- Row 2: Full-width Shopify Case Study -->
             <div class="screenshot-wide fade-in fd3" onclick="openLightbox(this)" style="margin-bottom:24px;">
                 <div class="sw-img">
                     <!-- HINWEIS: Dieses Bild (Shopify Overview Dashboard) auf Cloudinary hochladen und URL hier einfügen -->
@@ -287,8 +287,8 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(
                     <div class="zoom-hint"><i class="fas fa-expand"></i></div>
                 </div>
                 <div class="sw-meta">
-                    <div><div class="sc-label">Shopify – Overview Dashboard</div><div class="sc-desc">Gesamtübersicht über Sales, Sessions, Conversion Rate und Bestellvolumen im Vergleichszeitraum.</div></div>
-                    <div class="sw-stat"><div class="stat-num">4,05 %</div><div class="stat-sub">Conversion Rate</div></div>
+                    <div><div class="sc-label">Case: Shopify × Facebook Ads</div><div class="sc-desc">Durch gezielte Facebook-Ads-Kampagnen innerhalb von 3 Monaten über 10.000 Bestellungen im Shopify-Store generiert – operativ aufgebaut, skaliert und datenbasiert optimiert.</div></div>
+                    <div class="sw-stat"><div class="stat-num">10k+</div><div class="stat-sub">Bestellungen in 3 Monaten</div></div>
                 </div>
             </div>
 
