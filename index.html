@@ -276,21 +276,16 @@ img { display: block; max-width: 100%; }
   height: 24px;
   width: auto;
 }
-.nav-cta {
-  background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
-  color: var(--bg-deep);
-  padding: 9px 20px;
-  border-radius: var(--r-pill);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4), 0 4px 12px rgba(0,0,0,0.2);
-  transition: opacity 0.15s, transform 0.15s;
+.nav-burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--gold-light);
+  transition: opacity 0.2s;
 }
-.nav-cta:active { transform: scale(0.95); opacity: 0.85; }
+.nav-burger:active { opacity: 0.6; }
 
 /* ============================================================
    HERO 
@@ -715,27 +710,28 @@ img { display: block; max-width: 100%; }
   color: var(--text-muted); line-height: 1.65; font-weight: 300;
 }
 .nachsorge-note {
-  margin: 18px 24px 0; background: var(--bg-cream);
-  border: 1px solid var(--border-card); border-radius: var(--r-lg);
-  padding: 22px; display: flex; flex-direction: column; align-items: center; text-align: center;
+  margin: 24px 24px 0; background: var(--bg-card);
+  border: 1px solid var(--border-warm); border-radius: var(--r-xl);
+  padding: 32px 24px; display: flex; flex-direction: column; align-items: center; text-align: center;
+  box-shadow: var(--shadow-md);
 }
 .team-avatars {
-  display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
 }
 .team-avatars img {
-  width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
-  border: 2px solid var(--bg-cream); box-shadow: 0 4px 12px rgba(20,14,6,0.1);
+  width: 64px; height: 64px; border-radius: 50%; object-fit: cover;
+  border: 3px solid var(--bg-card); box-shadow: 0 6px 16px rgba(20,14,6,0.12);
   position: relative; z-index: 1;
 }
 .team-avatars img.avatar-main {
-  width: 58px; height: 58px; z-index: 10; margin: 0 -14px; border-width: 3px;
+  width: 84px; height: 84px; z-index: 10; margin: 0 -22px; border-width: 4px;
 }
 .nachsorge-note h4 {
-  font-family: 'Cormorant Garamond', serif; font-size: 1rem;
-  color: var(--text-dark); font-weight: 600; margin-bottom: 5px;
+  font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+  color: var(--text-dark); font-weight: 600; margin-bottom: 8px;
 }
 .nachsorge-note p {
-  font-family: 'Cormorant Garamond', serif; font-size: 13.5px;
+  font-family: 'Cormorant Garamond', serif; font-size: 14.5px;
   color: var(--text-muted); line-height: 1.62; font-weight: 300;
 }
 
@@ -787,17 +783,20 @@ img { display: block; max-width: 100%; }
    ============================================================ */
 .praxis-section { background: var(--bg-cream); padding: 52px 0 44px; }
 
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  margin: 0 24px 32px;
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow-md);
-  background: var(--bg-dark);
+.praxis-scroll {
+  display: flex; overflow-x: auto; gap: 14px;
+  padding: 4px 7.5% 18px;
+  scroll-snap-type: x mandatory; scrollbar-width: none;
 }
-.video-wrapper iframe {
+.praxis-scroll::-webkit-scrollbar { display: none; }
+
+.praxis-video-wrap {
+  flex-shrink: 0; width: 85%; scroll-snap-align: center;
+  aspect-ratio: 4/3; border-radius: var(--r-xl); overflow: hidden;
+  border: 1px solid var(--border-card); box-shadow: var(--shadow-md);
+  position: relative; background: var(--bg-dark);
+}
+.praxis-video-wrap iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -806,12 +805,6 @@ img { display: block; max-width: 100%; }
   border: 0;
 }
 
-.praxis-scroll {
-  display: flex; overflow-x: auto; gap: 14px;
-  padding: 4px 7.5% 18px;
-  scroll-snap-type: x mandatory; scrollbar-width: none;
-}
-.praxis-scroll::-webkit-scrollbar { display: none; }
 .praxis-img-wrap {
   flex-shrink: 0; width: 85%; scroll-snap-align: center;
   aspect-ratio: 4/3; border-radius: var(--r-xl); overflow: hidden;
@@ -1106,7 +1099,13 @@ img { display: block; max-width: 100%; }
   <div class="nav-logo">
     <img src="https://unikataesthetik.de/wp-content/uploads/2025/06/plastische-aesthetische-chirurgie-stuttgart-logo_white.svg" alt="Unikat Ästhetik" />
   </div>
-  <a href="#kontakt" class="nav-cta">Beratung</a>
+  <div class="nav-burger">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </div>
 </nav>
 
 
@@ -1433,11 +1432,10 @@ img { display: block; max-width: 100%; }
     <p class="t-body">Mitten in Stuttgart erwartet Sie eine modern gestaltete Praxis mit ruhiger, diskreter Atmosphäre. Helle Räume und persönliche Betreuung schaffen den passenden Rahmen.</p>
   </div>
 
-  <div class="video-wrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/0mevQzaeegI?si=eCN3ChdNNc_Ah1rL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
   <div class="praxis-scroll" id="praxis-carousel">
+    <div class="praxis-video-wrap">
+      <iframe id="praxis-video" width="560" height="315" src="https://www.youtube.com/embed/0mevQzaeegI?si=eCN3ChdNNc_Ah1rL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div class="praxis-img-wrap"><img src="https://unikataesthetik.de/wp-content/uploads/2025/10/empfangsbereich-facharztpraxis-unikataesthetik-stuttgart.webp" alt="Empfangsbereich" loading="lazy" /></div>
     <div class="praxis-img-wrap"><img src="https://unikataesthetik.de/wp-content/uploads/2025/10/beratung-plastische-aesthetische-chirurgie-dr-hodorkovski.webp" alt="Beratungszimmer" loading="lazy" /></div>
     <div class="praxis-img-wrap"><img src="https://unikataesthetik.de/wp-content/uploads/2025/10/warteraum-praxis-aesthetische-medizin-dr-hodorkovski-stuttgart.webp" alt="Wartebereich" loading="lazy" /></div>
@@ -1714,11 +1712,25 @@ img { display: block; max-width: 100%; }
 
   // Praxis carousel
   const pc = document.getElementById('praxis-carousel');
-  if (pc) setInterval(() => {
-    const max = pc.scrollWidth - pc.clientWidth;
-    const w = (pc.firstElementChild?.offsetWidth || 300) + 14;
-    pc.scrollLeft >= max - 10 ? pc.scrollTo({ left:0, behavior:'smooth' }) : pc.scrollBy({ left:w, behavior:'smooth' });
-  }, 4000);
+  if (pc) {
+    let praxisTouched = false;
+    pc.addEventListener('touchstart', () => praxisTouched = true, { passive: true });
+    pc.addEventListener('mousedown', () => praxisTouched = true, { passive: true });
+    
+    // Detect click inside iframe to stop auto-scroll
+    window.addEventListener('blur', () => {
+      if (document.activeElement && document.activeElement.id === 'praxis-video') {
+        praxisTouched = true;
+      }
+    });
+
+    setInterval(() => {
+      if (praxisTouched) return;
+      const max = pc.scrollWidth - pc.clientWidth;
+      const w = (pc.firstElementChild?.offsetWidth || 300) + 14;
+      pc.scrollLeft >= max - 10 ? pc.scrollTo({ left:0, behavior:'smooth' }) : pc.scrollBy({ left:w, behavior:'smooth' });
+    }, 4000);
+  }
 
   // Kennen carousel
   const kc = document.getElementById('kennen-carousel');
