@@ -1,435 +1,2625 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verum Systems – Individuelle Kampagnen-Präsentation für Dr. Edouard Manassa</title>
-<meta name="description" content="Strukturierte Testkampagnen-Präsentation von Verum Systems für Dr. Edouard Manassa / PAAU: Referenzen, Testaufbau, Budget & KPIs, Reporting.">
-<meta property="og:title" content="Verum Systems – Präsentation für Dr. Edouard Manassa">
-<meta property="og:description" content="Individuell vorbereitetes Kampagnen-Deck: Referenzen, Fallbeispiele, Testaufbau Hamburg, Budget & KPIs.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Augenlidstraffung Stuttgart – Dr. Hodorkovski | UNIKAT ÄSTHETIK</title>
+<meta name="description" content="Augenlidstraffung in Stuttgart – Schlupflider & Tränensäcke korrigieren. Facharzt Dr. med. Hodorkovski. Natürliche Ergebnisse, persönliche Beratung." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet" />
 <style>
-:root{--bg-base:#0a0a0b;--text-primary:#FFF;--text-secondary:rgba(255,255,255,0.85);--text-muted:rgba(255,255,255,0.6);--gold:#F9C10E;--gold-glow:rgba(249,193,14,0.6);--gold-soft:rgba(249,193,14,0.15);--gold-border:rgba(249,193,14,0.3);--red:#ff4757;--green:#2ed573;--border:rgba(255,255,255,0.08);--panel:rgba(24,24,27,0.85);--sidebar-w:280px}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:rgba(249,193,14,0.3) transparent}
-body{font-family:'Inter',sans-serif;background:var(--bg-base);color:var(--text-primary);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(249,193,14,0.25);border-radius:3px}
+/* ============================================================
+   RESET & ROOT
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
-.bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none}
-.bg-wrap .bg-img{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(249,193,14,0.04) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(249,193,14,0.02) 0%,transparent 50%)}
-.bg-wrap .bg-overlay{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(10,10,11,0.4) 0%,rgba(10,10,11,0.95) 100%)}
-.bg-wrap .bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:80px 80px;-webkit-mask-image:radial-gradient(ellipse 60% 55% at 50% 50%,black 0%,rgba(0,0,0,0.5) 40%,transparent 70%);mask-image:radial-gradient(ellipse 60% 55% at 50% 50%,black 0%,rgba(0,0,0,0.5) 40%,transparent 70%)}
+:root {
+  --cream: #F5F0E8;
+  --warm-white: #FDFAF5;
+  --gold: #C4A882;
+  --gold-light: #D4BEA0;
+  --brown-dark: #2A1F14;
+  --brown-mid: #4A3728;
+  --brown-light: #7A6050;
+  --text-body: #3D2E22;
+  --text-muted: #8A7060;
+  --border: rgba(196,168,130,0.25);
+  --shadow: 0 4px 32px rgba(42,31,20,0.10);
+  --radius: 12px;
+  --radius-lg: 20px;
+}
 
-.t1{font-size:clamp(36px,5vw,72px);font-weight:300;line-height:1.08;letter-spacing:-0.02em}
-.t2{font-size:clamp(28px,3vw,42px);font-weight:400;line-height:1.2}
-.sub{font-size:clamp(20px,2vw,30px);font-weight:300;color:var(--text-secondary);line-height:1.4}
-.body-text{font-size:clamp(16px,1.4vw,22px);font-weight:200;line-height:1.55;color:var(--text-secondary)}
-.label{font-size:14px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold)}
-.gold-text{background:linear-gradient(90deg,#FFF 0%,#F9C10E 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background: var(--warm-white);
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 60px rgba(0,0,0,0.12);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-/* Sidebar */
-.sidebar{position:fixed;left:0;top:0;bottom:0;width:var(--sidebar-w);background:rgba(10,10,11,0.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-right:1px solid var(--border);z-index:100;display:flex;flex-direction:column;padding:32px 0;transition:transform 0.4s cubic-bezier(.16,1,.3,1)}
-.sidebar-logo{padding:0 24px 28px;border-bottom:1px solid var(--border);margin-bottom:28px}
-.sidebar-logo img{width:100%;max-width:180px;height:auto;display:block;filter:brightness(1.1)}
-.sidebar-logo .logo-sub{font-size:11px;font-weight:400;color:var(--text-muted);margin-top:10px;letter-spacing:0.04em}
-.sidebar-nav{flex:1;padding:0 16px;overflow-y:auto}
-.nav-item{display:flex;align-items:flex-start;gap:14px;padding:12px 16px;border-radius:10px;cursor:pointer;transition:all 0.3s ease;margin-bottom:3px;border-left:3px solid transparent;text-decoration:none;color:inherit}
-.nav-item:hover{background:rgba(255,255,255,0.04)}
-.nav-item.active{background:linear-gradient(90deg,rgba(249,193,14,0.08) 0%,transparent 100%);border-left-color:var(--gold)}
-.nav-num{font-size:11px;font-weight:600;color:var(--gold);min-width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:5px;border:1px solid var(--gold-border);flex-shrink:0;margin-top:1px}
-.nav-label{font-size:13px;font-weight:400;color:var(--text-secondary);line-height:1.3}
-.nav-item.active .nav-label{color:var(--text-primary);font-weight:500}
-.sidebar-footer{padding:16px 24px 0;border-top:1px solid var(--border);margin-top:16px}
-.sidebar-footer .badge-line{font-size:11px;color:var(--text-muted);display:flex;align-items:center;gap:6px}
-.sidebar-footer .badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse-dot 2s ease infinite}
-@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.4}}
-.progress-track{width:100%;height:2px;background:rgba(255,255,255,0.06);border-radius:1px;margin-top:12px;overflow:hidden}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),rgba(249,193,14,0.4));border-radius:1px;width:20%;transition:width 0.6s ease}
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
 
-.main{margin-left:var(--sidebar-w);position:relative;z-index:1;min-height:100vh}
+a { text-decoration: none; }
+img { display: block; max-width: 100%; }
 
-/* Hero */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 48px;position:relative}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:100px;border:1px solid var(--gold-border);background:rgba(249,193,14,0.06);font-size:12px;font-weight:500;color:var(--gold);letter-spacing:0.06em;margin-bottom:40px}
-.hero-badge i{font-size:10px}
-.hero .t1{max-width:900px;margin-bottom:28px}
-.hero .sub{max-width:740px;margin-bottom:48px}
-.hero-logos{display:flex;align-items:center;justify-content:center;gap:32px}
-.hero-logo{height:60px;width:auto;opacity:0.9;filter:brightness(1.1)}
-.hero-x{font-size:24px;font-weight:300;color:var(--text-muted)}
-.hero-scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-muted);font-size:12px;font-weight:400;letter-spacing:0.06em;animation:float-hint 2.5s ease infinite}
-@keyframes float-hint{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+/* ============================================================
+   NAV
+   ============================================================ */
+.ua-nav {
+  position: fixed;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%; max-width: 430px;
+  z-index: 100;
+  background: rgba(26,22,20,0.95);
+  backdrop-filter: blur(12px);
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(196,168,130,0.15);
+  transition: transform 0.4s ease;
+}
 
-.section{padding:100px 48px;max-width:1200px;margin:0 auto}
-.section-divider{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:20px}
+.ua-nav.hidden { transform: translateX(-50%) translateY(-100%); }
 
-/* Cards */
-.card{border-radius:16px;background:var(--panel);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,0.4);border:1px solid var(--border);padding:34px;transition:transform 0.4s cubic-bezier(.16,1,.3,1),box-shadow 0.4s ease}
-.card:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(0,0,0,0.5)}
-.card.gold-top{border-top:2px solid var(--gold-border)}
-.card.no-hover:hover{transform:none;box-shadow:0 10px 40px rgba(0,0,0,0.4)}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold-light);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
 
-.stat-card{text-align:center;padding:28px 20px}
-.stat-card .stat-icon{width:44px;height:44px;border-radius:12px;background:rgba(249,193,14,0.08);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--gold);font-size:18px}
-.stat-card .stat-value{font-size:clamp(28px,3vw,48px);font-weight:300;color:var(--gold);margin-bottom:8px;line-height:1}
-.stat-card .stat-label{font-size:13px;font-weight:500;color:var(--text-muted);letter-spacing:0.04em;line-height:1.4}
+.nav-cta {
+  background: var(--gold);
+  color: var(--brown-dark);
+  padding: 9px 18px;
+  border-radius: 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
 
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid-narrative{display:grid;grid-template-columns:1.15fr 0.85fr;gap:36px;align-items:start}
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero-wrap {
+  background: #0b0908;
+  padding-top: 75px;
+}
 
-.story-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px}
-.story-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px}
-.story-text{font-size:clamp(15px,1.2vw,19px);font-weight:300;line-height:1.55;color:var(--text-secondary)}
-.story-text strong{font-weight:500;color:var(--text-primary)}
+.hero-image-area {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+}
 
-/* KPI Bar */
-.kpi-bar{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;padding:36px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.kpi-item{text-align:center;padding:8px 4px}
-.kpi-icon{width:48px;height:48px;border-radius:14px;background:rgba(249,193,14,0.07);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--gold);font-size:20px}
-.kpi-value{font-size:clamp(22px,2.2vw,32px);font-weight:300;color:var(--gold);margin-bottom:6px;line-height:1}
-.kpi-label{font-size:12px;font-weight:400;color:var(--text-muted);line-height:1.35}
-.origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.hero-image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
 
-/* Slideshow */
-.slideshow-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--border);cursor:pointer;background:rgba(255,255,255,0.02)}
-.slideshow-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
-.slideshow-slide.active{opacity:1}
-.slideshow-slide img{width:100%;height:100%;object-fit:contain;object-position:top center;background:rgba(255,255,255,0.03)}
-.slideshow-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
-.slideshow-dots .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.25);transition:all 0.3s ease}
-.slideshow-dots .dot.active{background:var(--gold);transform:scale(1.2)}
+.hero-img-fade-bottom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0b0908 0%, rgba(11,9,8,0.3) 50%, transparent 100%);
+}
 
-/* Screenshots */
-.screenshot-card{border-radius:16px;background:var(--panel);border:1px solid var(--border);overflow:hidden;transition:transform 0.4s cubic-bezier(.16,1,.3,1),box-shadow 0.4s ease;cursor:pointer}
-.screenshot-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
-.screenshot-img{width:100%;aspect-ratio:16/9;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
-.screenshot-img img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block;background:rgba(255,255,255,0.03)}
-.screenshot-img .zoom-hint{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:8px;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;opacity:0;transition:opacity 0.3s ease}
-.screenshot-card:hover .zoom-hint{opacity:1}
-.screenshot-meta{padding:20px 24px}
-.screenshot-meta .sc-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.screenshot-meta .sc-desc{font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.4}
+.hero-img-fade-top {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(11,9,8,0.1) 0%, transparent 40%);
+}
 
-/* Relevance */
-.relevance-box{border-radius:16px;background:linear-gradient(135deg,rgba(249,193,14,0.04) 0%,rgba(24,24,27,0.85) 100%);border:1px solid var(--gold-border);padding:40px;margin-top:60px}
-.rel-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
-.rel-item:last-child{margin-bottom:0}
-.rel-check{width:22px;height:22px;border-radius:6px;background:rgba(249,193,14,0.1);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;color:var(--gold);font-size:11px}
-.rel-text{font-size:clamp(15px,1.2vw,18px);font-weight:300;color:var(--text-secondary);line-height:1.5}
+.hero-content {
+  position: relative;
+  z-index: 20;
+  padding: 0 24px 32px;
+  margin-top: -160px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
-/* ── Accordion / Case Cards ── */
-.case-card{border-radius:16px;background:var(--panel);border:1px solid var(--border);overflow:hidden;margin-bottom:16px;transition:border-color 0.3s ease,box-shadow 0.3s ease}
-.case-card.open{border-color:var(--gold-border);box-shadow:0 12px 48px rgba(0,0,0,0.4)}
-.case-header{display:flex;align-items:center;gap:20px;padding:24px 32px;cursor:pointer;transition:background 0.3s ease;user-select:none}
-.case-header:hover{background:rgba(255,255,255,0.02)}
-.case-logo{width:56px;height:56px;border-radius:12px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
-.case-logo img{width:80%;height:80%;object-fit:contain}
-.case-logo .logo-placeholder{font-size:18px;font-weight:600;color:var(--text-muted);letter-spacing:0.04em}
-.case-info{flex:1;min-width:0}
-.case-info .case-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
-.case-info .case-title{font-size:clamp(18px,1.6vw,24px);font-weight:400;line-height:1.25;margin-bottom:4px}
-.case-info .case-result{font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.4}
-.case-toggle{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--text-muted);font-size:14px;transition:all 0.3s ease}
-.case-card.open .case-toggle{background:rgba(249,193,14,0.1);border-color:var(--gold-border);color:var(--gold);transform:rotate(180deg)}
-.case-body{max-height:0;overflow:hidden;transition:max-height 0.6s cubic-bezier(.16,1,.3,1)}
-.case-card.open .case-body{max-height:6000px}
-.case-body-inner{padding:0 32px 36px}
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  width: fit-content;
+}
 
-/* Placeholder case */
-.ph-case-block{padding:28px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid var(--border);margin-bottom:20px}
-.ph-case-block .ph-title{font-size:16px;font-weight:500;color:var(--text-secondary);margin-bottom:8px}
-.ph-case-block .ph-desc{font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.5}
+.hero-pill-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(212,185,140,0.8);
+  animation: pulse 2s infinite;
+}
 
-/* Lightbox */
-.lightbox{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.92);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s ease;cursor:zoom-out}
-.lightbox.open{opacity:1;pointer-events:all}
-.lightbox img{max-width:90%;max-height:85vh;border-radius:12px;box-shadow:0 20px 80px rgba(0,0,0,0.6)}
-.lightbox-close{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;cursor:pointer;transition:background 0.2s}
-.lightbox-close:hover{background:rgba(255,255,255,0.15)}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
 
-/* Fade In */
-.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-.fd1{transition-delay:.05s}.fd2{transition-delay:.1s}.fd3{transition-delay:.15s}.fd4{transition-delay:.2s}.fd5{transition-delay:.25s}.fd6{transition-delay:.3s}.fd7{transition-delay:.35s}.fd8{transition-delay:.4s}
+.hero-pill span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #e5ceaa;
+  text-transform: uppercase;
+}
 
-/* Mobile */
-.mobile-toggle{display:none;position:fixed;top:16px;left:16px;z-index:200;width:44px;height:44px;border-radius:12px;background:rgba(10,10,11,0.9);border:1px solid var(--border);color:white;font-size:18px;cursor:pointer;align-items:center;justify-content:center}
-@media(max-width:1024px){.sidebar{transform:translateX(-100%)}.sidebar.open{transform:translateX(0)}.mobile-toggle{display:flex}.main{margin-left:0}.grid-narrative{grid-template-columns:1fr}.kpi-bar{grid-template-columns:repeat(3,1fr)}.origin-grid{grid-template-columns:1fr;gap:0}.s3-grid-4{grid-template-columns:repeat(2,1fr)!important}.hero-logo{height:50px}}
-@media(max-width:640px){.section{padding:60px 24px}.hero{padding:60px 24px}.grid-2,.grid-3{grid-template-columns:1fr}.card{padding:24px}.kpi-bar{grid-template-columns:repeat(2,1fr)}.s3-grid-4{grid-template-columns:1fr!important}.case-header{padding:18px 20px;gap:14px}.case-body-inner{padding:0 20px 28px}.hero-logo{height:36px}.hero-logos{gap:20px}.hero-x{font-size:18px}.t1{font-size:clamp(28px,8vw,36px)}.process-flow{flex-direction:column!important}.process-flow .arrow{transform:rotate(90deg)!important;padding:4px 0!important}}
+.hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.hero-h1 em {
+  font-style: italic;
+  color: var(--gold);
+  display: block;
+  margin-top: 4px;
+}
+
+.hero-h1 span {
+  display: block;
+  margin-top: 4px;
+  font-size: 2.1rem;
+  color: rgba(255,255,255,0.95);
+}
+
+.hero-lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.hero-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.btn-hero-primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  background: linear-gradient(to right, #e3cca0, #eedbb5, #e3cca0);
+  color: #14110f;
+  border-radius: 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.6), 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.15s;
+  letter-spacing: 0.3px;
+}
+
+.btn-hero-primary:active { transform: scale(0.98); }
+
+.hero-trust-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-avatars {
+  display: flex;
+  flex-direction: row;
+}
+
+.trust-avatars img {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #0b0908;
+  object-fit: cover;
+  margin-left: -8px;
+}
+
+.trust-avatars img:first-child { margin-left: 0; }
+
+.trust-score {
+  display: flex;
+  flex-direction: column;
+}
+
+.trust-score-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trust-score-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.trust-stars-gold {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.trust-score-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 3px;
+}
+
+/* ============================================================
+   TRUST ROW
+   ============================================================ */
+.ua-trust-section {
+  background: var(--cream);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.ua-trust-row {
+  display: flex;
+  gap: 0;
+  padding: 0 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.ua-trust-row::-webkit-scrollbar { display: none; }
+
+.ua-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 135px;
+  flex-shrink: 0;
+  padding: 6px 14px 6px 0;
+  border-right: 1px solid var(--border);
+  margin-right: 14px;
+}
+.ua-trust-item:last-child { border-right: none; margin-right: 0; }
+
+.ua-trust-icon {
+  width: 32px; height: 32px;
+  background: rgba(196,168,130,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--gold);
+  font-size: 13px;
+}
+
+.ua-trust-item strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: var(--brown-dark);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ua-trust-item span {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* ============================================================
+   KENNEN SIE DAS
+   ============================================================ */
+.kennen-section {
+  background: var(--warm-white);
+  padding: 44px 0 32px;
+}
+
+.kennen-header {
+  padding: 0 24px;
+  margin-bottom: 24px;
+}
+
+.section-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.section-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--brown-dark);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.section-h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.section-lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.kennen-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 4px 24px 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.kennen-scroll::-webkit-scrollbar { display: none; }
+
+.kennen-card {
+  flex-shrink: 0;
+  width: 86%;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #eae4d9;
+  border-radius: 28px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+.kennen-card:active { transform: scale(0.98); }
+
+.kennen-card-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: #f4f1eb;
+}
+
+.kennen-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(15%);
+}
+
+.card-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card-h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  color: var(--brown-dark);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.card-divider {
+  width: 36px;
+  height: 1.5px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin-bottom: 12px;
+}
+
+.card-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* ============================================================
+   ELIGIBLE / VERFAHREN
+   ============================================================ */
+.eligible-section {
+  background: var(--warm-white);
+  padding: 40px 0 24px;
+}
+
+.eligible-header {
+  padding: 0 24px;
+  margin-bottom: 24px;
+}
+
+.eligible-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 4px 24px 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.eligible-scroll::-webkit-scrollbar { display: none; }
+
+.eligible-card {
+  flex-shrink: 0;
+  width: 88%;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #f0ebe1;
+  border-radius: 32px;
+  padding: 26px;
+  box-shadow: 0 12px 36px rgba(212,185,140,0.07);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.eligible-card:active { transform: scale(0.98); }
+
+.eligible-card-num {
+  position: absolute;
+  top: -10px; right: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(212,185,140,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.eligible-card-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.eligible-card-h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  color: var(--brown-dark);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.eligible-card-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+.eligible-suitable {
+  margin-bottom: 14px;
+}
+
+.eligible-suitable-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--brown-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.eligible-suitable-label::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.eligible-suitable p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding-left: 14px;
+  border-left: 1px solid rgba(196,168,130,0.2);
+}
+
+.eligible-benefit {
+  background: #fdfbf7;
+  border: 1px solid rgba(240,235,225,0.5);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.eligible-benefit-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.eligible-benefit p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: rgba(26,22,20,0.8);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.eligible-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #f0ebe1;
+}
+
+.eligible-price-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  color: rgba(179,175,168,1);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.eligible-price-badge {
+  padding: 6px 16px;
+  border-radius: 50px;
+  background: rgba(196,168,130,0.1);
+  border: 1px solid rgba(196,168,130,0.2);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brown-dark);
+}
+
+.eligible-note {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: rgba(179,175,168,0.7);
+  text-align: center;
+  font-style: italic;
+  padding: 8px 24px 0;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   DR. HODORKOVSKI (MidCtaBand)
+   ============================================================ */
+.doctor-band {
+  background: #1a1614;
+  padding-bottom: 40px;
+}
+
+.doctor-img-area {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+
+.doctor-img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.doctor-img-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #1a1614 0%, rgba(26,22,20,0.2) 50%, transparent 100%);
+}
+
+.doctor-content {
+  padding: 0 26px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+}
+
+.doctor-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.doctor-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.doctor-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+  display: block;
+}
+
+.doctor-bio {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: rgba(179,175,168,1);
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+
+.doctor-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.doctor-pill {
+  padding: 7px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(196,168,130,0.3);
+  background: rgba(196,168,130,0.05);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.doctor-vita-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 18px 0 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.doctor-vita-toggle span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.vita-arrow {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.vita-arrow.open { transform: rotate(180deg); }
+
+.vita-list {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.vita-list.open {
+  max-height: 600px;
+  opacity: 1;
+  padding-top: 22px;
+}
+
+.vita-entry {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.vita-entry:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 37px;
+  top: 18px;
+  bottom: 0;
+  width: 1px;
+  background: rgba(196,168,130,0.2);
+}
+
+.vita-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 52px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.vita-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: rgba(179,175,168,1);
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+.btn-doctor-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  margin-top: 24px;
+  background: transparent;
+  border: 1px solid rgba(196,168,130,0.4);
+  color: var(--gold);
+  border-radius: 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-doctor-cta:active { transform: scale(0.98); background: rgba(196,168,130,0.05); }
+
+/* ============================================================
+   FAKTEN
+   ============================================================ */
+.fakten-section {
+  background: var(--cream);
+  padding: 40px 24px 36px;
+}
+
+.fakten-section .section-h2 {
+  margin-bottom: 20px;
+}
+
+.fakten-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fakt-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 15px 13px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.fakt-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+.fakt-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--brown-dark);
+  font-weight: 500;
+  line-height: 1.2;
+  display: block;
+}
+
+.fakt-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  display: block;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   ABLAUF
+   ============================================================ */
+.ablauf-section {
+  background: #1a1614;
+  padding: 44px 24px 40px;
+}
+
+.ablauf-section .section-eyebrow { color: rgba(212,185,140,0.9); }
+
+.ablauf-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+
+.ablauf-h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.ablauf-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.ablauf-timeline::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 36px;
+  bottom: 36px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(212,185,140,0.4), rgba(212,185,140,0.1), transparent);
+}
+
+.ablauf-step {
+  display: flex;
+  gap: 22px;
+  position: relative;
+}
+
+.ablauf-num {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: #1a1614;
+  border: 1px solid rgba(212,185,140,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(212,185,140,0.1);
+}
+
+.ablauf-num span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.ablauf-step-content { padding-top: 4px; }
+
+.ablauf-step-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.ablauf-step-content p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(161,156,150,1);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.ablauf-cta {
+  margin-top: 32px;
+}
+
+.btn-ablauf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  background: var(--gold);
+  color: var(--brown-dark);
+  border-radius: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  transition: transform 0.15s, background 0.15s;
+}
+.btn-ablauf:active { transform: scale(0.97); background: var(--gold-light); }
+
+.ablauf-sub-note {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  color: rgba(212,185,140,0.4);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* ============================================================
+   NACHSORGE
+   ============================================================ */
+.nachsorge-section {
+  background: var(--warm-white);
+  padding: 44px 0 32px;
+}
+
+.nachsorge-header {
+  padding: 0 24px;
+  margin-bottom: 24px;
+}
+
+.nachsorge-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 4px 24px 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.nachsorge-scroll::-webkit-scrollbar { display: none; }
+
+.nachsorge-card {
+  flex-shrink: 0;
+  width: 85%;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #f0ebe1;
+  border-radius: 28px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.nachsorge-card:active { transform: scale(0.98); }
+
+.nachsorge-card-num {
+  position: absolute;
+  top: -10px; right: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: rgba(212,185,140,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.nachsorge-period {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.nachsorge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.nachsorge-period-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.nachsorge-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--brown-dark);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.nachsorge-card p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.nachsorge-note {
+  margin: 16px 24px 0;
+  background: #f9f6f1;
+  border: 1px solid #f0ebe1;
+  border-radius: 24px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nachsorge-note-avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(196,168,130,0.2);
+  margin-bottom: 14px;
+}
+
+.nachsorge-note-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.nachsorge-note h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: var(--brown-dark);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.nachsorge-note p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ============================================================
+   REVIEWS
+   ============================================================ */
+.reviews-section {
+  background: var(--warm-white);
+  padding: 40px 0 32px;
+}
+
+.reviews-header {
+  padding: 0 24px 20px;
+}
+
+.reviews-rating-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.reviews-rating-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  color: var(--brown-dark);
+  line-height: 1;
+  font-weight: 300;
+}
+
+.reviews-stars { color: #C4A050; font-size: 16px; letter-spacing: 2px; }
+.reviews-meta {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.reviews-scroll {
+  display: flex;
+  gap: 14px;
+  padding: 4px 24px 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.reviews-scroll::-webkit-scrollbar { display: none; }
+
+.review-card {
+  flex-shrink: 0;
+  width: 280px;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.review-stars { color: #C4A050; font-size: 13px; margin-bottom: 10px; }
+.review-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 14px;
+  font-style: italic;
+  font-weight: 300;
+}
+.review-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--brown-dark);
+}
+.review-treatment {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.reviews-footer { padding: 4px 24px 0; }
+
+.btn-outline-reviews {
+  display: block;
+  text-align: center;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+.btn-outline-reviews:active { background: rgba(196,168,130,0.07); }
+
+/* ============================================================
+   PRAXIS
+   ============================================================ */
+.praxis-section {
+  background: var(--warm-white);
+  padding: 40px 0 28px;
+}
+
+.praxis-header { padding: 0 24px; margin-bottom: 22px; }
+
+.praxis-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 14px;
+  padding: 4px 24px 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.praxis-scroll::-webkit-scrollbar { display: none; }
+
+.praxis-img-wrap {
+  flex-shrink: 0;
+  width: 85%;
+  scroll-snap-align: start;
+  aspect-ratio: 4/3;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid #f0ebe1;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.praxis-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.praxis-img-wrap:hover img { transform: scale(1.04); }
+
+.praxis-divider {
+  height: 1px;
+  margin: 14px 24px 0;
+  background: linear-gradient(to right, transparent, rgba(196,168,130,0.2), transparent);
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-section {
+  background: #2F2317;
+  padding: 44px 0 32px;
+}
+
+.faq-header {
+  padding: 0 26px;
+  margin-bottom: 22px;
+}
+
+.faq-section .section-eyebrow { color: var(--gold); }
+
+.faq-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.faq-h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.faq-list {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 0 26px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.3s;
+}
+
+.faq-item.open { background: rgba(255,255,255,0.02); }
+
+.faq-q-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 22px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.faq-q-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.4;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+
+.faq-item.open .faq-q-text {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.faq-icon-wrap {
+  flex-shrink: 0;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.4);
+  transition: all 0.4s;
+}
+
+.faq-item.open .faq-icon-wrap {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #2F2317;
+  transform: scale(1.08);
+}
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 1200px;
+  opacity: 1;
+  padding-bottom: 22px;
+}
+
+.faq-answer-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15.5px;
+  color: rgba(179,175,168,1);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.faq-answer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(196,168,130,0.3);
+  padding-bottom: 3px;
+  margin-top: 12px;
+}
+
+/* Risk cards */
+.faq-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(179,175,168,1);
+  font-style: italic;
+  line-height: 1.6;
+  border-left: 2px solid rgba(212,185,140,0.4);
+  padding-left: 16px;
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+
+.faq-risk-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 14px;
+  scrollbar-width: none;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+}
+.faq-risk-scroll::-webkit-scrollbar { display: none; }
+
+.faq-risk-card {
+  flex-shrink: 0;
+  width: 84%;
+  background: #1a140e;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 28px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-risk-cat {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.faq-risk-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  color: rgba(255,255,255,0.95);
+  font-weight: 400;
+}
+
+.faq-risk-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: rgba(140,136,130,1);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-section {
+  background: linear-gradient(160deg, var(--brown-dark) 0%, #3A2515 100%);
+  padding: 44px 24px 40px;
+  text-align: center;
+}
+
+.contact-section .section-eyebrow { color: rgba(196,168,130,0.8); }
+
+.contact-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.contact-h2 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.contact-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.contact-success {
+  background: rgba(196,168,130,0.12);
+  border: 1px solid rgba(196,168,130,0.35);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+  color: var(--gold-light);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  text-align: center;
+  display: none;
+}
+
+.contact-success.visible { display: block; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.form-group label {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(196,168,130,0.22);
+  border-radius: var(--radius);
+  padding: 13px 16px;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255,255,255,0.28);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.form-group select option { background: #2A1F14; color: #fff; }
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--brown-dark);
+  padding: 17px;
+  border-radius: 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-submit:active { transform: scale(0.98); background: var(--gold-light); }
+
+.contact-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.6);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  padding: 14px;
+  border: 1px solid rgba(196,168,130,0.18);
+  border-radius: var(--radius);
+  transition: border-color 0.2s, color 0.2s;
+}
+.contact-link:hover { border-color: var(--gold); color: var(--gold-light); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.treat-footer {
+  background: #150E06;
+  padding: 32px 24px 90px;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold-light);
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.footer-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.footer-address {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.footer-address a { color: rgba(255,255,255,0.45); }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(255,255,255,0.4);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.footer-copy {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 18px;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   STICKY BAR
+   ============================================================ */
+.sticky-cta {
+  position: fixed;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%; max-width: 430px;
+  z-index: 99;
+  background: rgba(21,14,6,0.97);
+  backdrop-filter: blur(20px);
+  padding: 12px 20px;
+  border-top: 1px solid rgba(196,168,130,0.18);
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.sticky-cta.hidden {
+  transform: translateX(-50%) translateY(100%);
+}
+
+.sticky-cta a {
+  flex: 1;
+  text-align: center;
+  padding: 13px 16px;
+  border-radius: 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sticky-main { background: var(--gold); color: var(--brown-dark); }
+.sticky-call { border: 1px solid rgba(196,168,130,0.35); color: var(--gold-light); }
+
+/* ============================================================
+   EINBLICK (Unser Ansatz)
+   ============================================================ */
+.einblick-section {
+  background: var(--warm-white);
+  padding: 40px 24px 36px;
+}
+
+.einblick-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.einblick-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px;
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.einblick-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  color: var(--gold);
+  font-weight: 300;
+  min-width: 36px;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.einblick-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--brown-dark);
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.einblick-item p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
 </style>
 </head>
 <body>
-<div class="bg-wrap"><div class="bg-img"></div><div class="bg-overlay"></div><div class="bg-grid"></div></div>
-<button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Menü"><i class="fas fa-bars"></i></button>
 
-<!-- Sidebar (5 Bereiche) -->
-<nav class="sidebar" id="sidebar">
-    <div class="sidebar-logo">
-        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1772716614/High_res-02_rootis.jpg" alt="Verum Systems Logo">
-        <div class="logo-sub">Performance · Strategie · Transparenz</div>
-    </div>
-    <div class="sidebar-nav">
-        <a href="#section-1" class="nav-item active"><span class="nav-num">01</span><span class="nav-label">Referenzen &<br>Fallbeispiele</span></a>
-        <a href="#section-2" class="nav-item"><span class="nav-num">02</span><span class="nav-label">Testaufbau<br>Hamburg</span></a>
-        <a href="#section-3" class="nav-item"><span class="nav-num">03</span><span class="nav-label">Budget, Leads<br>& KPIs</span></a>
-        <a href="#section-4" class="nav-item"><span class="nav-num">04</span><span class="nav-label">Reporting &<br>Accountzugriffe</span></a>
-        <a href="#section-5" class="nav-item"><span class="nav-num">05</span><span class="nav-label">Angebot<br>& Ablauf</span></a>
-    </div>
-    <div class="sidebar-footer">
-        <div class="badge-line"><span class="badge-dot"></span> Individuell vorbereitet für PAAU</div>
-        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-    </div>
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav class="ua-nav" id="main-nav">
+  <div class="nav-logo">UNIKAT ÄSTHETIK</div>
+  <a href="#kontakt" class="nav-cta">Beratung</a>
 </nav>
 
-<main class="main">
 
-<!-- HERO -->
-<section class="hero" id="hero">
-    <div class="fade-in fd1"><div class="hero-badge"><i class="fas fa-shield-halved"></i> Case-specific Deck · Individuell vorbereitet</div></div>
-    <h1 class="t1 fade-in fd2">Kampagnen-Präsentation<br>für <span class="gold-text">Dr. Edouard Manassa</span></h1>
-    <p class="sub fade-in fd3">Klar abgegrenzt, messbar und operativ umsetzbar.</p>
-    <div class="hero-logos fade-in fd4">
-        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1769866535/Transparent-02_onkhlb.png" alt="Verum Systems" class="hero-logo">
-        <span class="hero-x">×</span>
-        <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774267205/paau-logo-main-gray_p3udoj.svg" alt="PAAU" class="hero-logo">
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<div class="hero-wrap" id="top">
+  <div class="hero-image-area">
+    <img
+      src="https://res.cloudinary.com/dkbegf5yh/image/upload/q_auto/f_auto/v1776254801/Gemini_Generated_Image_3sas4k3sas4k3sas_1_jrrsxd.png"
+      alt="Augenlidstraffung Stuttgart – Dr. Hodorkovski"
+      onerror="this.src='https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600'"
+    />
+    <div class="hero-img-fade-bottom"></div>
+    <div class="hero-img-fade-top"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-pill">
+      <div class="hero-pill-dot"></div>
+      <span>Gesichtschirurgie · Stuttgart</span>
     </div>
-    <div class="hero-scroll-hint"><span>Weiter scrollen</span><i class="fas fa-chevron-down"></i></div>
-</section>
 
-<!-- ═══ SECTION 1: Referenzen & Fallbeispiele (Accordion) ═══ -->
-<section class="section" id="section-1">
-    <div class="fade-in fd1"><div class="section-divider"></div><span class="label">Bereich 01</span></div>
-    <h2 class="t1 fade-in fd2" style="margin:20px 0 16px;">Relevante <span class="gold-text">Referenzen</span> & Fallbeispiele</h2>
-    <p class="sub fade-in fd3" style="max-width:860px;margin-bottom:48px;">Ausgewählte Beispiele, die zeigen, wie Kampagnen, Funnel und operative Umsetzung strukturiert aufgebaut und messbar entwickelt wurden.</p>
+    <h1 class="hero-h1">
+      Augenlidstraffung –
+      <em>frischer Blick,</em>
+      <span>natürlich verjüngt</span>
+    </h1>
 
-    <!-- ── CASE 01: Escape Welt ── -->
-    <div class="case-card fade-in fd4" id="case-1">
-        <div class="case-header" onclick="toggleCase('case-1')">
-            <div class="case-logo"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774274400/logo_png_rogxkk.png" alt="Escape Welt"></div>
-            <div class="case-info">
-                <div class="case-label">Fallbeispiel 01</div>
-                <div class="case-title">Escape Welt</div>
-                <div class="case-result">Vom Startup-Aufbau bis in den siebenstelligen Umsatzbereich – operativ mit skaliert über mehrere Jahre und 34 Märkte.</div>
-            </div>
-            <div class="case-toggle"><i class="fas fa-chevron-down"></i></div>
+    <p class="hero-lead">
+      Schlupflider und Tränensäcke können das Gesicht müde und älter wirken lassen. Ziel ist ein wacher, natürlicher Ausdruck – mit einem Eingriff, der kaum sichtbare Narben hinterlässt.
+    </p>
+
+    <div class="hero-cta-wrap">
+      <a href="#kontakt" class="btn-hero-primary" id="beratung">
+        <span style="display:flex;align-items:center;gap:10px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Unverbindlich beraten lassen
+        </span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <div class="hero-trust-row">
+        <div class="trust-avatars">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" alt="Patientin" />
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100" alt="Patient" />
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100" alt="Patientin" />
         </div>
-        <div class="case-body">
-            <div class="case-body-inner">
-                <!-- KPI Bar -->
-                <div class="kpi-bar" style="margin-top:8px;">
-                    <div class="kpi-item"><div class="kpi-icon"><i class="fas fa-puzzle-piece"></i></div><div class="kpi-value">300k+</div><div class="kpi-label">Verkaufte Rätselspiele<br>durch Online-Marketing</div></div>
-                    <div class="kpi-item"><div class="kpi-icon"><i class="fab fa-instagram"></i></div><div class="kpi-value">11.000</div><div class="kpi-label">Follower<br>auf Instagram</div></div>
-                    <div class="kpi-item"><div class="kpi-icon"><i class="fas fa-star"></i></div><div class="kpi-value">10.000+</div><div class="kpi-label">Kundenbewertungen<br>& Video-Reviews</div></div>
-                    <div class="kpi-item"><div class="kpi-icon"><i class="fab fa-youtube"></i></div><div class="kpi-value">6 Mio.+</div><div class="kpi-label">Views<br>auf YouTube</div></div>
-                    <div class="kpi-item"><div class="kpi-icon"><i class="fas fa-globe"></i></div><div class="kpi-value">40 Mio.+</div><div class="kpi-label">Menschen in 34 Ländern<br>erreicht</div></div>
-                    <div class="kpi-item"><div class="kpi-icon"><i class="fas fa-coins"></i></div><div class="kpi-value">700k €</div><div class="kpi-label">Werbebudget verwaltet<br>und optimiert</div></div>
-                </div>
-                <!-- Story -->
-                <div class="card gold-top no-hover" style="margin-top:36px;">
-                    <span class="label" style="margin-bottom:18px;display:block;">Hintergrund & Entstehung</span>
-                    <div class="origin-grid">
-                        <div>
-                            <div class="story-item"><div class="story-dot"></div><div class="story-text">Escape Welt betrieb ursprünglich eine <strong>lokale Escape-Room-Filiale in Leipzig</strong>. Mit Beginn der Corona-Pandemie musste der stationäre Betrieb eingestellt werden.</div></div>
-                            <div class="story-item"><div class="story-dot"></div><div class="story-text">Daraus entstand die Idee, das <strong>Escape-Room-Erlebnis nach Hause zu bringen</strong> – in Form von hochwertigen Rätselspielen und Puzzle-Boxen für den Versand.</div></div>
-                            <div class="story-item"><div class="story-dot"></div><div class="story-text">Das gesamte <strong>Online-Marketing wurde von Grund auf neu aufgebaut</strong>: Werbeanzeigen, E-Mail-Marketing, Verkaufsseiten und die gesamte Messbarkeit.</div></div>
-                        </div>
-                        <div>
-                            <div class="story-item"><div class="story-dot"></div><div class="story-text">In <strong>zentraler Rolle</strong> maßgeblich an der Skalierung beteiligt – vom Einstieg bis zur Position <strong>Head of Marketing</strong> über vier Jahre.</div></div>
-                            <div class="story-item"><div class="story-dot"></div><div class="story-text">Internationale <strong>Expansion in 34 Länder</strong> mit angepassten Kampagnen und lokalen Verkaufsstrecken.</div></div>
-                            <div class="story-item"><div class="story-dot"></div><div class="story-text">Fokus auf <strong>datenbasierte Entscheidungen</strong>: laufende Tests, Optimierung der Werbemittel und schrittweiser Ausbau der erfolgreichsten Ansätze.</div></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Screenshots -->
-                <div style="margin-top:48px;">
-                    <span class="label">Operative Nachweise</span>
-                    <h3 class="t2" style="margin:12px 0 8px;">Belege aus dem Kampagnenumfeld</h3>
-                    <p class="body-text" style="max-width:700px;margin-bottom:28px;">Einblicke in die operative Arbeit – Dashboards, Ergebnisse und Auszeichnungen.</p>
-                    <div class="screenshot-card slideshow-card" style="margin-bottom:24px;">
-                        <div class="slideshow-wrap" onclick="openLightbox(this)" style="aspect-ratio:16/8;">
-                            <div class="slideshow-slide active"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774263709/Screenshot_2026-03-23_120051_mf4ueu.png" alt="Analytics" style="object-fit:contain;object-position:center;"></div>
-                            <div class="slideshow-slide"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262517/400k_sales_shopify_fhcwqk.jpg" alt="Shopify" style="object-fit:contain;object-position:center;"></div>
-                            <div class="zoom-hint" style="opacity:1;"><i class="fas fa-expand"></i></div>
-                            <div class="slideshow-dots"><span class="dot active"></span><span class="dot"></span></div>
-                        </div>
-                        <div class="screenshot-meta" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
-                            <div><div class="sc-label">Umsatz- & Traffic-Daten</div><div class="sc-desc">Siebenstellige Umsätze innerhalb weniger Monate – belegt durch Analytics- und Shop-Dashboards.</div></div>
-                            <div style="text-align:right;"><div style="font-size:28px;font-weight:300;color:var(--gold);line-height:1;">7-stellig</div><div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-top:4px;">Umsatz erreicht</div></div>
-                        </div>
-                    </div>
-                    <div class="grid-3">
-                        <div class="screenshot-card" onclick="openLightbox(this)"><div class="screenshot-img"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262511/Screenshot_2024-09-12_102144_znghtf.png" alt="FB Ads"><div class="zoom-hint"><i class="fas fa-expand"></i></div></div><div class="screenshot-meta"><div class="sc-label">Facebook Ads Manager</div><div class="sc-desc">Über 700.000 € Werbebudget operativ gesteuert und optimiert.</div></div></div>
-                        <div class="screenshot-card" onclick="openLightbox(this)"><div class="screenshot-img"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774262511/Screenshot_2024-09-11_224134_flqbld.png" alt="Startup Award"><div class="zoom-hint"><i class="fas fa-expand"></i></div></div><div class="screenshot-meta"><div class="sc-label">Startup of the Year 2023</div><div class="sc-desc">2. Platz beim Sächsischen Startup-of-the-Year-Wettbewerb.</div></div></div>
-                        <div class="screenshot-card" onclick="openLightbox(this)"><div class="screenshot-img" style="aspect-ratio:16/10;"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774267662/Screenshot_2026-03-23_130639_mrdu8m.png" alt="Team" style="object-fit:cover;object-position:center top;"><div class="zoom-hint"><i class="fas fa-expand"></i></div></div><div class="screenshot-meta"><div class="sc-label">Team & operative Zusammenarbeit</div><div class="sc-desc">Direkte Einbindung im Marketing-Team – von der Planung bis zur Umsetzung.</div></div></div>
-                    </div>
-                </div>
-            </div>
+        <div class="trust-score">
+          <div class="trust-score-top">
+            <span class="trust-score-num">5.0</span>
+            <span class="trust-stars-gold">★★★★★</span>
+          </div>
+          <div class="trust-score-sub">341+ Bewertungen · ProvenExpert</div>
         </div>
+      </div>
     </div>
-
-</section>
-
-<!-- ═══ SECTION 2: Testaufbau Hamburg ═══ -->
-<section class="section" id="section-2">
-    <div class="fade-in fd1"><div class="section-divider"></div><span class="label">Bereich 02</span></div>
-    <h2 class="t1 fade-in fd2" style="margin:20px 0 16px;">Vorschlag für den <span class="gold-text">Testaufbau</span> in Hamburg</h2>
-    <p class="sub fade-in fd3" style="max-width:700px;margin-bottom:40px;">Ein klar abgegrenzter, messbarer Ersttest für PAAU Hamburg.</p>
-    <div class="grid-2 fade-in fd4">
-        <div class="card gold-top"><div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;"><div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-syringe"></i></div><div><div class="label" style="margin-bottom:2px;">Behandlungsfokus</div><div style="font-size:clamp(18px,1.8vw,26px);font-weight:400;line-height:1.2;">Lippenunterspritzung mit Hyaluron</div></div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Visuell gut kommunizierbar und stark nachgefragt – ideal als Einstieg.</div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Bewusst <strong>eine Behandlung</strong>, damit der Test sauber messbar bleibt.</div></div><div class="story-item" style="margin-bottom:0;"><div class="story-dot"></div><div class="story-text">Klarer <strong>Entry-Point</strong> für die erste Kampagne.</div></div></div>
-        <div class="card gold-top"><div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;"><div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-crosshairs"></i></div><div><div class="label" style="margin-bottom:2px;">Zielgruppe</div><div style="font-size:clamp(18px,1.8vw,26px);font-weight:400;line-height:1.2;">Hamburg · Frauen · 20+</div></div></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;"><span style="padding:5px 14px;border-radius:100px;border:1px solid var(--border);background:rgba(255,255,255,0.03);font-size:13px;color:var(--text-secondary);"><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:6px;"></i>Hamburg</span><span style="padding:5px 14px;border-radius:100px;border:1px solid var(--border);background:rgba(255,255,255,0.03);font-size:13px;color:var(--text-secondary);"><i class="fas fa-venus" style="color:var(--gold);margin-right:6px;"></i>Weiblich</span><span style="padding:5px 14px;border-radius:100px;border:1px solid var(--border);background:rgba(255,255,255,0.03);font-size:13px;color:var(--text-secondary);"><i class="fas fa-calendar" style="color:var(--gold);margin-right:6px;"></i>20+</span></div><div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-bottom:12px;cursor:pointer;" onclick="openLightbox(this)"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1774273152/02422397-4aa0-453d-85cd-c6f17706e3e1.png" alt="Meta Reichweite" style="width:100%;height:auto;display:block;"></div><p style="font-size:12px;font-weight:400;color:var(--text-muted);font-style:italic;">Beispielhafte Meta-Reichweitenabschätzung für Frauen 20+ im Raum Hamburg.</p></div>
-        <div class="card gold-top"><div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;"><div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-bullhorn"></i></div><div><div class="label" style="margin-bottom:2px;">Kanäle</div><div style="font-size:clamp(18px,1.8vw,26px);font-weight:400;line-height:1.2;">Facebook & Instagram</div></div></div><div style="display:flex;gap:14px;margin-bottom:18px;"><div style="flex:1;padding:16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);text-align:center;"><i class="fab fa-facebook" style="font-size:24px;color:#1877F2;margin-bottom:6px;display:block;"></i><div style="font-size:13px;font-weight:500;color:var(--text-secondary);">Facebook</div></div><div style="flex:1;padding:16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);text-align:center;"><i class="fab fa-instagram" style="font-size:24px;color:#E4405F;margin-bottom:6px;display:block;"></i><div style="font-size:13px;font-weight:500;color:var(--text-secondary);">Instagram</div></div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Getestet werden <strong>Videoanzeigen</strong> und <strong>statische Bildanzeigen</strong> im direkten Vergleich.</div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Ziel: früh erkennen, welches Format besser anspricht.</div></div><div class="story-item" style="margin-bottom:0;"><div class="story-dot"></div><div class="story-text">Die Kampagne wird <strong>iterativ optimiert</strong>, nicht starr durchlaufen.</div></div></div>
-        <div class="card gold-top"><div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;"><div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-filter"></i></div><div><div class="label" style="margin-bottom:2px;">Funnel / Qualifizierung</div><div style="font-size:clamp(18px,1.8vw,26px);font-weight:400;line-height:1.2;">Dedizierte Qualifizierungsseite</div></div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Für die Lippenunterspritzung wird eine <strong>separate Qualifizierungsseite</strong> aufgebaut – dediziert auf diese Behandlung zugeschnitten.</div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Die Struktur orientiert sich am bestehenden Beispiel-Funnel zur Oberlidstraffung und wird <strong>individuell angepasst</strong>.</div></div><div class="story-item" style="margin-bottom:20px;"><div class="story-dot"></div><div class="story-text">Das Beispiel dient als Referenz für den grundsätzlichen Aufbau.</div></div><a href="https://perspectivefunnel.co/69af00a1d11b74a33ceccad6/69af020908c4994a26c9edbe/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;padding:16px 32px;border-radius:14px;background:linear-gradient(135deg,rgba(249,193,14,0.15) 0%,rgba(249,193,14,0.05) 100%);border:2px solid var(--gold-border);color:var(--gold);font-size:16px;font-weight:500;text-decoration:none;transition:all 0.3s ease;text-align:center;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(249,193,14,0.2)';this.style.borderColor='var(--gold)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='var(--gold-border)'"><i class="fas fa-external-link-alt" style="font-size:14px;"></i>Zum Beispiel Landingpage / Funnel</a></div>
-    </div>
-</section>
-
-<!-- ═══ SECTION 3: Budget, Leads & KPIs ═══ -->
-<section class="section" id="section-3">
-    <div class="fade-in fd1"><div class="section-divider"></div><span class="label">Bereich 03</span></div>
-    <h2 class="t1 fade-in fd2" style="margin:20px 0 16px;">Budget, erwartbare <span class="gold-text">Leads</span> & KPIs</h2>
-    <p class="sub fade-in fd3" style="max-width:780px;margin-bottom:40px;">Ein realistischer erster Testrahmen für einen 14-tägigen Kampagnenlauf in Hamburg.</p>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px;" class="fade-in fd4 s3-grid-4">
-        <div class="card stat-card"><div class="stat-icon"><i class="fas fa-wallet"></i></div><div class="stat-value">700 €</div><div class="stat-label">Testbudget<br>gesamt</div></div>
-        <div class="card stat-card"><div class="stat-icon"><i class="fas fa-calendar-alt"></i></div><div class="stat-value">14 Tage</div><div class="stat-label">Aktive Kampagnendauer<br><span style="font-size:11px;color:var(--text-muted);">Die Werbung läuft 2 Wochen</span></div></div>
-        <div class="card stat-card"><div class="stat-icon"><i class="fas fa-clock"></i></div><div class="stat-value">~50 €</div><div class="stat-label">Tagesbudget<br>(700 € / 14 Tage)</div></div>
-        <div class="card stat-card"><div class="stat-icon"><i class="fas fa-tag"></i></div><div class="stat-value">15–30 €</div><div class="stat-label">Zielkorridor CPL<br><span style="font-size:11px;color:var(--text-muted);">Cost per Lead / Kosten pro Eintragung</span><br><span style="font-size:11px;color:var(--text-muted);">(Schätzwert)</span></div></div>
-    </div>
-    <div class="card fade-in fd5" style="margin-bottom:36px;">
-        <span class="label" style="display:block;margin-bottom:20px;">Wie der Test operativ geführt wird</span>
-        <p style="font-size:clamp(14px,1.1vw,17px);font-weight:300;color:var(--text-secondary);line-height:1.5;margin-bottom:24px;">Die Anzeigen laufen nicht 14 Tage starr durch. Stattdessen erfolgt eine laufende Optimierung – schwächere Anzeigen werden früh erkannt, erfolgreiche Varianten ausgebaut.</p>
-        <div class="process-flow" style="display:flex;align-items:stretch;gap:0;">
-            <div style="flex:1;text-align:center;padding:20px 12px;border-radius:12px 0 0 12px;background:rgba(249,193,14,0.06);border:1px solid var(--gold-border);"><div style="font-size:13px;font-weight:600;color:var(--gold);letter-spacing:0.06em;margin-bottom:6px;">TAG 1–3</div><div style="font-size:14px;font-weight:300;color:var(--text-secondary);line-height:1.4;">Erster Datencheck<br>& Baseline</div></div>
-            <div class="arrow" style="display:flex;align-items:center;padding:0 4px;color:var(--gold);font-size:18px;">→</div>
-            <div style="flex:1;text-align:center;padding:20px 12px;background:rgba(249,193,14,0.04);border:1px solid var(--gold-border);border-left:none;"><div style="font-size:13px;font-weight:600;color:var(--gold);letter-spacing:0.06em;margin-bottom:6px;">TAG 4–7</div><div style="font-size:14px;font-weight:300;color:var(--text-secondary);line-height:1.4;">Erste Anpassungen<br>& Auswahl</div></div>
-            <div class="arrow" style="display:flex;align-items:center;padding:0 4px;color:var(--gold);font-size:18px;">→</div>
-            <div style="flex:1;text-align:center;padding:20px 12px;border-radius:0 12px 12px 0;background:rgba(249,193,14,0.02);border:1px solid var(--gold-border);border-left:none;"><div style="font-size:13px;font-weight:600;color:var(--gold);letter-spacing:0.06em;margin-bottom:6px;">TAG 8–14</div><div style="font-size:14px;font-weight:300;color:var(--text-secondary);line-height:1.4;">Optimierung auf Basis<br>der besten Ergebnisse</div></div>
-        </div>
-    </div>
-    <div class="card gold-top fade-in fd6" style="margin-bottom:36px;">
-        <span class="label" style="display:block;margin-bottom:16px;">Erwartbare Interessenten für die Lippenunterspritzung</span>
-        <div style="display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap;">
-            <div style="flex:1;min-width:140px;text-align:center;padding:20px 16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);"><div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-bottom:6px;">bei 15 € pro Anfrage</div><div style="font-size:clamp(24px,2.5vw,36px);font-weight:300;color:var(--gold);">~47</div><div style="font-size:12px;font-weight:400;color:var(--text-muted);">Interessenten</div></div>
-            <div style="flex:1;min-width:140px;text-align:center;padding:20px 16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);"><div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-bottom:6px;">bei 20 € pro Anfrage</div><div style="font-size:clamp(24px,2.5vw,36px);font-weight:300;color:var(--gold);">~35</div><div style="font-size:12px;font-weight:400;color:var(--text-muted);">Interessenten</div></div>
-            <div style="flex:1;min-width:140px;text-align:center;padding:20px 16px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);"><div style="font-size:12px;font-weight:500;color:var(--text-muted);margin-bottom:6px;">bei 30 € pro Anfrage</div><div style="font-size:clamp(24px,2.5vw,36px);font-weight:300;color:var(--gold);">~23</div><div style="font-size:12px;font-weight:400;color:var(--text-muted);">Interessenten</div></div>
-        </div>
-        <div style="padding:20px 24px;border-radius:12px;background:rgba(249,193,14,0.06);border:1px solid var(--gold-border);">
-            <p style="font-size:clamp(16px,1.3vw,20px);font-weight:400;color:var(--text-primary);line-height:1.5;">Möglicher Zielkorridor: ca. <strong style="font-weight:600;color:var(--gold);">23 bis 47 Interessenten für eine Lippenunterspritzung</strong>, abhängig von Angebotsresonanz, lokalen Faktoren, Wettbewerbsdichte im selben Markt und Qualität der erstellten Werbemittel.</p>
-        </div>
-    </div>
-
-</section>
-
-<!-- ═══ SECTION 4: Reporting & Datenhoheit ═══ -->
-<section class="section" id="section-4">
-    <div class="fade-in fd1"><div class="section-divider"></div><span class="label">Bereich 04</span></div>
-    <h2 class="t1 fade-in fd2" style="margin:20px 0 16px;">Reporting, <span class="gold-text">Datenhoheit</span> & Zugriffe</h2>
-    <p class="sub fade-in fd3" style="max-width:780px;margin-bottom:40px;">Klare Rollen, transparente Datenstruktur und volle Kontrolle auf Kundenseite.</p>
-    <div class="grid-2 fade-in fd4">
-        <div class="card gold-top"><div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;"><div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-key"></i></div><div><div class="label" style="margin-bottom:2px;">Account-Zugriffe</div><div style="font-size:clamp(18px,1.8vw,24px);font-weight:400;line-height:1.2;">Volle Kontrolle bei PAAU</div></div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Zugriff über eine <strong>reguläre Agenturfreigabe</strong> im Business Manager.</div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">PAAU behält bestehende Logins und <strong>volle Kontrolle</strong>.</div></div><div class="story-item" style="margin-bottom:0;"><div class="story-dot"></div><div class="story-text">Nur die <strong>nötigen Berechtigungen</strong> für die operative Arbeit.</div></div></div>
-        <div class="card gold-top"><div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;"><div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-chart-bar"></i></div><div><div class="label" style="margin-bottom:2px;">Reporting & Lead-Übersicht</div><div style="font-size:clamp(18px,1.8vw,24px);font-weight:400;line-height:1.2;">Transparentes Dashboard</div></div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Reporting über ein <strong>separates, übersichtliches Dashboard</strong>, welches von uns zur Verfügung gestellt wird.</div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Eingehende Anfragen zur Lippenunterspritzung werden in einer <strong>zentralen Übersicht</strong> gesammelt.</div></div><div class="story-item" style="margin-bottom:0;"><div class="story-dot"></div><div class="story-text">Interessenten systematisch <strong>nachverfolgen und bearbeiten</strong>.</div></div></div>
-        <div class="card gold-top"><div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;"><div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-phone-alt"></i></div><div><div class="label" style="margin-bottom:2px;">Operativer Follow-up</div><div style="font-size:clamp(18px,1.8vw,24px);font-weight:400;line-height:1.2;">Schnelle Reaktionszeit</div></div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Leads werden an die <strong>Hamburger Location übergeben</strong>.</div></div><div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text"><strong>Schnelle Reaktionszeit</strong> ist entscheidend.</div></div><div class="story-item" style="margin-bottom:0;"><div class="story-dot"></div><div class="story-text">Ziel: möglichst wenig Nachfrage durch langsames Follow-up verlieren.</div></div></div>
-        <div class="card" style="border-top:2px solid rgba(255,255,255,0.1);"><div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;"><div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-robot"></i></div><div><div class="label" style="margin-bottom:2px;">Optional: KI-gestützter Follow-up</div><div style="font-size:clamp(18px,1.8vw,24px);font-weight:400;line-height:1.2;">Automatisierte Vorqualifizierung</div></div></div><p style="font-size:clamp(14px,1.1vw,16px);font-weight:300;color:var(--text-secondary);line-height:1.5;margin-bottom:16px;">Optional kann ein KI-Chatbot den Follow-up unterstützen:</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;"><div style="padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid var(--border);font-size:13px;font-weight:300;color:var(--text-muted);"><i class="fas fa-comment-dots" style="color:var(--gold);margin-right:8px;"></i>Rückfragen beantworten</div><div style="padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid var(--border);font-size:13px;font-weight:300;color:var(--text-muted);"><i class="fas fa-filter" style="color:var(--gold);margin-right:8px;"></i>Einwände vorqualifizieren</div><div style="padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid var(--border);font-size:13px;font-weight:300;color:var(--text-muted);"><i class="fas fa-calendar-check" style="color:var(--gold);margin-right:8px;"></i>Termininteresse abfragen</div><div style="padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid var(--border);font-size:13px;font-weight:300;color:var(--text-muted);"><i class="fas fa-route" style="color:var(--gold);margin-right:8px;"></i>In Terminlogik überführen</div></div><p style="font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.5;font-style:italic;">Die Ausgestaltung des Follow-up-Prozesses kann gemeinsam festgelegt werden.</p></div>
-    </div>
-</section>
-
-<!-- ═══ SECTION 5: Angebot & Ablauf ═══ -->
-<section class="section" id="section-5">
-    <div class="fade-in fd1"><div class="section-divider"></div><span class="label">Bereich 05</span></div>
-    <h2 class="t1 fade-in fd2" style="margin:20px 0 16px;">Angebot <span class="gold-text">& Ablauf</span></h2>
-    <p class="sub fade-in fd3" style="max-width:780px;margin-bottom:48px;">Ein klarer, pragmatischer Rahmen für einen ersten gemeinsamen Test.</p>
-
-    <!-- A) Angebotsrahmen -->
-    <div class="card gold-top fade-in fd4" style="margin-bottom:32px;">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-            <div class="kpi-icon" style="margin:0;width:42px;height:42px;border-radius:12px;font-size:18px;flex-shrink:0;"><i class="fas fa-handshake"></i></div>
-            <div><div class="label" style="margin-bottom:2px;">Angebotsrahmen</div><div style="font-size:clamp(18px,1.8vw,26px);font-weight:400;line-height:1.2;">Partnerschaftlicher Testrahmen</div></div>
-        </div>
-        <div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Wie bereits vorab besprochen: Das Setup für diesen ersten Test wird <strong>kostenfrei umgesetzt</strong>.</div></div>
-        <div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Im Gegenzug wird nach Verlauf eine <strong>kurze Video-Referenz</strong> gewünscht, die für Website oder künftige Projekte genutzt werden darf.</div></div>
-        <div class="story-item" style="margin-bottom:10px;"><div class="story-dot"></div><div class="story-text">Übernommen werden müsste lediglich das <strong>Werbebudget</strong> (ca. 700 €).</div></div>
-        <div class="story-item" style="margin-bottom:0;"><div class="story-dot"></div><div class="story-text">Die <strong>Einstiegshürde bleibt damit bewusst gering</strong> – das Risiko ist überschaubar, der mögliche Erkenntnisgewinn hoch.</div></div>
-    </div>
-
-    <!-- B) Ablauf nach Zusage (4 Steps) -->
-    <div class="card fade-in fd5" style="margin-bottom:32px;">
-        <span class="label" style="display:block;margin-bottom:24px;">Möglicher Ablauf nach Zusage</span>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;" class="s3-grid-4">
-            <div style="text-align:center;padding:24px 16px;border-radius:14px;background:rgba(249,193,14,0.06);border:1px solid var(--gold-border);">
-                <div style="width:36px;height:36px;border-radius:10px;background:rgba(249,193,14,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:16px;font-weight:600;color:var(--gold);">1</div>
-                <div style="font-size:14px;font-weight:500;color:var(--text-primary);margin-bottom:8px;">Kurzer Call</div>
-                <div style="font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.4;">15-Minuten-Telefonat oder Zoom – Klärung letzter Rückfragen und Abstimmung.</div>
-            </div>
-            <div style="text-align:center;padding:24px 16px;border-radius:14px;background:rgba(249,193,14,0.04);border:1px solid var(--gold-border);">
-                <div style="width:36px;height:36px;border-radius:10px;background:rgba(249,193,14,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:16px;font-weight:600;color:var(--gold);">2</div>
-                <div style="font-size:14px;font-weight:500;color:var(--text-primary);margin-bottom:8px;">Vorbereitung</div>
-                <div style="font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.4;">Setup in ca. 2 Tagen startklar. Erste statische Anzeigen können sofort aufgebaut werden.</div>
-            </div>
-            <div style="text-align:center;padding:24px 16px;border-radius:14px;background:rgba(249,193,14,0.03);border:1px solid var(--gold-border);">
-                <div style="width:36px;height:36px;border-radius:10px;background:rgba(249,193,14,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:16px;font-weight:600;color:var(--gold);">3</div>
-                <div style="font-size:14px;font-weight:500;color:var(--text-primary);margin-bottom:8px;">Setup & Launch</div>
-                <div style="font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.4;">Anzeigen, Funnel und Kampagnenstruktur werden aufgesetzt – dann startet der Test live.</div>
-            </div>
-            <div style="text-align:center;padding:24px 16px;border-radius:14px;background:rgba(249,193,14,0.02);border:1px solid var(--gold-border);">
-                <div style="width:36px;height:36px;border-radius:10px;background:rgba(249,193,14,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:16px;font-weight:600;color:var(--gold);">4</div>
-                <div style="font-size:14px;font-weight:500;color:var(--text-primary);margin-bottom:8px;">Iteration & Auswertung</div>
-                <div style="font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.4;">Daten werden laufend geprüft, Anzeigen iterativ angepasst – Ziel sind belastbare Erkenntnisse.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Terminkalender -->
-    <div class="card fade-in fd7" style="margin-top:32px;padding:28px 34px;">
-        <span class="label" style="display:block;margin-bottom:16px;">Termin vereinbaren</span>
-        <p style="font-size:clamp(14px,1.1vw,17px);font-weight:300;color:var(--text-secondary);line-height:1.5;margin-bottom:24px;">Direkt einen passenden Zeitpunkt für ein kurzes Gespräch auswählen:</p>
-        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/vladislavlederer/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        </div>
-    </div>
-
-</section>
-
-<!-- Footer -->
-<footer style="padding:60px 48px 40px;text-align:center;border-top:1px solid var(--border);max-width:1200px;margin:0 auto;">
-    <img src="https://res.cloudinary.com/dkbegf5yh/image/upload/v1772716614/High_res-02_rootis.jpg" alt="Verum Systems" style="height:32px;width:auto;margin:0 auto 16px;display:block;filter:brightness(1.1);opacity:0.7;">
-    <p style="font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.5;">Individuell vorbereitet für Dr. Edouard Manassa / PAAU Hamburg</p>
-</footer>
-</main>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close"><i class="fas fa-times"></i></button>
-    <img id="lightboxImg" src="" alt="Vergrößerte Ansicht">
+  </div>
 </div>
 
+
+
+
+
+<!-- ============================================================
+     KENNEN SIE DAS
+     ============================================================ -->
+<section class="kennen-section">
+  <div class="kennen-header">
+    <span class="section-eyebrow">Kennen Sie das?</span>
+    <h2 class="section-h2">Wenn der Spiegel nicht mehr <br/><em>Ihr wahres Ich</em> zeigt</h2>
+    <p class="section-lead">Viele Patientinnen und Patienten wirken erschöpft, obwohl sie es nicht sind. Der Blick verrät ein Alter, das nicht stimmt. Das lässt sich ändern – <strong>natürlich und dezent.</strong></p>
+  </div>
+
+  <div class="kennen-scroll" id="kennen-carousel">
+    <div class="kennen-card">
+      <div class="kennen-card-img">
+        <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&q=80&w=600&h=400" alt="Müder Blick" loading="lazy" />
+      </div>
+      <span class="card-tag">Problem 01</span>
+      <h3 class="card-h3">Müder Blick</h3>
+      <div class="card-divider"></div>
+      <p class="card-text">Ein erschöpfter Ausdruck lässt Sie oft müde wirken, obwohl Sie sich eigentlich fit und wach fühlen. Gerade die Augenpartie kann dem Gesicht ungewollt Schwere nehmen.</p>
+    </div>
+
+    <div class="kennen-card">
+      <div class="kennen-card-img">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600&h=400" alt="Schwere Oberlider" loading="lazy" />
+      </div>
+      <span class="card-tag">Problem 02</span>
+      <h3 class="card-h3">Schwere Oberlider</h3>
+      <div class="card-divider"></div>
+      <p class="card-text">Wenn Oberlider absinken, wirkt der Blick schnell gedrückt und weniger offen. Das verändert die Ausstrahlung oft stärker, als vielen bewusst ist.</p>
+    </div>
+
+    <div class="kennen-card">
+      <div class="kennen-card-img">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600&h=400" alt="Tränensäcke" loading="lazy" />
+      </div>
+      <span class="card-tag">Problem 03</span>
+      <h3 class="card-h3">Tränensäcke &amp; Unterlidtaschen</h3>
+      <div class="card-divider"></div>
+      <p class="card-text">Ausgeprägte Unterlidtaschen lassen das Gesicht häufig älter und abgespannter erscheinen – obwohl es nicht Ihrem tatsächlichen Befinden entspricht.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VERFAHREN (ELIGIBLE)
+     ============================================================ -->
+<section class="eligible-section">
+  <div class="eligible-header">
+    <span class="section-eyebrow">Vier Verfahren, ein Ziel</span>
+    <h2 class="section-h2">Die passende Lösung für <br/><em>Ihre Augenpartie</em></h2>
+    <p class="section-lead">Ob Schlupflider, Tränensäcke, Asymmetrien oder eine kombinierte Korrektur: Entscheidend ist eine Behandlung, die zu Ihrer Anatomie passt.</p>
+  </div>
+
+  <div class="eligible-scroll">
+    <!-- Card 1 -->
+    <div class="eligible-card">
+      <span class="eligible-card-num">01</span>
+      <span class="eligible-card-tag">Häufig · Ambulant</span>
+      <h3 class="eligible-card-h3">Oberlidstraffung bei Schlupflidern</h3>
+      <p class="eligible-card-desc">Überschüssige Haut am Oberlid kann den Blick müde, schwer oder weniger offen wirken lassen. Bei einer Oberlidstraffung wird die Augenpartie gezielt geglättet, sodass der Ausdruck wieder frischer und wacher erscheint.</p>
+      <div class="eligible-suitable">
+        <span class="eligible-suitable-label">Besonders geeignet bei:</span>
+        <p>Schlupflidern, schwer wirkendem Blick und Hautüberschuss am Oberlid.</p>
+      </div>
+      <div class="eligible-benefit">
+        <span class="eligible-benefit-label">Vorteil:</span>
+        <p>Die feine Narbe liegt später meist unauffällig in der natürlichen Lidfalte.</p>
+      </div>
+      <div class="eligible-price-row">
+        <span class="eligible-price-label">Investition</span>
+        <span class="eligible-price-badge">ab 2.900 €*</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="eligible-card">
+      <span class="eligible-card-num">02</span>
+      <span class="eligible-card-tag">Tränensäcke · Ambulant</span>
+      <h3 class="eligible-card-h3">Unterlidstraffung bei Tränensäcken</h3>
+      <p class="eligible-card-desc">Tränensäcke und Unterlidtaschen lassen die Augenpartie häufig älter und abgespannter wirken. Durch eine gezielte Korrektur kann das Unterlid geglättet und der Blick insgesamt erholter erscheinen.</p>
+      <div class="eligible-suitable">
+        <span class="eligible-suitable-label">Besonders geeignet bei:</span>
+        <p>Tränensäcken, erschlafftem Unterlid und sichtbar müder Augenpartie.</p>
+      </div>
+      <div class="eligible-benefit">
+        <span class="eligible-benefit-label">Vorteil:</span>
+        <p>Je nach Befund verläuft der Schnitt sehr unauffällig direkt unterhalb des Wimpernkranzes oder von innen.</p>
+      </div>
+      <div class="eligible-price-row">
+        <span class="eligible-price-label">Investition</span>
+        <span class="eligible-price-badge">ab 3.100 €*</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="eligible-card">
+      <span class="eligible-card-num">03</span>
+      <span class="eligible-card-tag">Symmetrie · Individuell</span>
+      <h3 class="eligible-card-h3">Ausgleich von Lid-Asymmetrien</h3>
+      <p class="eligible-card-desc">Wenn Ober- oder Unterlider unterschiedlich ausgeprägt sind, kann die Augenpartie unruhig wirken. Eine individuell geplante Korrektur kann die Symmetrie verbessern und das Gesamtbild harmonisieren.</p>
+      <div class="eligible-suitable">
+        <span class="eligible-suitable-label">Besonders geeignet bei:</span>
+        <p>Angeborenen oder altersbedingten Unterschieden im Bereich der Lider.</p>
+      </div>
+      <div class="eligible-benefit">
+        <span class="eligible-benefit-label">Wichtig:</span>
+        <p>Die Behandlung wird immer nach genauer Analyse Ihrer Anatomie und Lidfunktion geplant.</p>
+      </div>
+      <div class="eligible-price-row">
+        <span class="eligible-price-label">Investition</span>
+        <span class="eligible-price-badge">je nach Befund</span>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="eligible-card">
+      <span class="eligible-card-num">04</span>
+      <span class="eligible-card-tag">Kombiniert · Effizient</span>
+      <h3 class="eligible-card-h3">Kombinierte Ober- und Unterlidstraffung</h3>
+      <p class="eligible-card-desc">Wenn sowohl Schlupflider als auch Tränensäcke bestehen, kann eine kombinierte Korrektur sinnvoll sein. So lassen sich Ober- und Unterlid in einem Eingriff behandeln.</p>
+      <div class="eligible-suitable">
+        <span class="eligible-suitable-label">Besonders geeignet bei:</span>
+        <p>Gleichzeitig ausgeprägten Oberlid- und Unterlidveränderungen.</p>
+      </div>
+      <div class="eligible-benefit">
+        <span class="eligible-benefit-label">Vorteil:</span>
+        <p>Nur ein Eingriff, eine gemeinsame Heilungsphase und ein stimmiges Gesamtbild der Augenpartie.</p>
+      </div>
+      <div class="eligible-price-row">
+        <span class="eligible-price-label">Investition</span>
+        <span class="eligible-price-badge">auf Anfrage</span>
+      </div>
+    </div>
+  </div>
+  <p class="eligible-note">*Die tatsächlichen Kosten werden nach GOÄ individuell ermittelt.</p>
+</section>
+
+
+<!-- ============================================================
+     DR. HODORKOVSKI
+     ============================================================ -->
+<div class="doctor-band">
+  <div class="doctor-img-area">
+    <img
+      src="https://unikataesthetik.de/wp-content/uploads/2025/07/dr-hodorkovski-stuttgart-plastische-aesthetische-chirurgie-unikat-aesthetik_kk-1.webp"
+      alt="Dr. med. Igor Hodorkovski"
+      loading="lazy"
+    />
+    <div class="doctor-img-fade"></div>
+  </div>
+
+  <div class="doctor-content">
+    <span class="doctor-eyebrow">Ihr Arzt in Stuttgart</span>
+    <h2 class="doctor-h2">Dr. med. Igor Hodorkovski</h2>
+    <span class="doctor-subtitle">Chefarzt &amp; Gründer · Unikat Ästhetik Stuttgart</span>
+
+    <p class="doctor-bio">
+      Mit über 16 Jahren Erfahrung in der Plastischen und Ästhetischen Chirurgie steht Dr. Hodorkovski für natürliche Ergebnisse, absolute Transparenz und persönliche Betreuung – von der Beratung bis zur letzten Nachkontrolle.
+    </p>
+
+    <div class="doctor-pills">
+      <span class="doctor-pill">Facharzt DGPRÄC</span>
+      <span class="doctor-pill">16+ Jahre Erfahrung</span>
+      <span class="doctor-pill">Internationale Ausbildung</span>
+      <span class="doctor-pill">Promotion 2012 Tübingen</span>
+      <span class="doctor-pill">Gründer seit 2018</span>
+    </div>
+
+    <button class="doctor-vita-toggle" onclick="toggleVita(this)">
+      <span>Vollständige Vita anzeigen</span>
+      <div class="vita-arrow" id="vita-arrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </button>
+
+    <div class="vita-list" id="vita-list">
+      <div class="vita-entry">
+        <span class="vita-year">1994</span>
+        <p class="vita-text">Studium Humanmedizin, Tübingen &amp; Berlin</p>
+      </div>
+      <div class="vita-entry">
+        <span class="vita-year">2003</span>
+        <p class="vita-text">Spezialisierung Mamachirurgie, Berlin</p>
+      </div>
+      <div class="vita-entry">
+        <span class="vita-year">2004</span>
+        <p class="vita-text">Fortbildung Cutaneous Surgery, Sydney</p>
+      </div>
+      <div class="vita-entry">
+        <span class="vita-year">2012</span>
+        <p class="vita-text">Promotion, Uni Tübingen – Praxisgründung Stuttgart</p>
+      </div>
+      <div class="vita-entry">
+        <span class="vita-year">2012–22</span>
+        <p class="vita-text">Belegarzt Klinik Charlottenhaus Stuttgart</p>
+      </div>
+      <div class="vita-entry">
+        <span class="vita-year">2018</span>
+        <p class="vita-text">Gründung UNIKAT ÄSTHETIK Stuttgart-Mitte</p>
+      </div>
+    </div>
+
+    <a href="#kontakt" class="btn-doctor-cta">
+      Persönliche Beratung anfragen
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     FAKTEN
+     ============================================================ -->
+<section class="fakten-section" id="fakten">
+  <span class="section-eyebrow">Auf einen Blick</span>
+  <h2 class="section-h2">Fakten zur<br /><em>Augenlidstraffung</em></h2>
+  <div class="fakten-grid">
+    <div class="fakt-card"><span class="fakt-label">Dauer</span><span class="fakt-value">30–90 Min.</span><span class="fakt-sub">je nach Umfang</span></div>
+    <div class="fakt-card"><span class="fakt-label">Anästhesie</span><span class="fakt-value">Lokal / Dämmerschlaf</span><span class="fakt-sub">ambulant möglich</span></div>
+    <div class="fakt-card"><span class="fakt-label">Klinikaufenthalt</span><span class="fakt-value">Ambulant</span><span class="fakt-sub">kein stationärer Aufenthalt</span></div>
+    <div class="fakt-card"><span class="fakt-label">Arbeitsunfähigkeit</span><span class="fakt-value">7–10 Tage</span><span class="fakt-sub">je nach Beruf</span></div>
+    <div class="fakt-card"><span class="fakt-label">Sport</span><span class="fakt-value">ab Woche 3–4</span><span class="fakt-sub">leichte Aktivität früher</span></div>
+    <div class="fakt-card"><span class="fakt-label">Schwellung</span><span class="fakt-value">Woche 1–2</span><span class="fakt-sub">danach deutlich besser</span></div>
+    <div class="fakt-card"><span class="fakt-label">Endgültiges Ergebnis</span><span class="fakt-value">nach 3–6 Mon.</span><span class="fakt-sub">Narbenreife vollständig</span></div>
+    <div class="fakt-card"><span class="fakt-label">Haltbarkeit</span><span class="fakt-value">7–12 Jahre</span><span class="fakt-sub">je nach Hautalterung</span></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     UNSER ANSATZ (EINBLICK)
+     ============================================================ -->
+<section class="einblick-section">
+  <span class="section-eyebrow">Unser Ansatz</span>
+  <h2 class="section-h2">Was eine Augenlidstraffung<br /><em>bei uns besonders macht.</em></h2>
+  <div class="einblick-items">
+    <div class="einblick-item">
+      <div class="einblick-num">01</div>
+      <div>
+        <h3>Präzision statt Routine</h3>
+        <p>Dr. Hodorkovski plant jeden Eingriff individuell – angepasst an Ihre Anatomie, Ihre Hautstruktur und Ihre persönlichen Ziele. Kein Standardprotokoll.</p>
+      </div>
+    </div>
+    <div class="einblick-item">
+      <div class="einblick-num">02</div>
+      <div>
+        <h3>Natürlichkeit als Maßstab</h3>
+        <p>Das Ergebnis soll ausgeruhter, frischer und jünger wirken – nicht operiert. Wir entfernen so wenig wie nötig und so präzise wie möglich.</p>
+      </div>
+    </div>
+    <div class="einblick-item">
+      <div class="einblick-num">03</div>
+      <div>
+        <h3>Sicherheit auf Klinikniveau</h3>
+        <p>Zertifizierte OP-Räumlichkeiten, erfahrenes Anästhesie-Team und lückenlose Nachsorge. Sie sind gut aufgehoben – von der ersten Minute bis zum finalen Ergebnis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABLAUF
+     ============================================================ -->
+<section class="ablauf-section" id="ablauf">
+  <span class="section-eyebrow">So läuft es ab</span>
+  <h2 class="ablauf-h2">Ihr Weg zu <br/><em>Ihrem Ergebnis</em></h2>
+
+  <div class="ablauf-timeline">
+    <div class="ablauf-step">
+      <div class="ablauf-num"><span>1</span></div>
+      <div class="ablauf-step-content">
+        <h3>Persönliche Beratung</h3>
+        <p>Im ersten Gespräch hören wir zu. Keine Verkaufsabsicht – nur ein ehrliches Bild Ihrer Optionen und Möglichkeiten.</p>
+      </div>
+    </div>
+    <div class="ablauf-step">
+      <div class="ablauf-num"><span>2</span></div>
+      <div class="ablauf-step-content">
+        <h3>Individuelle Planung</h3>
+        <p>Dr. Hodorkovski plant den Eingriff exakt auf Ihre Anatomie abgestimmt – mit realistischen Erwartungen und klaren Zielen.</p>
+      </div>
+    </div>
+    <div class="ablauf-step">
+      <div class="ablauf-num"><span>3</span></div>
+      <div class="ablauf-step-content">
+        <h3>Der Eingriff</h3>
+        <p>Modernste Operationstechnik, zertifizierte Materialien, erfahrenes Anästhesie-Team. Sie sind in sicheren Händen.</p>
+      </div>
+    </div>
+    <div class="ablauf-step">
+      <div class="ablauf-num"><span>4</span></div>
+      <div class="ablauf-step-content">
+        <h3>Nachsorge &amp; Begleitung</h3>
+        <p>Regelmäßige Kontrolltermine mit Dr. Hodorkovski persönlich – bis das finale Ergebnis vollständig erreicht ist.</p>
+      </div>
+    </div>
+    <div class="ablauf-step">
+      <div class="ablauf-num"><span>5</span></div>
+      <div class="ablauf-step-content">
+        <h3>Ihr Ergebnis</h3>
+        <p>Natürlich, harmonisch, dauerhaft. Ein Ergebnis, das zu Ihnen passt und Ihr Selbstbewusstsein stärkt.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ablauf-cta">
+    <a href="#kontakt" class="btn-ablauf">Schritt 1 machen</a>
+    <p class="ablauf-sub-note">Unverbindlich &amp; Diskret</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     NACHSORGE
+     ============================================================ -->
+<section class="nachsorge-section" id="nachsorge">
+  <div class="nachsorge-header">
+    <span class="section-eyebrow">Nachsorge</span>
+    <h2 class="section-h2">Was nach dem<br /><em>Eingriff passiert</em></h2>
+  </div>
+
+  <div class="nachsorge-scroll">
+    <div class="nachsorge-card">
+      <span class="nachsorge-card-num">01</span>
+      <div class="nachsorge-period"><div class="nachsorge-dot"></div><span class="nachsorge-period-label">Direkt nach dem Eingriff</span></div>
+      <h3>Erste Erholungsphase</h3>
+      <p>Kühlung und eine kurze Ruhephase direkt in der Praxis. Sie werden anschließend von einer Begleitperson abgeholt. Leichte Schwellungen und Hämatome sind in dieser Phase völlig normal.</p>
+    </div>
+    <div class="nachsorge-card">
+      <span class="nachsorge-card-num">02</span>
+      <div class="nachsorge-period"><div class="nachsorge-dot"></div><span class="nachsorge-period-label">Tag 1 – 5</span></div>
+      <h3>Schonung &amp; Kühlung</h3>
+      <p>Regelmäßiges Kühlen, körperliche Schonung und Schlafen mit erhöhtem Oberkörper. Vermeiden Sie Anstrengung. Die Fäden sind stabil – dennoch sollten Sie Zug oder Reibung strikt vermeiden.</p>
+    </div>
+    <div class="nachsorge-card">
+      <span class="nachsorge-card-num">03</span>
+      <div class="nachsorge-period"><div class="nachsorge-dot"></div><span class="nachsorge-period-label">Tag 5 – 7</span></div>
+      <h3>Fadenentfernung</h3>
+      <p>Ihr erster Kontrolltermin bei Dr. Hodorkovski. Die Fäden werden schmerzfrei entfernt und der bisherige Heilungsverlauf wird bewertet. Die meisten Patienten sind bereits beschwerdefrei.</p>
+    </div>
+    <div class="nachsorge-card">
+      <span class="nachsorge-card-num">04</span>
+      <div class="nachsorge-period"><div class="nachsorge-dot"></div><span class="nachsorge-period-label">Woche 2 – 3</span></div>
+      <h3>Rückkehr in den Alltag</h3>
+      <p>Die Schwellungen klingen deutlich ab. Make-up im Bereich der Narbe darf nach ausdrücklicher Freigabe wieder verwendet werden. Leichte Alltagsaktivitäten sind nun wieder möglich.</p>
+    </div>
+    <div class="nachsorge-card">
+      <span class="nachsorge-card-num">05</span>
+      <div class="nachsorge-period"><div class="nachsorge-dot"></div><span class="nachsorge-period-label">Monat 1 – 3</span></div>
+      <h3>Regeneration der Narben</h3>
+      <p>Die Narben verblassen zusehends und das Ergebnis wird immer deutlicher sichtbar. Konsequenter UV-Schutz ist essenziell. Ein weiterer Kontrolltermin findet nach ca. 6 Wochen statt.</p>
+    </div>
+    <div class="nachsorge-card">
+      <span class="nachsorge-card-num">06</span>
+      <div class="nachsorge-period"><div class="nachsorge-dot"></div><span class="nachsorge-period-label">Finales Ergebnis</span></div>
+      <h3>Dauerhafte Frische</h3>
+      <p>Nach 3–6 Monaten ist die Narbenreife vollständig abgeschlossen. Das endgültige Ergebnis präsentiert sich: ein frischer, ausgeruhter und absolut natürlicher Blick.</p>
+    </div>
+  </div>
+
+  <div class="nachsorge-note">
+    <div class="nachsorge-note-avatar">
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/07/dr-hodorkovski-stuttgart-plastische-aesthetische-chirurgie-unikat-aesthetik_kk-1.webp" alt="Dr. Hodorkovski" loading="lazy" />
+    </div>
+    <h4>Persönliche Begleitung</h4>
+    <p>Dr. Hodorkovski und sein Team sind während der gesamten Heilungsphase jederzeit für Sie erreichbar.</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     REVIEWS
+     ============================================================ -->
+<section class="reviews-section" id="bewertungen">
+  <div class="reviews-header">
+    <span class="section-eyebrow">Echte Erfahrungen</span>
+    <h2 class="section-h2">Was Patientinnen sagen</h2>
+    <div class="reviews-rating-bar">
+      <span class="reviews-rating-big">5,0</span>
+      <div>
+        <div class="reviews-stars">★★★★★</div>
+        <div class="reviews-meta">340+ Bewertungen · Google &amp; ProvenExpert</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-scroll">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">„Ich bin mit meiner Oberlidstraffung sehr zufrieden – mit der Beratung, der OP und dem Ergebnis. Ich habe mich sehr wohlgefühlt und alles lief professionell ab. Klare Empfehlung!"</p>
+      <div class="review-name">Nastaran A.</div>
+      <div class="review-treatment">Augenlidstraffung</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">„Von der ersten Beratung bis zur Nachbesprechung habe ich mich rundum gut aufgehoben gefühlt. Das Ergebnis wirkt sehr natürlich – genau so, wie ich es mir erhofft habe."</p>
+      <div class="review-name">Daniela</div>
+      <div class="review-treatment">Augenlidstraffung · Augenbrauenlifting</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">„Bei der Beratung mit Dr. Hodorkovski hatte ich sofort das Gefühl, in sehr professionellen Händen zu sein. Das Ergebnis ist wunderschön: harmonisch, natürlich und sehr ästhetisch."</p>
+      <div class="review-name">Margarita N.</div>
+      <div class="review-treatment">Brustvergrößerung</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">„Seit mehr als 20 Jahren kenne ich Dr. Hodorkovski. Er überzeugt durch höchste Präzision und stets natürliche Ergebnisse. Ich fühle mich seit zwei Jahrzehnten bestens aufgehoben."</p>
+      <div class="review-name">Tanya</div>
+      <div class="review-treatment">Langjährige Patientin</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">„Dr. Hodorkovski ist für mich die Nummer 1 in der plastisch-ästhetischen Chirurgie – fachlich wie menschlich nicht zu toppen. Man fühlt sich jederzeit ernst genommen und in besten Händen."</p>
+      <div class="review-name">Irina G.</div>
+      <div class="review-treatment">Bauchdeckenstraffung · Brustvergrößerung</div>
+    </div>
+  </div>
+
+  <div class="reviews-footer">
+    <a href="https://www.provenexpert.com/plastische-chirurgie-unikat-aesthetik-dr-hodorkovski/" target="_blank" rel="noreferrer" class="btn-outline-reviews">Alle 340+ Bewertungen lesen</a>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRAXIS
+     ============================================================ -->
+<section class="praxis-section" id="praxis">
+  <div class="praxis-header">
+    <span class="section-eyebrow">Unsere Praxis</span>
+    <h2 class="section-h2">Modernes Ambiente im<br /><em>Herzen Stuttgarts</em></h2>
+    <p class="section-lead" style="margin-top:12px;">Mitten in Stuttgart erwartet Sie eine modern gestaltete Praxis mit ruhiger, diskreter Atmosphäre. Helle Räume, hochwertiges Ambiente und persönliche Betreuung schaffen den passenden Rahmen.</p>
+  </div>
+
+  <div class="praxis-scroll" id="praxis-carousel">
+    <div class="praxis-img-wrap">
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/10/empfangsbereich-facharztpraxis-unikataesthetik-stuttgart.webp" alt="Empfangsbereich" loading="lazy" />
+    </div>
+    <div class="praxis-img-wrap">
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/10/beratung-plastische-aesthetische-chirurgie-dr-hodorkovski.webp" alt="Beratungszimmer" loading="lazy" />
+    </div>
+    <div class="praxis-img-wrap">
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/10/warteraum-praxis-aesthetische-medizin-dr-hodorkovski-stuttgart.webp" alt="Wartebereich" loading="lazy" />
+    </div>
+    <div class="praxis-img-wrap">
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/10/aesthetische-behandlung-dr-hodorkovski-stuttgart-unikat-aesthetik.webp" alt="Behandlungszimmer" loading="lazy" />
+    </div>
+    <div class="praxis-img-wrap">
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/10/aesthetische-medizin-beratung-plastischer-aesthetischer-chirurg-dr-hodorkovski-stuttgart.webp" alt="Medizinische Beratung" loading="lazy" />
+    </div>
+  </div>
+  <div class="praxis-divider"></div>
+</section>
+
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="faq-section" id="faq">
+  <div class="faq-header">
+    <span class="section-eyebrow">Häufig gestellte Fragen</span>
+    <h2 class="faq-h2">FAQ zur <em>Augenlidstraffung</em></h2>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Wie erfolgt eine Lidstraffung?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-answer-text">Den vollständigen Ablauf in fünf Schritten finden Sie in der Schritt-für-Schritt-Übersicht weiter oben auf dieser Seite.</p>
+        <a href="#ablauf" class="faq-answer-link">Details ansehen →</a>
+      </div>
+    </div>
+
+    <div class="faq-item open">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Wann übernimmt die Krankenkasse die Kosten für eine Augenlidstraffung?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-answer-text">Da es sich bei einer Augenlidstraffung meist um einen ästhetischen Eingriff handelt, wird die Behandlung in den meisten Fällen nicht von der Krankenkasse übernommen. Liegt ein medizinischer Grund vor – wie z. B. eine Sehfeldeinschränkung – ist eine anteilige oder vollständige Übernahme möglich. Die medizinische Indikation muss von einem Augenarzt geprüft und bestätigt werden.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Darf ich nach der Behandlung ohne Begleitung nach Hause fahren?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-answer-text">Da Ihr Sichtfeld unmittelbar nach der Augenlidstraffung eingeschränkt ist, empfehlen wir Ihnen, sich von einer Begleitperson nach Hause fahren zu lassen. Bei einer Operation mit Dämmerschlaf oder Vollnarkose ist eine Begleitperson Pflicht, da Sie in den nächsten 24 Stunden nicht aktiv am Straßenverkehr teilnehmen dürfen.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Sind die Narben nach einer Lidkorrektur sichtbar?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-answer-text">Bei einer Lidkorrektur heilen die Narben meist sehr schnell und gut ab, sodass sie später kaum sichtbar sind. Der Schnitt wird so gesetzt, dass er fast unsichtbar in der Oberlidfalte liegt oder sich ca. 3 mm unter dem Wimpernkranz befindet. Nach wenigen Wochen verändern sie sich zu einem weißlichen, unauffälligen Strich.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Wie lange hält die Schwellung nach einer Lidstraffung an?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-answer-text">Jeder Körper reagiert anders auf operative Eingriffe. Schwellungen und Blutergüsse können innerhalb weniger Tage abklingen oder 1 bis 2 Wochen überdauern. Regelmäßiges Kühlen wirkt dem positiv entgegen. Nach 1–2 Wochen sind auffälligere Schwellungen meist abgeklungen und unsere Patienten sind wieder gesellschafts- und arbeitsfähig.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Was ist nach einer Schlupflider OP zu beachten?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-answer-text">Die wichtigsten Nachsorge-Hinweise finden Sie ausführlich in der Nachsorge-Übersicht weiter oben auf dieser Seite. Grundsätzlich gilt: Schonen Sie sich in den ersten 2 Wochen, vermeiden Sie Wärme (Sauna, Solarium) und direkte Sonneneinstrahlung für die ersten Monate.</p>
+        <a href="#nachsorge" class="faq-answer-link">Zur Nachsorge →</a>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Wie lange dauert die Heilung nach einer Lidstraffung?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-answer-text">In den ersten Tagen nach der Operation sind die Augenlider häufig geschwollen und Blutergüsse zu sehen. Nach 1–2 Wochen sind auffälligere Schwellungen meist abgeklungen. Das endgültige Ergebnis ist nach etwa 2–3 Monaten vollständig sichtbar.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Welche Risiken oder Komplikationen sind bei einer Augenlidkorrektur möglich?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-intro">Ich lege bei jeder Augenlidstraffung großen Wert auf vollständige, ehrliche Aufklärung. Die Risiken sind gering und können durch entsprechende Vorsichtsmaßnahmen weitestgehend minimiert werden.</p>
+        <div class="faq-risk-scroll">
+          <div class="faq-risk-card">
+            <span class="faq-risk-cat">Häufig · Vorübergehend</span>
+            <h4 class="faq-risk-title">Schwellung &amp; Blutergüsse</h4>
+            <p class="faq-risk-text">Klingen nach 1–2 Wochen deutlich ab. Regelmäßiges Kühlen mit Gel-Pads hilft.</p>
+          </div>
+          <div class="faq-risk-card">
+            <span class="faq-risk-cat">Häufig · Vorübergehend</span>
+            <h4 class="faq-risk-title">Leichte Schmerzen &amp; Verfärbungen</h4>
+            <p class="faq-risk-text">Gut beherrschbar, klingen in den ersten Tagen ab. Verfärbungen dürfen nach Fadenzug kaschiert werden.</p>
+          </div>
+          <div class="faq-risk-card">
+            <span class="faq-risk-cat">Sehr selten</span>
+            <h4 class="faq-risk-title">Narbenbildung &amp; Asymmetrie</h4>
+            <p class="faq-risk-text">Gering bei fachgerechter Technik. Narbe liegt in der natürlichen Lidfalte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Kann ich die Augenlidstraffung mit anderen Eingriffen kombinieren?</span>
+        <div class="faq-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-answer-text">Ja – und oft ergibt die Kombination erst das wirklich harmonische Gesamtergebnis. Häufige Kombinationen sind: Augenlidstraffung + Augenbrauenlifting, Augenlidstraffung + Facelift, oder Ober- und Unterlidstraffung in einer Operation. Was in Ihrem Fall sinnvoll ist, besprechen wir gemeinsam in der Beratung.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     KONTAKT
+     ============================================================ -->
+<section class="contact-section" id="kontakt">
+  <span class="section-eyebrow">Ihr nächster Schritt</span>
+  <h2 class="contact-h2">Ihr Weg zu <em>natürlicher Ästhetik</em> beginnt hier.</h2>
+  <p class="contact-intro">Kostenlose, unverbindliche Erstberatung – persönlich mit Dr. Hodorkovski. Kein Druck, keine Verkaufsabsicht. Antwort innerhalb von 24 Stunden.</p>
+
+  <div class="contact-success" id="contact-success">
+    Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+  </div>
+
+  <form class="contact-form" id="contact-form" onsubmit="submitForm(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Vorname</label>
+        <input type="text" placeholder="Maria" />
+      </div>
+      <div class="form-group">
+        <label>Nachname</label>
+        <input type="text" placeholder="Müller" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>E-Mail</label>
+      <input type="email" placeholder="ihre@email.de" />
+    </div>
+    <div class="form-group">
+      <label>Telefon</label>
+      <input type="tel" placeholder="+49 711 ..." />
+    </div>
+    <div class="form-group">
+      <label>Gewünschte Behandlung</label>
+      <select>
+        <option value="" disabled selected>Bitte wählen ...</option>
+        <optgroup label="Gesicht">
+          <option>Augenlidstraffung</option>
+          <option>Faltenbehandlung / Botox</option>
+          <option>Lippen aufspritzen</option>
+          <option>Facelift / Mini-Facelift</option>
+          <option>Jawline Unterspritzung</option>
+          <option>Sonstiges Gesicht</option>
+        </optgroup>
+        <optgroup label="Brust">
+          <option>Brustvergrößerung</option>
+          <option>Bruststraffung</option>
+          <option>Brustverkleinerung</option>
+          <option>Implantatwechsel</option>
+        </optgroup>
+        <optgroup label="Körper">
+          <option>Bauchdeckenstraffung</option>
+          <option>Fettabsaugung</option>
+          <option>Körperstraffung</option>
+        </optgroup>
+        <option>Noch unsicher – Beratung gewünscht</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Nachricht (optional)</label>
+      <textarea rows="3" placeholder="Ihre Fragen oder Anliegen ..."></textarea>
+    </div>
+    <button class="btn-submit" type="submit">Anfrage absenden</button>
+  </form>
+
+  <div class="contact-alt">
+    <a href="tel:+4971190769390" class="contact-link">☎&nbsp;&nbsp;0711 90 769 390</a>
+    <a href="mailto:info@in-form-aesthetik.de" class="contact-link">✉&nbsp;&nbsp;info@in-form-aesthetik.de</a>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="treat-footer">
+  <div class="footer-logo">UNIKAT AESTHETIK</div>
+  <div class="footer-sub">Dr. med. Hodorkovski · Plastische &amp; Ästhetische Chirurgie</div>
+  <div class="footer-address">Königstr. 16 · 70173 Stuttgart · <a href="tel:+4971122886831">+49 711 228 868 31</a></div>
+  <nav class="footer-links">
+    <a href="https://unikataesthetik.de/impressum/" target="_blank" rel="noreferrer">Impressum</a>
+    <a href="https://unikataesthetik.de/datenschutz/" target="_blank" rel="noreferrer">Datenschutz</a>
+    <a href="https://unikataesthetik.de/" target="_blank" rel="noreferrer">Zurück zur Übersicht</a>
+  </nav>
+  <div class="footer-copy">© 2025 UNIKAT AESTHETIK Stuttgart. Alle Rechte vorbehalten.</div>
+</footer>
+
+
+<!-- ============================================================
+     STICKY BAR
+     ============================================================ -->
+<div class="sticky-cta" id="sticky-cta">
+  <a href="#kontakt" class="sticky-main">Beratung anfragen</a>
+  <a href="tel:+4971190769390" class="sticky-call">☎ Anrufen</a>
+</div>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
 <script>
-// Fade In
-const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+  // --- NAV hide/show on scroll ---
+  let lastScrollY = 0;
+  const nav = document.getElementById('main-nav');
 
-// Active Nav
-const sections=document.querySelectorAll('.section,.hero');
-const navItems=document.querySelectorAll('.nav-item');
-function updateActiveNav(){let c='';const s=window.scrollY+window.innerHeight*0.35;sections.forEach(s2=>{if(s2.offsetTop<=s)c=s2.id});navItems.forEach(i=>{i.classList.remove('active');const h=i.getAttribute('href');if(h&&h.substring(1)===c)i.classList.add('active')});const d=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=Math.min((window.scrollY/d)*100,100)+'%'}
-window.addEventListener('scroll',updateActiveNav,{passive:true});
-updateActiveNav();
+  window.addEventListener('scroll', () => {
+    const currentY = window.scrollY;
+    if (currentY < lastScrollY || currentY < 60) {
+      nav.classList.remove('hidden');
+    } else {
+      nav.classList.add('hidden');
+    }
+    lastScrollY = currentY;
+  }, { passive: true });
 
-navItems.forEach(item=>{item.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(item.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});document.querySelector('.sidebar').classList.remove('open')})});
+  // --- Sticky CTA hide when contact visible ---
+  const stickyCta = document.getElementById('sticky-cta');
+  const contactSection = document.getElementById('kontakt');
+  if (contactSection) {
+    const observer = new IntersectionObserver(entries => {
+      stickyCta.classList.toggle('hidden', entries[0].isIntersecting);
+    }, { threshold: 0.05 });
+    observer.observe(contactSection);
+  }
 
-// Lightbox
-function openLightbox(card){const img=card.querySelector('img');if(img&&img.src){document.getElementById('lightboxImg').src=img.src;document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden'}}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
-document.querySelector('.lightbox-close').addEventListener('click',e=>{e.stopPropagation();closeLightbox()});
+  // --- FAQ accordion ---
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // close all
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      const iconWrap = i.querySelector('.faq-icon-wrap');
+      iconWrap.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>';
+    });
+    // open clicked if was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      const iconWrap = item.querySelector('.faq-icon-wrap');
+      iconWrap.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>';
+    }
+  }
 
-// Slideshow
-(function(){const w=document.querySelector('.slideshow-wrap');if(!w)return;const s=w.querySelectorAll('.slideshow-slide'),d=w.querySelectorAll('.dot');let c=0;setInterval(()=>{s[c].classList.remove('active');d[c].classList.remove('active');c=(c+1)%s.length;s[c].classList.add('active');d[c].classList.add('active')},3500)})();
+  // --- Vita toggle ---
+  function toggleVita(btn) {
+    const vitaList = document.getElementById('vita-list');
+    const arrow = document.getElementById('vita-arrow');
+    vitaList.classList.toggle('open');
+    arrow.classList.toggle('open');
+  }
 
-// Accordion
-function toggleCase(id){const card=document.getElementById(id);const wasOpen=card.classList.contains('open');document.querySelectorAll('.case-card').forEach(c=>c.classList.remove('open'));if(!wasOpen){card.classList.add('open');setTimeout(()=>{card.scrollIntoView({behavior:'smooth',block:'start',inline:'nearest'})},100)}}
+  // --- Contact form ---
+  function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('contact-success').classList.add('visible');
+  }
+
+  // --- Praxis auto-scroll carousel ---
+  const praxisCarousel = document.getElementById('praxis-carousel');
+  if (praxisCarousel) {
+    setInterval(() => {
+      const maxScroll = praxisCarousel.scrollWidth - praxisCarousel.clientWidth;
+      const firstCard = praxisCarousel.firstElementChild;
+      const cardWidth = firstCard ? firstCard.offsetWidth + 14 : 300;
+      if (praxisCarousel.scrollLeft >= maxScroll - 10) {
+        praxisCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        praxisCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    }, 4000);
+  }
+
+  // --- Kennen-Sie-Das auto-scroll (stops on touch) ---
+  const kennenCarousel = document.getElementById('kennen-carousel');
+  if (kennenCarousel) {
+    let kennenInteracted = false;
+    kennenCarousel.addEventListener('touchstart', () => kennenInteracted = true, { passive: true });
+    kennenCarousel.addEventListener('mousedown', () => kennenInteracted = true, { passive: true });
+
+    setInterval(() => {
+      if (kennenInteracted) return;
+      const maxScroll = kennenCarousel.scrollWidth - kennenCarousel.clientWidth;
+      const firstCard = kennenCarousel.firstElementChild;
+      const cardWidth = firstCard ? firstCard.offsetWidth + 16 : 300;
+      if (kennenCarousel.scrollLeft >= maxScroll - 10) {
+        kennenCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        kennenCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    }, 3000);
+  }
 </script>
+
 </body>
 </html>
