@@ -95,10 +95,66 @@ img { display: block; max-width: 100%; }
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.75rem,5.5vw,2.1rem);
   font-weight: 300;
-  line-height: 1.12;
+  line-height: 1.25;
   color: var(--text-dark);
 }
-.t-em { font-style: italic; color: var(--gold-light); }
+
+/* GLOBAL HEADLINE HIGHLIGHTS (Premium Editorial Style) */
+.t-em,
+.faq-h2 em {
+  position: relative;
+  display: inline-block;
+  color: var(--gold-pale);
+  font-style: italic;
+  padding: 0 4px;
+  margin: 0 6px;
+  z-index: 1;
+}
+
+.t-em::before,
+.faq-h2 em::before {
+  content: '';
+  position: absolute;
+  top: 6%;
+  bottom: 4%;
+  left: -8px;
+  right: -8px;
+  background: rgba(28, 25, 22, 0.96); /* Entspricht #1C1916 leicht transluzent */
+  z-index: -1;
+  /* Standard: Leichte Neigung nach rechts unten */
+  border-radius: 3px 18px 5px 22px / 22px 5px 18px 3px;
+  transform: rotate(-1.5deg);
+}
+
+/* Pinselstrich Variation 2: Leicht nach oben geneigt (Verfahren, Ansatz, FAQ) */
+.eligible-section .t-em::before,
+.einblick-section .t-em::before,
+.faq-h2 em::before {
+  border-radius: 18px 3px 20px 5px / 5px 20px 4px 18px;
+  transform: rotate(1deg);
+}
+
+/* Pinselstrich Variation 3: Flacher, ruhiger (Fakten, Praxis) */
+.fakten-section .t-em::before,
+.praxis-section .t-em::before {
+  border-radius: 6px 22px 4px 16px / 18px 4px 20px 6px;
+  transform: rotate(-0.5deg);
+}
+
+.hero-h1 em {
+  display: block;
+  color: var(--gold-light);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.ablauf-h2 em,
+.contact-h2 em {
+  display: inline;
+  color: var(--gold-light);
+  font-style: italic;
+}
+
 .t-body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 15.5px;
@@ -213,12 +269,12 @@ img { display: block; max-width: 100%; }
 }
 .ua-nav.hidden { transform: translateX(-50%) translateY(-100%); }
 .nav-logo {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--gold-light);
-  font-size: 10.5px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 24px;
+  width: auto;
 }
 .nav-cta {
   background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
@@ -294,7 +350,6 @@ img { display: block; max-width: 100%; }
   font-size: 2.5rem; font-weight: 300; color: #fff;
   line-height: 1.05; letter-spacing: -0.02em;
 }
-.hero-h1 em { font-style: italic; color: var(--gold-light); display: block; margin-top: 4px; }
 .hero-h1 span { display: block; margin-top: 4px; font-size: 2.1rem; color: rgba(255,255,255,0.92); }
 .hero-lead {
   font-family: 'Cormorant Garamond', serif; font-size: 17px;
@@ -588,9 +643,8 @@ img { display: block; max-width: 100%; }
 }
 .ablauf-h2 {
   font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300;
-  color: var(--text-light); line-height: 1.1; margin-bottom: 32px;
+  color: var(--text-light); line-height: 1.25; margin-bottom: 32px;
 }
-.ablauf-h2 em { font-style: italic; color: var(--gold-light); }
 .ablauf-timeline { position: relative; display: flex; flex-direction: column; gap: 24px; }
 .ablauf-timeline::before {
   content: ''; position: absolute; left: 17px; top: 32px; bottom: 32px;
@@ -665,11 +719,17 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--border-card); border-radius: var(--r-lg);
   padding: 22px; display: flex; flex-direction: column; align-items: center; text-align: center;
 }
-.nachsorge-note-avatar {
-  width: 52px; height: 52px; border-radius: 50%; overflow: hidden;
-  border: 2px solid rgba(197,154,82,0.18); margin-bottom: 12px;
+.team-avatars {
+  display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
 }
-.nachsorge-note-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.team-avatars img {
+  width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+  border: 2px solid var(--bg-cream); box-shadow: 0 4px 12px rgba(20,14,6,0.1);
+  position: relative; z-index: 1;
+}
+.team-avatars img.avatar-main {
+  width: 58px; height: 58px; z-index: 10; margin: 0 -14px; border-width: 3px;
+}
 .nachsorge-note h4 {
   font-family: 'Cormorant Garamond', serif; font-size: 1rem;
   color: var(--text-dark); font-weight: 600; margin-bottom: 5px;
@@ -834,9 +894,8 @@ img { display: block; max-width: 100%; }
 .faq-header { padding: 0 26px; margin-bottom: 24px; }
 .faq-h2 {
   font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300;
-  color: var(--text-dark); line-height: 1.1;
+  color: var(--text-dark); line-height: 1.25;
 }
-.faq-h2 em { font-style: italic; color: var(--gold); }
 .faq-list { border-top: 1px solid rgba(197,154,82,0.15); padding: 0 26px; }
 .faq-item { border-bottom: 1px solid rgba(197,154,82,0.15); transition: background 0.3s; }
 .faq-item.open { background: rgba(197,154,82,0.06); }
@@ -916,9 +975,8 @@ img { display: block; max-width: 100%; }
 }
 .contact-h2 {
   font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 300;
-  color: var(--text-light); line-height: 1.15; margin-bottom: 12px;
+  color: var(--text-light); line-height: 1.25; margin-bottom: 12px;
 }
-.contact-h2 em { font-style: italic; color: var(--gold-light); }
 .contact-intro {
   font-family: 'Cormorant Garamond', serif; font-size: 16px;
   color: var(--text-faint); line-height: 1.68; margin-bottom: 30px; font-weight: 300;
@@ -1045,7 +1103,9 @@ img { display: block; max-width: 100%; }
 
 <!-- NAV -->
 <nav class="ua-nav" id="main-nav">
-  <div class="nav-logo">Unikat Ästhetik</div>
+  <div class="nav-logo">
+    <img src="https://unikataesthetik.de/wp-content/uploads/2025/06/plastische-aesthetische-chirurgie-stuttgart-logo_white.svg" alt="Unikat Ästhetik" />
+  </div>
   <a href="#kontakt" class="nav-cta">Beratung</a>
 </nav>
 
@@ -1323,7 +1383,11 @@ img { display: block; max-width: 100%; }
     <div class="nachsorge-card"><span class="nc-bg-num">06</span><div class="nc-period"><div class="nc-dot"></div><span class="nc-period-label">Finales Ergebnis</span></div><h3>Dauerhafte Frische</h3><p>Nach 3–6 Monaten ist die Narbenreife vollständig abgeschlossen. Das endgültige Ergebnis präsentiert sich: ein frischer, ausgeruhter und absolut natürlicher Blick.</p></div>
   </div>
   <div class="nachsorge-note">
-    <div class="nachsorge-note-avatar"><img src="https://unikataesthetik.de/wp-content/uploads/2025/07/dr-hodorkovski-stuttgart-plastische-aesthetische-chirurgie-unikat-aesthetik_kk-1.webp" alt="Dr. Hodorkovski" loading="lazy" /></div>
+    <div class="team-avatars">
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/10/praxis-managerin-stuttgart-e1760862555668.jpg" alt="Teammitglied" loading="lazy" />
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/07/dr-hodorkovski-stuttgart-plastische-aesthetische-chirurgie-unikat-aesthetik_kk-1.webp" alt="Dr. Hodorkovski" class="avatar-main" loading="lazy" />
+      <img src="https://unikataesthetik.de/wp-content/uploads/2025/10/afshin_rahmany-280x320-1-e1760862638668.jpg" alt="Teammitglied" loading="lazy" />
+    </div>
     <h4>Persönliche Begleitung</h4>
     <p>Dr. Hodorkovski und sein Team sind während der gesamten Heilungsphase jederzeit für Sie erreichbar.</p>
   </div>
@@ -1337,7 +1401,7 @@ img { display: block; max-width: 100%; }
   <div class="reviews-section-rule"></div>
   <div class="reviews-header">
     <span class="t-eyebrow">Echte Erfahrungen</span>
-    <h2 class="t-h2">Was Patientinnen sagen</h2>
+    <h2 class="t-h2">Was <em class="t-em">Patientinnen</em> sagen</h2>
     <div class="reviews-rating-bar">
       <span class="reviews-rating-big">5,0</span>
       <div>
