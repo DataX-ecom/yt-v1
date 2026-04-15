@@ -28,23 +28,25 @@
   --gold-dim:   rgba(197,154,82,0.14);
   --gold-line:  rgba(197,154,82,0.28);
 
-  --text-dark:   #1E1810;
-  --text-body:   #3A2E22;
-  --text-muted:  #8A7A68;
-  --text-soft:   #B5A898;
-  --text-light:  rgba(243,238,231,0.92);
-  --text-faint:  rgba(243,238,231,0.50);
+  /* TEXT COLORS - MAXIMALER KONTRAST FÜR HELLE HINTERGRÜNDE */
+  --text-dark:   #0A0806;
+  --text-body:   #1A140E;
+  --text-muted:  #3D3124;
+  --text-soft:   #5C4B3A;
+  --text-light:  rgba(243,238,231,0.95);
+  --text-faint:  rgba(243,238,231,0.60);
 
   --border-card: rgba(197,154,82,0.13);
   --border-warm: rgba(197,154,82,0.26);
 
-  --shadow-sm: 0 2px 14px rgba(20,14,6,0.06);
-  --shadow-md: 0 6px 28px rgba(20,14,6,0.10);
+  --shadow-sm: 0 4px 20px rgba(20,14,6,0.06);
+  --shadow-md: 0 8px 32px rgba(20,14,6,0.08);
 
   --r-sm:   10px;
   --r-md:   16px;
   --r-lg:   24px;
   --r-xl:   30px;
+  --r-container: 32px;
   --r-pill: 100px;
 }
 
@@ -106,7 +108,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ============================================================
-   BUTTON SYSTEM
+   BUTTON SYSTEM (ALL WITH GOLD GRADIENT)
    ============================================================ */
 .btn-primary-hero {
   display: flex;
@@ -134,34 +136,61 @@ img { display: block; max-width: 100%; }
   gap: 10px;
   width: 100%;
   padding: 16px 24px;
-  background: transparent;
-  color: var(--gold-light);
-  border: 1px solid rgba(197,154,82,0.30);
+  background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
+  color: var(--bg-deep);
+  border: none;
   border-radius: var(--r-pill);
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4), 0 10px 28px rgba(0,0,0,0.35);
+  transition: transform 0.15s, opacity 0.15s;
 }
-.btn-ghost-dark:active { transform: scale(0.98); background: rgba(197,154,82,0.06); border-color: var(--gold); }
+.btn-ghost-dark:active { transform: scale(0.98); opacity: 0.9; }
 
 .btn-outline-light {
   display: block;
   text-align: center;
-  border: 1px solid var(--gold-line);
-  color: var(--gold);
+  border: none;
+  background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
+  color: var(--bg-deep);
   padding: 15px 24px;
   border-radius: var(--r-pill);
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.10em;
   text-transform: uppercase;
-  transition: background 0.2s;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4), 0 10px 28px rgba(0,0,0,0.35);
+  transition: transform 0.15s, opacity 0.15s;
 }
-.btn-outline-light:active { background: rgba(197,154,82,0.08); }
+.btn-outline-light:active { transform: scale(0.98); opacity: 0.9; }
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
+  color: var(--bg-deep);
+  padding: 17px; border-radius: var(--r-pill);
+  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
+  border: none; cursor: pointer; letter-spacing: 0.12em; text-transform: uppercase;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4), 0 10px 28px rgba(0,0,0,0.35);
+  transition: opacity 0.2s, transform 0.15s;
+}
+.btn-submit:active { transform: scale(0.98); opacity: 0.88; }
+
+.btn-ablauf {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 60px;
+  background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
+  color: var(--bg-deep); border-radius: var(--r-pill);
+  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4), 0 10px 28px rgba(0,0,0,0.35);
+  transition: opacity 0.2s, transform 0.15s;
+}
+.btn-ablauf:active { transform: scale(0.97); opacity: 0.88; }
 
 /* ============================================================
    NAV
@@ -192,7 +221,7 @@ img { display: block; max-width: 100%; }
   font-weight: 400;
 }
 .nav-cta {
-  background: var(--gold);
+  background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
   color: var(--bg-deep);
   padding: 9px 20px;
   border-radius: var(--r-pill);
@@ -202,25 +231,23 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4), 0 4px 12px rgba(0,0,0,0.2);
+  transition: opacity 0.15s, transform 0.15s;
 }
-.nav-cta:active { opacity: 0.85; }
+.nav-cta:active { transform: scale(0.95); opacity: 0.85; }
 
 /* ============================================================
-   HERO  —  1:1 PRESERVED, only adds smooth exit at bottom
+   HERO 
    ============================================================ */
 .hero-wrap {
   background: #0b0908;
   padding-top: 75px;
   position: relative;
-}
-.hero-wrap::after {
-  content: '';
-  position: absolute;
-  bottom: -1px; left: 0; right: 0;
-  height: 52px;
-  background: linear-gradient(to bottom, transparent, var(--bg-warm));
-  pointer-events: none;
-  z-index: 5;
+  border-radius: 0 0 var(--r-container) var(--r-container);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 40px;
+  z-index: 10;
 }
 .hero-image-area {
   position: relative;
@@ -239,7 +266,7 @@ img { display: block; max-width: 100%; }
 }
 .hero-content {
   position: relative; z-index: 20;
-  padding: 0 24px 40px;
+  padding: 0 24px 48px;
   margin-top: -160px;
   display: flex; flex-direction: column; gap: 18px;
 }
@@ -271,10 +298,10 @@ img { display: block; max-width: 100%; }
 .hero-h1 span { display: block; margin-top: 4px; font-size: 2.1rem; color: rgba(255,255,255,0.92); }
 .hero-lead {
   font-family: 'Cormorant Garamond', serif; font-size: 17px;
-  color: rgba(255,255,255,0.58); line-height: 1.65; font-weight: 300;
+  color: rgba(255,255,255,0.70); line-height: 1.65; font-weight: 300;
 }
 .hero-cta-wrap { display: flex; flex-direction: column; gap: 12px; padding-top: 6px; }
-.hero-trust-row { display: flex; align-items: center; gap: 12px; }
+.hero-trust-row { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 4px; }
 .trust-avatars { display: flex; }
 .trust-avatars img {
   width: 28px; height: 28px; border-radius: 50%;
@@ -287,33 +314,6 @@ img { display: block; max-width: 100%; }
 .trust-stars-gold { color: var(--gold); font-size: 11px; letter-spacing: 1px; }
 .trust-score-sub { font-family: 'DM Sans', sans-serif; font-size: 10px; color: rgba(255,255,255,0.42); margin-top: 3px; letter-spacing: 0.02em; }
 
-/* ============================================================
-   SECTION SEPARATORS — arch technique
-   Each dark→light or light→dark gets a 28px "shelf"
-   ============================================================ */
-.arch-from-dark::before {
-  content: '';
-  display: block;
-  height: 28px;
-  border-radius: 0 0 28px 28px;
-  margin-bottom: 36px;
-}
-.arch-from-warm::before {
-  content: '';
-  display: block;
-  height: 28px;
-  background: var(--bg-warm);
-  border-radius: 0 0 28px 28px;
-  margin-bottom: 36px;
-}
-.arch-from-cream::before {
-  content: '';
-  display: block;
-  height: 28px;
-  background: var(--bg-cream);
-  border-radius: 0 0 28px 28px;
-  margin-bottom: 36px;
-}
 
 /* Shared scroll header */
 .scroll-header { padding: 0 24px; margin-bottom: 28px; }
@@ -322,7 +322,7 @@ img { display: block; max-width: 100%; }
 /* ============================================================
    KENNEN SIE DAS
    ============================================================ */
-.kennen-section { background: var(--bg-warm); padding: 52px 0 40px; }
+.kennen-section { background: var(--bg-warm); padding: 20px 0 40px; }
 .kennen-scroll {
   display: flex; overflow-x: auto; gap: 14px;
   padding: 4px 24px 18px;
@@ -331,7 +331,7 @@ img { display: block; max-width: 100%; }
 }
 .kennen-scroll::-webkit-scrollbar { display: none; }
 .kennen-card {
-  flex-shrink: 0; width: 86%; scroll-snap-align: start;
+  flex-shrink: 0; width: 100%; scroll-snap-align: center; /* FULL WIDTH & CENTER ALIGN */
   background: var(--bg-card); border: 1px solid var(--border-card);
   border-radius: var(--r-xl); padding: 22px;
   box-shadow: var(--shadow-md); transition: transform 0.2s;
@@ -360,19 +360,20 @@ img { display: block; max-width: 100%; }
 /* ============================================================
    VERFAHREN / ELIGIBLE
    ============================================================ */
-.eligible-section { background: var(--bg-warm); padding: 8px 0 36px; }
+.eligible-section { background: var(--bg-warm); padding: 8px 0 48px; }
 .eligible-section-rule {
   height: 1px; margin: 0 24px 44px;
   background: linear-gradient(to right, transparent, var(--border-warm), transparent);
 }
 .eligible-scroll {
-  display: flex; overflow-x: auto; gap: 14px;
+  display: flex; flex-direction: row; overflow-x: auto; gap: 14px;
   padding: 4px 24px 18px;
   scroll-snap-type: x mandatory; scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 .eligible-scroll::-webkit-scrollbar { display: none; }
 .eligible-card {
-  flex-shrink: 0; width: 88%; scroll-snap-align: start;
+  flex-shrink: 0; width: 88%; scroll-snap-align: center;
   background: var(--bg-card); border: 1px solid var(--border-card);
   border-radius: var(--r-xl); padding: 26px;
   box-shadow: var(--shadow-md); position: relative; overflow: hidden;
@@ -445,20 +446,22 @@ img { display: block; max-width: 100%; }
 }
 
 /* ============================================================
+   GLOBAL DARK CONTAINERS (Doctor, Ablauf, Kontakt)
+   ============================================================ */
+.dark-container {
+  border-radius: var(--r-container);
+  margin: 0 12px 48px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* ============================================================
    DOCTOR BAND
    ============================================================ */
 .doctor-band {
   background: var(--bg-dark);
-  padding-bottom: 48px;
+  padding-bottom: 40px;
   position: relative;
-}
-/* Cream shelf at top — smooth light→dark transition */
-.doctor-band::before {
-  content: '';
-  display: block;
-  height: 28px;
-  background: var(--bg-warm);
-  border-radius: 0 0 28px 28px;
 }
 .doctor-img-area { position: relative; width: 100%; height: 440px; overflow: hidden; }
 .doctor-img-area img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
@@ -466,7 +469,7 @@ img { display: block; max-width: 100%; }
   position: absolute; inset: 0;
   background: linear-gradient(to top, var(--bg-dark) 0%, rgba(22,19,16,0.15) 55%, transparent 100%);
 }
-.doctor-content { padding: 0 26px; margin-top: -80px; position: relative; z-index: 10; }
+.doctor-content { padding: 0 24px; margin-top: -80px; position: relative; z-index: 10; }
 .doctor-eyebrow {
   font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 400;
   letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
@@ -532,15 +535,6 @@ img { display: block; max-width: 100%; }
   padding: 52px 24px 48px;
   position: relative;
 }
-/* Dark shelf at top */
-.fakten-section::before {
-  content: '';
-  display: block;
-  height: 28px;
-  background: var(--bg-dark);
-  border-radius: 0 0 28px 28px;
-  margin: -52px -24px 36px;
-}
 .fakten-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .fakt-card {
   background: var(--bg-card); border-radius: var(--r-md);
@@ -589,13 +583,8 @@ img { display: block; max-width: 100%; }
    ============================================================ */
 .ablauf-section {
   background: var(--bg-dark-2);
-  padding: 52px 24px 48px;
+  padding: 48px 24px;
   position: relative;
-}
-.ablauf-section::before {
-  content: ''; display: block; height: 28px;
-  background: var(--bg-warm); border-radius: 0 0 28px 28px;
-  margin: -52px -24px 36px;
 }
 .ablauf-h2 {
   font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300;
@@ -629,16 +618,6 @@ img { display: block; max-width: 100%; }
   color: rgba(185,178,168,0.82); line-height: 1.62; font-weight: 300;
 }
 .ablauf-cta { margin-top: 36px; }
-.btn-ablauf {
-  display: flex; align-items: center; justify-content: center;
-  width: 100%; height: 60px; background: var(--gold);
-  color: var(--bg-deep); border-radius: var(--r-pill);
-  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  box-shadow: 0 12px 32px rgba(197,154,82,0.22);
-  transition: opacity 0.2s, transform 0.15s;
-}
-.btn-ablauf:active { transform: scale(0.97); opacity: 0.88; }
 .ablauf-sub-note {
   text-align: center; font-family: 'DM Sans', sans-serif; font-size: 9.5px;
   color: rgba(197,154,82,0.32); letter-spacing: 0.18em;
@@ -648,12 +627,7 @@ img { display: block; max-width: 100%; }
 /* ============================================================
    NACHSORGE
    ============================================================ */
-.nachsorge-section { background: var(--bg-warm); padding: 52px 0 44px; position: relative; }
-.nachsorge-section::before {
-  content: ''; display: block; height: 28px;
-  background: var(--bg-dark-2); border-radius: 0 0 28px 28px;
-  margin-bottom: 36px;
-}
+.nachsorge-section { background: var(--bg-warm); padding: 24px 0 44px; position: relative; }
 .nachsorge-scroll {
   display: flex; overflow-x: auto; gap: 14px;
   padding: 4px 24px 18px;
@@ -732,8 +706,8 @@ img { display: block; max-width: 100%; }
 .reviews-scroll::-webkit-scrollbar { display: none; }
 .review-card {
   flex-shrink: 0; width: 83%; scroll-snap-align: start;
-  background: var(--bg-card); border-radius: var(--r-xl);
-  padding: 22px; box-shadow: var(--shadow-md); border: 1px solid var(--border-card);
+  background: var(--bg-card); border: 1px solid var(--border-card);
+  border-radius: var(--r-xl); padding: 22px; box-shadow: var(--shadow-md);
 }
 .review-stars { color: var(--gold); font-size: 11px; margin-bottom: 12px; letter-spacing: 2px; }
 .review-text {
@@ -749,41 +723,123 @@ img { display: block; max-width: 100%; }
 .reviews-footer { padding: 4px 24px 0; }
 
 /* ============================================================
-   PRAXIS
+   PRAXIS & VIDEO
    ============================================================ */
 .praxis-section { background: var(--bg-cream); padding: 52px 0 44px; }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 0 24px 32px;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-dark);
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .praxis-scroll {
   display: flex; overflow-x: auto; gap: 14px;
-  padding: 4px 24px 18px;
+  padding: 4px 7.5% 18px;
   scroll-snap-type: x mandatory; scrollbar-width: none;
 }
 .praxis-scroll::-webkit-scrollbar { display: none; }
 .praxis-img-wrap {
-  flex-shrink: 0; width: 85%; scroll-snap-align: start;
+  flex-shrink: 0; width: 85%; scroll-snap-align: center;
   aspect-ratio: 4/3; border-radius: var(--r-xl); overflow: hidden;
   border: 1px solid var(--border-card); box-shadow: var(--shadow-md);
 }
 .praxis-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
 .praxis-img-wrap:active img { transform: scale(1.03); }
 
-/* ============================================================
-   FAQ
-   ============================================================ */
-.faq-section { background: var(--bg-mid); padding: 52px 0 44px; position: relative; }
-.faq-section::before {
-  content: ''; display: block; height: 28px;
-  background: var(--bg-cream); border-radius: 0 0 28px 28px;
-  margin-bottom: 36px;
+.map-wrapper {
+  position: relative;
+  margin: 32px 24px 0;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  height: 360px;
+  background: var(--bg-cream);
+  border: 1px solid var(--border-card);
 }
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.map-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 32px);
+  max-width: 320px;
+  background: var(--bg-card);
+  padding: 24px;
+  border-radius: var(--r-lg);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border: 1px solid var(--border-card);
+  z-index: 10;
+  text-align: center;
+}
+.map-overlay h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.map-overlay p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.btn-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
+  color: var(--bg-deep);
+  padding: 13px;
+  border-radius: var(--r-pill);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4), 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.15s, opacity 0.15s;
+}
+.btn-map:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* ============================================================
+   FAQ (NOW LIGHT THEME)
+   ============================================================ */
+.faq-section { background: var(--bg-cream); padding: 24px 0 52px; position: relative; }
 .faq-header { padding: 0 26px; margin-bottom: 24px; }
 .faq-h2 {
   font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300;
-  color: var(--text-light); line-height: 1.1;
+  color: var(--text-dark); line-height: 1.1;
 }
-.faq-h2 em { font-style: italic; color: var(--gold-light); }
-.faq-list { border-top: 1px solid rgba(197,154,82,0.09); padding: 0 26px; }
-.faq-item { border-bottom: 1px solid rgba(197,154,82,0.06); transition: background 0.3s; }
-.faq-item.open { background: rgba(197,154,82,0.03); }
+.faq-h2 em { font-style: italic; color: var(--gold); }
+.faq-list { border-top: 1px solid rgba(197,154,82,0.15); padding: 0 26px; }
+.faq-item { border-bottom: 1px solid rgba(197,154,82,0.15); transition: background 0.3s; }
+.faq-item.open { background: rgba(197,154,82,0.06); }
 .faq-q-btn {
   display: flex; align-items: center; justify-content: space-between;
   width: 100%; padding: 20px 0; background: none; border: none;
@@ -791,16 +847,16 @@ img { display: block; max-width: 100%; }
 }
 .faq-q-text {
   font-family: 'Cormorant Garamond', serif; font-size: 17px;
-  color: rgba(243,238,231,0.82); line-height: 1.4; font-weight: 300; transition: color 0.3s;
+  color: var(--text-body); line-height: 1.4; font-weight: 500; transition: color 0.3s;
 }
-.faq-item.open .faq-q-text { color: var(--gold-light); font-weight: 400; }
+.faq-item.open .faq-q-text { color: var(--gold); }
 .faq-icon-wrap {
   flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
-  border: 1px solid rgba(197,154,82,0.20);
+  border: 1px solid rgba(197,154,82,0.30);
   display: flex; align-items: center; justify-content: center;
-  color: rgba(197,154,82,0.48); transition: all 0.35s;
+  color: var(--gold); transition: all 0.35s;
 }
-.faq-item.open .faq-icon-wrap { background: var(--gold); border-color: var(--gold); color: var(--bg-mid); }
+.faq-item.open .faq-icon-wrap { background: var(--gold); border-color: var(--gold); color: var(--bg-cream); }
 .faq-answer {
   overflow: hidden; max-height: 0; opacity: 0;
   transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.3s ease;
@@ -808,7 +864,7 @@ img { display: block; max-width: 100%; }
 .faq-item.open .faq-answer { max-height: 1200px; opacity: 1; padding-bottom: 22px; }
 .faq-answer-text {
   font-family: 'Cormorant Garamond', serif; font-size: 15.5px;
-  color: rgba(183,172,158,0.9); line-height: 1.70; font-weight: 300;
+  color: var(--text-muted); line-height: 1.70; font-weight: 300;
 }
 .faq-answer-link {
   display: inline-flex; align-items: center; gap: 6px;
@@ -818,8 +874,8 @@ img { display: block; max-width: 100%; }
 }
 .faq-intro {
   font-family: 'Cormorant Garamond', serif; font-size: 15.5px;
-  color: rgba(183,172,158,0.9); font-style: italic; line-height: 1.65;
-  border-left: 2px solid var(--gold-line); padding-left: 16px; margin-bottom: 18px; font-weight: 300;
+  color: var(--text-muted); font-style: italic; line-height: 1.65;
+  border-left: 2px solid var(--gold); padding-left: 16px; margin-bottom: 18px; font-weight: 300;
 }
 .faq-risk-scroll {
   display: flex; overflow-x: auto; gap: 12px;
@@ -827,8 +883,8 @@ img { display: block; max-width: 100%; }
 }
 .faq-risk-scroll::-webkit-scrollbar { display: none; }
 .faq-risk-card {
-  flex-shrink: 0; width: 84%; background: var(--bg-deep);
-  border: 1px solid rgba(197,154,82,0.09); border-radius: var(--r-xl);
+  flex-shrink: 0; width: 84%; background: var(--bg-card);
+  border: 1px solid var(--border-card); border-radius: var(--r-xl);
   padding: 22px; display: flex; flex-direction: column; gap: 10px;
 }
 .faq-risk-cat {
@@ -837,11 +893,11 @@ img { display: block; max-width: 100%; }
 }
 .faq-risk-title {
   font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
-  color: rgba(243,238,231,0.90); font-weight: 400;
+  color: var(--text-dark); font-weight: 500;
 }
 .faq-risk-text {
   font-family: 'Cormorant Garamond', serif; font-size: 14px;
-  color: rgba(138,128,116,0.9); line-height: 1.62; font-weight: 300;
+  color: var(--text-muted); line-height: 1.62; font-weight: 300;
 }
 
 /* ============================================================
@@ -849,14 +905,14 @@ img { display: block; max-width: 100%; }
    ============================================================ */
 .contact-section {
   background: var(--bg-dark);
-  padding: 52px 24px 48px;
+  padding: 48px 24px;
   text-align: center;
   position: relative;
 }
-.contact-section::before {
-  content: ''; display: block; height: 28px;
-  background: var(--bg-mid); border-radius: 0 0 28px 28px;
-  margin: -52px -24px 36px;
+.contact-section.dark-container {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .contact-h2 {
   font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 300;
@@ -895,15 +951,6 @@ img { display: block; max-width: 100%; }
 }
 .form-group select option { background: var(--bg-mid); color: #fff; }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
-.btn-submit {
-  width: 100%; background: var(--gold); color: var(--bg-deep);
-  padding: 17px; border-radius: var(--r-pill);
-  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
-  border: none; cursor: pointer; letter-spacing: 0.12em; text-transform: uppercase;
-  box-shadow: 0 8px 28px rgba(197,154,82,0.18);
-  transition: opacity 0.2s, transform 0.15s;
-}
-.btn-submit:active { transform: scale(0.98); opacity: 0.88; }
 .contact-alt { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
 .contact-link {
   display: flex; align-items: center; justify-content: center; gap: 10px;
@@ -920,6 +967,9 @@ img { display: block; max-width: 100%; }
 .treat-footer {
   background: var(--bg-deep); padding: 32px 24px 96px;
   border-top: 1px solid rgba(197,154,82,0.07);
+  margin: 0 12px 32px;
+  border-radius: 0 0 var(--r-container) var(--r-container);
+  box-shadow: var(--shadow-md);
 }
 .footer-logo {
   font-family: 'DM Sans', sans-serif; color: var(--gold-light);
@@ -949,31 +999,45 @@ img { display: block; max-width: 100%; }
    STICKY BAR
    ============================================================ */
 .sticky-cta {
-  position: fixed; bottom: 0; left: 50%;
+  position: fixed; bottom: 24px; left: 50%;
   transform: translateX(-50%);
-  width: 100%; max-width: 430px; z-index: 99;
-  background: rgba(10,8,6,0.97); backdrop-filter: blur(24px);
+  width: calc(100% - 32px); max-width: 400px; z-index: 99;
+  background: rgba(14,12,10,0.95); backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  padding: 12px 20px 14px;
-  border-top: 1px solid rgba(197,154,82,0.12);
-  display: flex; gap: 10px;
-  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  padding: 8px;
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(197,154,82,0.20);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+  display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
 }
-.sticky-cta.hidden { transform: translateX(-50%) translateY(100%); }
+.sticky-cta.hidden { transform: translateX(-50%) translateY(150px); opacity: 0; pointer-events: none; }
 .sticky-main {
-  flex: 1; text-align: center; padding: 14px 16px;
-  background: var(--gold); color: var(--bg-deep); border-radius: var(--r-pill);
-  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
-  letter-spacing: 0.10em; text-transform: uppercase; transition: opacity 0.15s;
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(105deg, #B8832E 0%, #DFBC82 50%, #B8832E 100%);
+  color: var(--bg-deep);
+  border-radius: var(--r-pill);
+  font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; padding: 14px 10px;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4);
+  transition: transform 0.15s, opacity 0.15s;
+  white-space: nowrap;
 }
-.sticky-main:active { opacity: 0.85; }
+.sticky-main:active { transform: scale(0.97); opacity: 0.9; }
 .sticky-call {
-  flex: 0.7; text-align: center; padding: 14px 16px;
-  border: 1px solid rgba(197,154,82,0.26); color: var(--gold-light);
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  border: 1px solid rgba(197,154,82,0.35); color: var(--gold-light);
   border-radius: var(--r-pill); font-family: 'DM Sans', sans-serif;
-  font-size: 12px; font-weight: 400; transition: border-color 0.15s;
+  font-size: 11px; font-weight: 500; padding: 13px 10px;
+  text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  background: transparent;
+  white-space: nowrap;
 }
-.sticky-call:active { border-color: var(--gold); }
+.sticky-call:active { transform: scale(0.97); background: rgba(197,154,82,0.1); border-color: var(--gold); }
 
 </style>
 </head>
@@ -987,7 +1051,7 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ============================================================
-     HERO — 1:1 preserved
+     HERO 
      ============================================================ -->
 <div class="hero-wrap" id="top">
   <div class="hero-image-area">
@@ -1050,21 +1114,21 @@ img { display: block; max-width: 100%; }
   </div>
   <div class="kennen-scroll" id="kennen-carousel">
     <div class="kennen-card">
-      <div class="kennen-card-img"><img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&q=80&w=600&h=400" alt="Müder Blick" loading="lazy" /></div>
+      <div class="kennen-card-img"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/q_auto/f_auto/v1776270029/1_xfonit.png" alt="Müder Blick" loading="lazy" /></div>
       <span class="card-eyebrow">Problem 01</span>
       <h3 class="card-h3">Müder Blick</h3>
       <div class="card-rule"></div>
       <p class="card-body">Ein erschöpfter Ausdruck lässt Sie oft müde wirken, obwohl Sie sich eigentlich fit und wach fühlen. Gerade die Augenpartie kann dem Gesicht ungewollt Schwere nehmen.</p>
-    </div>
+      </div>
     <div class="kennen-card">
-      <div class="kennen-card-img"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600&h=400" alt="Schwere Oberlider" loading="lazy" /></div>
+      <div class="kennen-card-img"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/q_auto/f_auto/v1776270029/2_awfroe.png" alt="Schwere Oberlider" loading="lazy" /></div>
       <span class="card-eyebrow">Problem 02</span>
       <h3 class="card-h3">Schwere Oberlider</h3>
       <div class="card-rule"></div>
       <p class="card-body">Wenn Oberlider absinken, wirkt der Blick schnell gedrückt und weniger offen. Das verändert die Ausstrahlung oft stärker, als vielen bewusst ist.</p>
     </div>
     <div class="kennen-card">
-      <div class="kennen-card-img"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600&h=400" alt="Tränensäcke" loading="lazy" /></div>
+      <div class="kennen-card-img"><img src="https://res.cloudinary.com/dkbegf5yh/image/upload/q_auto/f_auto/v1776270029/3_mv18jm.png" alt="Tränensäcke" loading="lazy" /></div>
       <span class="card-eyebrow">Problem 03</span>
       <h3 class="card-h3">Tränensäcke &amp; Unterlidtaschen</h3>
       <div class="card-rule"></div>
@@ -1139,9 +1203,9 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ============================================================
-     DR. HODORKOVSKI
+     DR. HODORKOVSKI (DARK CONTAINER)
      ============================================================ -->
-<div class="doctor-band">
+<div class="doctor-band dark-container">
   <div class="doctor-img-area">
     <img src="https://unikataesthetik.de/wp-content/uploads/2025/07/dr-hodorkovski-stuttgart-plastische-aesthetische-chirurgie-unikat-aesthetik_kk-1.webp" alt="Dr. med. Igor Hodorkovski" loading="lazy" />
     <div class="doctor-img-fade"></div>
@@ -1223,9 +1287,9 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ============================================================
-     ABLAUF
+     ABLAUF (DARK CONTAINER)
      ============================================================ -->
-<section class="ablauf-section" id="ablauf">
+<section class="ablauf-section dark-container" id="ablauf">
   <span class="t-eyebrow" style="color:rgba(197,154,82,0.80);">So läuft es ab</span>
   <h2 class="ablauf-h2">Ihr Weg zu <em>Ihrem Ergebnis</em></h2>
   <div class="ablauf-timeline">
@@ -1236,7 +1300,7 @@ img { display: block; max-width: 100%; }
     <div class="ablauf-step"><div class="ablauf-num"><span>5</span></div><div class="ablauf-step-content"><h3>Ihr Ergebnis</h3><p>Natürlich, harmonisch, dauerhaft. Ein Ergebnis, das zu Ihnen passt und Ihr Selbstbewusstsein stärkt.</p></div></div>
   </div>
   <div class="ablauf-cta">
-    <a href="#kontakt" class="btn-ablauf">Schritt 1 machen</a>
+    <button onclick="document.getElementById('kontakt').scrollIntoView()" class="btn-ablauf">Schritt 1 machen</button>
     <p class="ablauf-sub-note">Unverbindlich &amp; Diskret</p>
   </div>
 </section>
@@ -1296,7 +1360,7 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ============================================================
-     PRAXIS
+     PRAXIS (Mit Video)
      ============================================================ -->
 <section class="praxis-section" id="praxis">
   <div class="scroll-header">
@@ -1304,6 +1368,11 @@ img { display: block; max-width: 100%; }
     <h2 class="t-h2">Modernes Ambiente im <em class="t-em">Herzen Stuttgarts</em></h2>
     <p class="t-body">Mitten in Stuttgart erwartet Sie eine modern gestaltete Praxis mit ruhiger, diskreter Atmosphäre. Helle Räume und persönliche Betreuung schaffen den passenden Rahmen.</p>
   </div>
+
+  <div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0mevQzaeegI?si=eCN3ChdNNc_Ah1rL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
   <div class="praxis-scroll" id="praxis-carousel">
     <div class="praxis-img-wrap"><img src="https://unikataesthetik.de/wp-content/uploads/2025/10/empfangsbereich-facharztpraxis-unikataesthetik-stuttgart.webp" alt="Empfangsbereich" loading="lazy" /></div>
     <div class="praxis-img-wrap"><img src="https://unikataesthetik.de/wp-content/uploads/2025/10/beratung-plastische-aesthetische-chirurgie-dr-hodorkovski.webp" alt="Beratungszimmer" loading="lazy" /></div>
@@ -1311,8 +1380,19 @@ img { display: block; max-width: 100%; }
     <div class="praxis-img-wrap"><img src="https://unikataesthetik.de/wp-content/uploads/2025/10/aesthetische-behandlung-dr-hodorkovski-stuttgart-unikat-aesthetik.webp" alt="Behandlungszimmer" loading="lazy" /></div>
     <div class="praxis-img-wrap"><img src="https://unikataesthetik.de/wp-content/uploads/2025/10/aesthetische-medizin-beratung-plastischer-aesthetischer-chirurg-dr-hodorkovski-stuttgart.webp" alt="Medizinische Beratung" loading="lazy" /></div>
   </div>
-</section>
 
+  <div class="map-wrapper">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.761918342203!2d9.176465611382457!3d48.78018617132174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799db35b1d1bcad%3A0x6b63bc5843cc11dc!2sK%C3%B6nigstra%C3%9Fe%2016%2C%2070173%20Stuttgart!5e0!3m2!1sde!2sde!4v1715000000000!5m2!1sde!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-overlay">
+      <h4>Hier finden Sie uns</h4>
+      <p>Königstr. 16 (über dem Douglas)<br>70173 Stuttgart</p>
+      <a href="https://maps.google.com/?q=Königstraße+16,+70173+Stuttgart" target="_blank" rel="noreferrer" class="btn-map">
+        Route planen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- ============================================================
      FAQ
@@ -1335,10 +1415,10 @@ img { display: block; max-width: 100%; }
       </div>
     </div>
 
-    <div class="faq-item open">
+    <div class="faq-item">
       <button class="faq-q-btn" onclick="toggleFaq(this)">
         <span class="faq-q-text">Wann übernimmt die Krankenkasse die Kosten für eine Augenlidstraffung?</span>
-        <div class="faq-icon-wrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg></div>
+        <div class="faq-icon-wrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
       </button>
       <div class="faq-answer">
         <p class="faq-answer-text">Da es sich bei einer Augenlidstraffung meist um einen ästhetischen Eingriff handelt, wird die Behandlung in den meisten Fällen nicht von der Krankenkasse übernommen. Liegt ein medizinischer Grund vor – wie z. B. eine Sehfeldeinschränkung – ist eine anteilige oder vollständige Übernahme möglich. Die medizinische Indikation muss von einem Augenarzt geprüft und bestätigt werden.</p>
@@ -1426,9 +1506,9 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ============================================================
-     KONTAKT
+     KONTAKT (DARK CONTAINER)
      ============================================================ -->
-<section class="contact-section" id="kontakt">
+<section class="contact-section dark-container" id="kontakt">
   <span class="t-eyebrow" style="justify-content:center; color:rgba(197,154,82,0.65);">Ihr nächster Schritt</span>
   <h2 class="contact-h2">Ihr Weg zu <em>natürlicher Ästhetik</em> beginnt hier.</h2>
   <p class="contact-intro">Kostenlose, unverbindliche Erstberatung – persönlich mit Dr. Hodorkovski. Kein Druck, keine Verkaufsabsicht. Antwort innerhalb von 24 Stunden.</p>
@@ -1487,9 +1567,12 @@ img { display: block; max-width: 100%; }
 
 
 <!-- STICKY BAR -->
-<div class="sticky-cta" id="sticky-cta">
+<div class="sticky-cta hidden" id="sticky-cta">
   <a href="#kontakt" class="sticky-main">Beratung anfragen</a>
-  <a href="tel:+4971190769390" class="sticky-call">☎ Anrufen</a>
+  <a href="tel:+4971190769390" class="sticky-call">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Anrufen
+  </a>
 </div>
 
 
@@ -1506,9 +1589,33 @@ img { display: block; max-width: 100%; }
   // Sticky CTA
   const stickyCta = document.getElementById('sticky-cta');
   const contactSec = document.getElementById('kontakt');
+  const heroBtn = document.getElementById('beratung');
+
+  let isHeroBtnVisible = true;
+  let isContactVisible = false;
+
+  const updateStickyVisibility = () => {
+    if (stickyCta) {
+      // Zeigt Sticky Bar, wenn Hero Button weg ist UND Kontakt Sektion noch nicht da ist
+      if (!isHeroBtnVisible && !isContactVisible) {
+        stickyCta.classList.remove('hidden');
+      } else {
+        stickyCta.classList.add('hidden');
+      }
+    }
+  };
+
+  if (heroBtn) {
+    new IntersectionObserver(e => {
+      isHeroBtnVisible = e[0].isIntersecting;
+      updateStickyVisibility();
+    }, { threshold: 0 }).observe(heroBtn);
+  }
+
   if (contactSec) {
     new IntersectionObserver(e => {
-      stickyCta.classList.toggle('hidden', e[0].isIntersecting);
+      isContactVisible = e[0].isIntersecting;
+      updateStickyVisibility();
     }, { threshold: 0.05 }).observe(contactSec);
   }
 
